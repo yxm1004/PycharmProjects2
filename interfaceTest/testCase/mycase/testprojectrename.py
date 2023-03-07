@@ -35,5 +35,5 @@ class testprojectrename(unittest.TestCase ):
 
         response = requests.request("POST", url, headers=headers, data=payload)
         self.assertEqual(response.status_code, 200)
-  if __name__ == '__main__':
+if __name__ == '__main__':
      unittest.main()

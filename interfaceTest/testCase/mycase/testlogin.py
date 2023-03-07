@@ -25,12 +25,7 @@ class testlogin(unittest.TestCase):
 
     def test_post_login(self):
         # 3、拷贝postman中code
-        # 获取baseurl
-        # baseurl = localReadConfig.get_http("baseurl")
-        # url = baseurl+"/api/oauth/noToken/login"
-        # 获取登录账号
-        # account = localReadConfig.get_OPTION("account")
-        # password = localReadConfig.get_OPTION("password")
+
         payload = json.dumps({
             "account": self.account,
             "avatar": "",

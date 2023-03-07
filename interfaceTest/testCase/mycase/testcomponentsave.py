@@ -11,8 +11,9 @@ class testcomponentsave(unittest.TestCase):
     def setUp(self):
         # 引入常量类，直接使用常量类中的url地址
         self.constants = ApiConstants()
-        self.account = localReadConfig.get_OPTION("account")
-        self.password = localReadConfig.get_OPTION("password")
+        tk = Token()
+        self.token = 'Bearer ' + tk.get_token()
+        print("self.token-------", self.token)
         payload = json.dumps({
         "bomDetailList": [],
         "rebarWeight": "30.475",

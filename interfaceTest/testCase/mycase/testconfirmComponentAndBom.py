@@ -11,9 +11,9 @@ localReadConfig = readConfig.ReadConfig()
 
 
 class confirmComponentAndBom(unittest.TestCase):
-    global strKey
-    def setUp(self):
 
+    def setUp(self):
+        self.strKey = None
         # 引入常量类，直接使用常量类中的url地址
         self.constants = ApiConstants()
         tk = Token()
@@ -52,14 +52,14 @@ class confirmComponentAndBom(unittest.TestCase):
         print("------------------", response.text)
         data = json.loads(response.text)
         # 多级字段取值
-        strKey = data["data"]["strKey"]
-        print("打印strKey", strKey)
+        self.strKey = data["data"]["strKey"]
+        print("打印strKey", self.strKey)
 
     # 测试用例get类型测试用例
     def test_get_confirmComponentAndBom(self):
         # key=None
-        print("queren",strKey)
-        response = requests.request("GET", self.constants.CONFIRMCOMPONENTANDBOM_URL, params=strKey,
+        print("queren",self.strKey)
+        response = requests.request("GET", self.constants.CONFIRMCOMPONENTANDBOM_URL, params=self.strKey,
                                     headers=self.headers)
         self.assertEqual(response.status_code, 200)
 

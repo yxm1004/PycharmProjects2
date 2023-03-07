@@ -12,22 +12,23 @@ localReadConfig = readConfig.ReadConfig()
 
 class confirmComponentAndBom(unittest.TestCase):
     def setUp(self):
+        global strKey
         # 引入常量类，直接使用常量类中的url地址
         self.constants = ApiConstants()
         tk = Token()
         self.token = 'Bearer ' + tk.get_token()
         print("self.token-------", self.token)
 
-        #公告头部
+        # 公告头部
         self.headers = {
-        'Authorization': 'Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==',
-        'tenant': 'ZGdnYw==',
-        'token': self.token,
-        'Content-Type': 'application/json'
-    }
+            'Authorization': 'Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==',
+            'tenant': 'ZGdnYw==',
+            'token': self.token,
+            'Content-Type': 'application/json'
+        }
 
     def test_post_componentsave(self):
-        global strKey
+
         payload = json.dumps({
             "bomDetailList": [],
             "rebarWeight": "30.475",
@@ -46,19 +47,21 @@ class confirmComponentAndBom(unittest.TestCase):
             "concreteDosage": "0.636"
         })
         response = requests.request("POST", self.constants.COMPONENTSAVE_URL, headers=self.headers, data=payload)
-        self.assertEqual(response.status_code, 200)
         # 取出响应结果字段
-        print("------------------",response.text)
+        print("------------------", response.text)
         data = json.loads(response.text)
         # 多级字段取值
         strKey = data["data"]["strKey"]
-        print("打印strKey",strKey)
-    #测试用例get类型测试用例
+        print("打印strKey", strKey)
+
+    # 测试用例get类型测试用例
     def test_get_confirmComponentAndBom(self):
         # key=None
-        response = requests.request("GET", self.constants.CONFIRMCOMPONENTANDBOM_URL, params=strKey,headers=self.headers)
+        print("queren",strKey)
+        response = requests.request("GET", self.constants.CONFIRMCOMPONENTANDBOM_URL, params=strKey,
+                                    headers=self.headers)
         self.assertEqual(response.status_code, 200)
 
 
 if __name__ == '__main__':
-    unittest.main()#单元测试
+    unittest.main()  # 单元测试

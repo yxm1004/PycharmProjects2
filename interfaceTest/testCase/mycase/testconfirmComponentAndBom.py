@@ -28,7 +28,7 @@ class confirmComponentAndBom(unittest.TestCase):
     def test_get_confirmComponentAndBom(self):
         # key=None
 
-        response = requests.request("GET", self.constants.CONFIRMCOMPONENTANDBOM_URL, headers=self.headers, key="596a1af3a8024259b21b4a432d6fca54")
+        response = requests.request("GET", self.constants.CONFIRMCOMPONENTANDBOM_URL+"?key=596a1af3a8024259b21b4a432d6fca54", headers=self.headers, key="")
         self.assertEqual(response.status_code, 200)
 
 

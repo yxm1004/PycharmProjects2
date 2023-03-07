@@ -37,7 +37,7 @@ class confirmComponentAndBom(unittest.TestCase):
             "building": "6",
             "floorSegment": "3",
             "type": "叠合板",
-            "model": "DHB011",
+            "model": "DHB012",
             "floorCount": "1",
             "appearanceSizeLength": "2500",
             "appearanceSizeWidth": "2320",

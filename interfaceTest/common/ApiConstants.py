@@ -23,3 +23,8 @@ class ApiConstants:
     def PROJECTRENAME_URL(self):
         projectrename_url = self.base_url + "/api/report/bom/projectFile/rename"
         return projectrename_url
+
+    @property
+    def COMPONENTSAVE_URL(self):
+        componentsave_url=self.base_url +"/api/report/component/saveComponentAndBom"
+        return componentsave_url

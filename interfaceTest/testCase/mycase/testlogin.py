@@ -14,7 +14,7 @@ class testlogin(unittest.TestCase):
     def setUp(self):
         # 引入常量类，直接使用常量类中的url地址
         self.constants = ApiConstants()
-        self.url = self.constants.BASE_URL
+        self.url = self.constants.LOGIN_URL
         print(self.url)
         self.account = localReadConfig.get_OPTION("account")
         self.password = localReadConfig.get_OPTION("password")

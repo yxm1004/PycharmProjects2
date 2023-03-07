@@ -1,7 +1,7 @@
 import json
 import unittest
 import requests
-from ApiConstants import ApiConstants
+from interfaceTest.common import ApiConstants
 from interfaceTest import readConfig
 
 localReadConfig = readConfig.ReadConfig()
@@ -10,8 +10,8 @@ class testlogin(unittest.TestCase):
     #2、定义一个测试方法test_开头
 
     def setUp(self):
-        c=ApiConstants()
-        self.url=
+        #引入常量类，直接使用常量类中的url地址
+        self.constants = ApiConstants()
         self.account = localReadConfig.get_OPTION("account")
         self.password = localReadConfig.get_OPTION("password")
         self.headers = {

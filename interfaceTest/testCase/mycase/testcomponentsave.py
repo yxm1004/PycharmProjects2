@@ -47,11 +47,12 @@ class testcomponentsave(unittest.TestCase):
         response = requests.request("POST", self.constants.COMPONENTSAVE_URL, headers=self.headers, data=payload)
         self.assertEqual(response.status_code, 200)
         # 取出响应结果字段
+        print("------------------",response.text)
         data = json.loads(response.text)
         # 多级字段取值
         strKey = data["data"]["strKey"]
         print("打印strKey",strKey)
 
 
-if __name__ == '__main__':
-    unittest.main()#单元测试
+# if __name__ == '__main__':
+#     unittest.main()#单元测试

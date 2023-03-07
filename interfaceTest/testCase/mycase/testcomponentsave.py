@@ -25,7 +25,7 @@ class testcomponentsave(unittest.TestCase):
         'Content-Type': 'application/json'
     }
     #测试用例
-    def test_post_components(self):
+    def test_post_componentsave(self):
 
         payload = json.dumps({
             "bomDetailList": [],
@@ -44,7 +44,7 @@ class testcomponentsave(unittest.TestCase):
             "concreteLabel": "C30",
             "concreteDosage": "0.636"
         })
-        response = requests.request("POST", self.constants.componentsave_url, headers=self.headers, data=payload)
+        response = requests.request("POST", self.constants.COMPONENTSAVE_URL, headers=self.headers, data=payload)
         self.assertEqual(response.status_code, 200)
 
 

@@ -14,9 +14,10 @@ class testcomponentsave(unittest.TestCase):
         tk = Token()
         self.token = 'Bearer ' + tk.get_token()
         print("self.token-------", self.token)
-    def test_post_componentsave(self):
-        baseurl = localReadConfig.get_http("baseurl")
-        url=baseurl +"/api/report/component/saveComponentAndBom"
+
+    def setUp(self):
+        # 引入常量类，直接使用常量类中的url地址
+        self.constants = ApiConstants()
 
     ayload = json.dumps({
         "bomDetailList": [],
@@ -42,7 +43,7 @@ class testcomponentsave(unittest.TestCase):
         'Content-Type': 'application/json'
     }
 
-    response = requests.request("POST", url, headers=headers, data=payload)
+    response = requests.request("POST", self.constants.componentsave_url, headers=headers, data=payload)
     self.assertEqual(response.status_code, 200)
 if __name__ == '__main__':
     main()

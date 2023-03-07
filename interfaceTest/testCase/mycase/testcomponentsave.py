@@ -34,7 +34,7 @@ class testcomponentsave(unittest.TestCase):
             "building": "6",
             "floorSegment": "3",
             "type": "叠合板",
-            "model": "DHB003",
+            "model": "DHB009",
             "floorCount": "1",
             "appearanceSizeLength": "2500",
             "appearanceSizeWidth": "2320",
@@ -46,6 +46,11 @@ class testcomponentsave(unittest.TestCase):
         })
         response = requests.request("POST", self.constants.COMPONENTSAVE_URL, headers=self.headers, data=payload)
         self.assertEqual(response.status_code, 200)
+        # 取出响应结果字段
+        data = json.loads(response.text)
+        # 多级字段取值
+        strKey = data["data"]["strKey"]
+        print("打印strKey",strKey)
 
 
 if __name__ == '__main__':

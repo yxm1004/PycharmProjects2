@@ -27,8 +27,8 @@ class confirmComponentAndBom(unittest.TestCase):
     #测试用例get类型测试用例
     def test_get_confirmComponentAndBom(self):
         # key=None
-
-        response = requests.request("GET", self.constants.CONFIRMCOMPONENTANDBOM_URL+"?key=596a1af3a8024259b21b4a432d6fca54", headers=self.headers, key="")
+        params={"key":"40dad150ce59444f99a17c78d50d1b2c"}
+        response = requests.request("GET", self.constants.CONFIRMCOMPONENTANDBOM_URL, params=params,headers=self.headers)
         self.assertEqual(response.status_code, 200)
 
 

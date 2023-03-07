@@ -65,7 +65,4 @@ class confirmComponentAndBom(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    suite = unittest.TestSuite()
-    suite.addTest(confirmComponentAndBom("test_post_componentsave"))
-    suite.addTest(confirmComponentAndBom("test_get_confirmComponentAndBom"))
-    unittest.TextTestRunner().run(suite)
+    unittest.main()

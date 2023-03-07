@@ -11,8 +11,9 @@ localReadConfig = readConfig.ReadConfig()
 
 
 class confirmComponentAndBom(unittest.TestCase):
+    global strKey
     def setUp(self):
-        global strKey
+
         # 引入常量类，直接使用常量类中的url地址
         self.constants = ApiConstants()
         tk = Token()

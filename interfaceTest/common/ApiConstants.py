@@ -30,6 +30,6 @@ class ApiConstants:
         return componentsave_url
 
     @property
-    def CONFIRMCOMPONENTANDBOM(self):
+    def CONFIRMCOMPONENTANDBOM_URL(self):
         confirmComponentAndBom_url = self.base_url + "/api/report/component/confirmComponentAndBom"
         return confirmComponentAndBom_url

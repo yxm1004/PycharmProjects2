@@ -44,7 +44,7 @@ class confirmComponentAndBom(unittest.TestCase):
             "concreteLabel": "C30",
             "concreteDosage": "0.636"
         })
-        response = requests.request("GET", self.constants.COMPONENTSAVE_URL, headers=self.headers, data=payload)
+        response = requests.request("GET", self.constants.CONFIRMCOMPONENTANDBOM_URL, headers=self.headers, data=payload)
         self.assertEqual(response.status_code, 200)
 
 

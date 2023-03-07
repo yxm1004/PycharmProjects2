@@ -25,8 +25,6 @@ class confirmComponentAndBom(unittest.TestCase):
             'token': self.token,
             'Content-Type': 'application/json'
         }
-
-    def test_post_componentsave(self):
         payload = json.dumps({
             "bomDetailList": [],
             "rebarWeight": "30.475",
@@ -34,7 +32,7 @@ class confirmComponentAndBom(unittest.TestCase):
             "building": "6",
             "floorSegment": "3",
             "type": "叠合板",
-            "model": "DHB012",
+            "model": "DHB013",
             "floorCount": "1",
             "appearanceSizeLength": "2500",
             "appearanceSizeWidth": "2320",
@@ -45,12 +43,10 @@ class confirmComponentAndBom(unittest.TestCase):
             "concreteDosage": "0.636"
         })
         response = requests.request("POST", self.constants.COMPONENTSAVE_URL, headers=self.headers, data=payload)
-        # 取出响应结果字段
-        print("------------------", response.text)
         data = json.loads(response.text)
-        # 多级字段取值
         self.strKey = data["data"]["strKey"]
-        print("打印strKey", self.strKey)
+        print(self.strKey)
+
 
     # 测试用例get类型测试用例
     def test_get_confirmComponentAndBom(self):
@@ -61,7 +57,4 @@ class confirmComponentAndBom(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    suite = unittest.TestSuite()
-    suite.addTests()
-    runner = unittest.TextTestRunner()
-    runner.run(suite)
+    unittest.main()

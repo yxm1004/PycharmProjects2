@@ -1,0 +1,24 @@
+2023-03-04 17:06:43,692 - INFO - ********TEST START********
+2023-03-04 17:06:43,697 - DEBUG - Starting new HTTPS connection (1): www.baidu.com:443
+2023-03-04 17:06:43,797 - DEBUG - https://www.baidu.com:443 "GET / HTTP/1.1" 200 None
+2023-03-04 17:06:43,800 - DEBUG - Starting new HTTPS connection (1): www.baidu.com:443
+2023-03-04 17:06:43,890 - DEBUG - https://www.baidu.com:443 "GET / HTTP/1.1" 200 None
+2023-03-04 17:06:43,892 - INFO - *********TEST END*********
+2023-03-04 17:07:32,742 - INFO - ********TEST START********
+2023-03-04 17:07:32,746 - DEBUG - Starting new HTTPS connection (1): www.baidu.com:443
+2023-03-04 17:07:32,847 - DEBUG - https://www.baidu.com:443 "GET / HTTP/1.1" 200 None
+2023-03-04 17:07:32,850 - DEBUG - Starting new HTTPS connection (1): www.baidu.com:443
+2023-03-04 17:07:32,950 - DEBUG - https://www.baidu.com:443 "GET / HTTP/1.1" 200 None
+2023-03-04 17:07:32,953 - INFO - *********TEST END*********
+2023-03-04 17:12:36,913 - INFO - ********TEST START********
+2023-03-04 17:12:36,918 - DEBUG - Starting new HTTPS connection (1): www.baidu.com:443
+2023-03-04 17:12:37,028 - DEBUG - https://www.baidu.com:443 "GET / HTTP/1.1" 200 None
+2023-03-04 17:12:37,031 - DEBUG - Starting new HTTPS connection (1): www.baidu.com:443
+2023-03-04 17:12:37,126 - DEBUG - https://www.baidu.com:443 "GET / HTTP/1.1" 200 None
+2023-03-04 17:12:37,129 - INFO - *********TEST END*********
+2023-03-04 17:16:02,341 - INFO - ********TEST START********
+2023-03-04 17:16:02,345 - DEBUG - Starting new HTTPS connection (1): www.baidu.com:443
+2023-03-04 17:16:02,437 - DEBUG - https://www.baidu.com:443 "GET / HTTP/1.1" 200 None
+2023-03-04 17:16:02,441 - DEBUG - Starting new HTTPS connection (1): www.baidu.com:443
+2023-03-04 17:16:02,527 - DEBUG - https://www.baidu.com:443 "GET / HTTP/1.1" 200 None
+2023-03-04 17:16:02,530 - INFO - *********TEST END*********

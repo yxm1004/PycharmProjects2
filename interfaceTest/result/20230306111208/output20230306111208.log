@@ -1,0 +1,4 @@
+2023-03-06 11:12:08,210 - root - INFO - ********TEST START********
+2023-03-06 11:12:08,215 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cz-api-test.dalezhuang.com:443
+2023-03-06 11:12:15,831 - urllib3.connectionpool - DEBUG - https://cz-api-test.dalezhuang.com:443 "POST /api/oauth/noToken/login HTTP/1.1" 200 None
+2023-03-06 11:12:15,833 - root - INFO - *********TEST END*********

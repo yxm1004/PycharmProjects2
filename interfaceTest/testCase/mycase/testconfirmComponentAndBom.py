@@ -11,9 +11,6 @@ localReadConfig = readConfig.ReadConfig()
 
 
 class confirmComponentAndBom(unittest.TestCase):
-    def __init__(self):
-        self.strKey
-        return self.strKey
     def setUp(self):
         # 引入常量类，直接使用常量类中的url地址
         self.constants = ApiConstants()

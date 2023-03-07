@@ -24,27 +24,11 @@ class confirmComponentAndBom(unittest.TestCase):
         'token': self.token,
         'Content-Type': 'application/json'
     }
-    #测试用例
+    #测试用例get类型测试用例
     def test_get_confirmComponentAndBom(self):
+        # key=None
 
-        payload = json.dumps({
-            "bomDetailList": [],
-            "rebarWeight": "30.475",
-            "projectId": "434",
-            "building": "6",
-            "floorSegment": "3",
-            "type": "叠合板",
-            "model": "DHB003",
-            "floorCount": "1",
-            "appearanceSizeLength": "2500",
-            "appearanceSizeWidth": "2320",
-            "appearanceSizeThickness": "60",
-            "squareAmount": "0.636",
-            "weight": "0.255",
-            "concreteLabel": "C30",
-            "concreteDosage": "0.636"
-        })
-        response = requests.request("GET", self.constants.CONFIRMCOMPONENTANDBOM_URL, headers=self.headers, data=payload)
+        response = requests.request("GET", self.constants.CONFIRMCOMPONENTANDBOM_URL, headers=self.headers, key="596a1af3a8024259b21b4a432d6fca54")
         self.assertEqual(response.status_code, 200)
 
 

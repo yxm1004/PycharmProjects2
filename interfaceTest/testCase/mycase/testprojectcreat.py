@@ -24,7 +24,7 @@ class testprojectcreat(unittest.TestCase ):
         payload = json.dumps({
             "name": "",
             "orderType": "大乐装（东莞）建筑科技有限公司",
-            "abbreviation": "2023030914",
+            "abbreviation": "2023030814",
             "contractNo": "",
             "province": 1,
             "city": 2,

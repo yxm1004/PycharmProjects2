@@ -8,7 +8,9 @@ from interfaceTest import readConfig
 from interfaceTest.testCase.mycase.testcomponentsave import testcomponentsave
 
 localReadConfig = readConfig.ReadConfig()
-class processPlan(unittest.TestCase ):
+
+
+class processPlan(unittest.TestCase):
     def setUp(self):
         # 引入常量类，直接使用常量类中的url地址
         self.constants = ApiConstants()
@@ -55,7 +57,9 @@ class processPlan(unittest.TestCase ):
             "concreteLabel": "C30",
             "deleteStatus": 0
         })
-        response = requests.request("PUT", self.constants.PROCESSPLAN_URL , headers=self.headers , data=payload)
+        response = requests.request("PUT", self.constants.PROCESSPLAN_URL, headers=self.headers, data=payload)
         self.assertEqual(response.status_code, 200)
+
+
 if __name__ == '__main__':
-    unittest.main ()
+    unittest.main()

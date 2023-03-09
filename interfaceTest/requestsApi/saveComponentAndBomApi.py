@@ -5,12 +5,15 @@ import json
 from interfaceTest.common.ApiConstants import ApiConstants
 from interfaceTest.common.GetToken import Token
 from interfaceTest import readConfig
-from interfaceTest.testCase.mycase.testcomponentsave import testcomponentsave
 
 localReadConfig = readConfig.ReadConfig()
 
 
-class confirmComponentAndBom(unittest.TestCase):
+class confirmComponentAndBomApi:
+    def __init__(self):
+        pass
+    def confirmComponentAndBom(self):
+        pass
     def setUp(self):
         # 引入常量类，直接使用常量类中的url地址
         self.constants = ApiConstants()

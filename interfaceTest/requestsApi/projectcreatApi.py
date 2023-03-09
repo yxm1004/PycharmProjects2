@@ -1,30 +1,28 @@
-import unittest
 import requests
 import json
 
-from interfaceTest.common.GetToken import Token
 from interfaceTest import readConfig
+from interfaceTest.requestsApi.loginApi import loginApi
 
 localReadConfig = readConfig.ReadConfig()
 
-class testprojectcreatApi:
-    @classmethod
-    def setUpClass(self) :
-        #获取token
-        tk=Token()
-        self.token='Bearer '+tk.get_token()
-        print("self.token-------",self.token)
 
-
-    def test_post_projectcreat(self):
-        # 获取baseurl
+class projectcreatApi:
+    def __init__(self, account, password, abbreviation):
         baseurl = localReadConfig.get_http("baseurl")
-        url = baseurl + "/api/report/project/create"
-
-        payload = json.dumps({
+        self.url = baseurl + "/api/report/project/create"
+        lg = loginApi()
+        self.token = lg.getToken(account, password)
+        self.headers = {
+            'Authorization': 'Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==',
+            'tenant': 'ZGdnYw==',
+            'token': "Bearer "+self.token,
+            'Content-Type': 'application/json'
+        }
+        self.payload = json.dumps({
             "name": "",
             "orderType": "大乐装（东莞）建筑科技有限公司",
-            "abbreviation": "2023030914",
+            "abbreviation": abbreviation,
             "contractNo": "",
             "province": 1,
             "city": 2,
@@ -50,13 +48,13 @@ class testprojectcreatApi:
             "allocationList": [],
             "logo": None
         })
-        headers = {
-            'Authorization': 'Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==',
-            'tenant': 'ZGdnYw==',
-            'token': self.token,
-            'Content-Type': 'application/json'
-        }
 
-        response = requests.request("POST", url, headers=headers, data=payload)
+    def projectcreat(self):
+        response = requests.request("POST", self.url, headers=self.headers, data=self.payload)
+        return response
+
+
 if __name__ == '__main__':
-     unittest .main()
+    pc = projectcreatApi("15313487958", "900520", "2023030899")
+    rs = pc.projectcreat()
+    print(rs.json())

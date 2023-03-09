@@ -22,9 +22,9 @@ class ApiConstants:
         return projectquery_url
 
     @property
-    def PROJECTRENAME_URL(self):
-        projectrename_url = self.base_url + "/api/report/bom/projectFile/rename"
-        return projectrename_url
+    def PROJECTFILERENAME_URL(self):
+        projectrFilerename_url = self.base_url + "/api/report/bom/projectFile/rename"
+        return projectrFilerename_url
 
     @property
     def COMPONENTSAVE_URL(self):

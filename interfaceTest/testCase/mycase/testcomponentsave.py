@@ -51,7 +51,7 @@ class testcomponentsave(unittest.TestCase):
         data = json.loads(response.text)
         # 多级字段取值
         strKey = data["data"]["strKey"]
-        print("打印strKey",strKey)
+        print("打印结果",data)
 
 
 # if __name__ == '__main__':

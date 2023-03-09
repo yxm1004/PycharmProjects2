@@ -1,7 +1,7 @@
 import unittest
 import requests
 import json
-
+from interfaceTest.requestsApi.confirmComponentAndBomApi import confirmComponentAndBomApi
 from interfaceTest.common.ApiConstants import ApiConstants
 from interfaceTest.common.GetToken import Token
 from interfaceTest import readConfig
@@ -12,6 +12,7 @@ localReadConfig = readConfig.ReadConfig()
 
 class confirmComponentAndBom(unittest.TestCase):
     def setUp(self):
+        confirmComponentAndBomApi()
         # 引入常量类，直接使用常量类中的url地址
         self.constants = ApiConstants()
         tk = Token()

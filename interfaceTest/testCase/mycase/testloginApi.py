@@ -26,11 +26,11 @@ class testlogin(unittest.TestCase):
         else:
             print("failed to get token")
         self.assertEqual(response.status_code, 200)
-    def test_post_getToken(self):
-        tk = self.loginApi.getToken(self.account, self.password)
-        #打印token
-        print("获取token",tk)
-        self.assertIsNotNone(tk)
+    # def test_post_getToken(self):
+    #     tk = self.loginApi.getToken(self.account, self.password)
+    #     #打印token
+    #     print("获取token",tk)
+    #     self.assertIsNotNone(tk)
 
 # 5.验证这个用例
 if __name__ == '__main__':

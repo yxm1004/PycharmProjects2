@@ -9,7 +9,8 @@ localReadConfig = readConfig.ReadConfig()
 # 登录接口
 class loginApi:
     def __init__(self):
-        pass
+        self.account = localReadConfig.get_OPTION("account")
+        self.password = localReadConfig.get_OPTION("password")
 
     def login(self, account, password):
         # 引入常量类，直接使用常量类中的url地址
@@ -21,14 +22,14 @@ class loginApi:
             'Content-Type': 'application/json'
         }
         payload = json.dumps({
-            "account": account,
+            "account": self.account,
             "avatar": "",
             "code": "",
             "grantType": "password",
             "key": "",
             "name": "",
             "openId": "",
-            "password": password,
+            "password": self.password,
             "refreshToken": ""
         })
 
@@ -37,8 +38,8 @@ class loginApi:
         return response
 
     # 获取登录用户token
-    def getToken(self, account, password):
-        response = self.login(account, password)
+    def getToken(self):
+        response = self.login()
         if response.status_code == 200:
             print(response.json()["data"]["token"])
             token = response.json()["data"]["token"]
@@ -50,7 +51,7 @@ class loginApi:
 # 验证这个用例
 if __name__ == '__main__':
     lg=loginApi()
-    rs=lg.login("15313487958","900520")
+    rs=lg.login()
     print("login",rs.json())
-    tk=lg.getToken("15313487958","900520")
+    tk=lg.getToken()
     print(tk)

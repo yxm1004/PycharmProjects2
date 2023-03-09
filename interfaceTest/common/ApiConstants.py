@@ -41,5 +41,5 @@ class ApiConstants:
 
     @property
     def PRODUCTIONTASK_URL(self):
-        productiontask_url = self.base_url +"/api/report/productionTask"
+        productionTask_url = self.base_url +"/api/report/productionTask"
         return productiontask_url

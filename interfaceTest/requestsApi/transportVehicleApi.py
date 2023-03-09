@@ -19,8 +19,8 @@ class transportVehicleApi():
         """
         payload = json.dumps({
             "companyName": "顺丰物流",
-            "transportVehicle": "赣D8888",
-            "carLength": "10",
+            "transportVehicle": "赣D8899",
+            "carLength": "13.5",
             "driverName": "小尹",
             "driverPhone": "15313487958",
             "driverName2": "",

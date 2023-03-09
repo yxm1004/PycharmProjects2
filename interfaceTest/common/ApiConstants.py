@@ -46,14 +46,18 @@ class ApiConstants:
         productionTask_url = self.base_url +"/api/report/productionTask"
         return productionTask_url
     @property
-    def PROJECTCUSTOMER(self):
+    def PROJECTCUSTOMER_URL(self):
         projectCustomer_url = self.base_url +"/api/report/projectCustomer"
         return projectCustomer_url
 
     @property
-    def TRANSPORTVECHICE(self):
+    def TRANSPORTVECHICE_URL(self):
         transportVehicle_url = self.base_url +"/api/report/transportVehicle"
         return transportVehicle_url
 
+    @property
+    def DELIVERYPLAN_URL(self):
+        deliveryPlan_url = self.base_url +"/api/report/deliveryPlan"
+        return deliveryPlan_url
 
 

@@ -1,3 +1,5 @@
+import self as self
+
 from interfaceTest import readConfig
 localReadConfig = readConfig.ReadConfig()
 class ApiConstants:
@@ -42,4 +44,10 @@ class ApiConstants:
     @property
     def PRODUCTIONTASK_URL(self):
         productionTask_url = self.base_url +"/api/report/productionTask"
-        return productiontask_url
+        return productionTask_url
+    @property
+    def PROJECTCUSTOMER(self):
+        projectCustomer_url = self.base_url +"/api/report/projectCustomer"
+        return projectCustomer_url
+
+

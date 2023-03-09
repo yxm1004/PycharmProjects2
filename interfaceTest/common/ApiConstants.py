@@ -38,3 +38,8 @@ class ApiConstants:
     def  PROCESSPLAN_URL(self):
          processplan_url = self.base_url +"/api/report/processPlan"
          return processplan_url
+
+    @property
+    def PRODUCTIONTASK_URL(self):
+        productiontask_url = self.base_url +"/api/report/productionTask"
+        return productiontask_url

@@ -6,31 +6,35 @@ localReadConfig = readConfig.ReadConfig()
 class confirmComponentAndBomApi:
     """新增构建清单componentsave()
     确认新增构建清单confirmComponentAndBom()"""
+
     def __init__(self):
         baseurl = localReadConfig.get_http("baseurl")
         self.componentsave_url = baseurl + "/api/report/component/saveComponentAndBom"
         self.confirmComponentAndBom_url = baseurl + "/api/report/component/confirmComponentAndBom"
-        #初始化头部
-        lg=loginApi()
-        self.headers=lg.getheaders()
+        # 初始化头部
+        lg = loginApi()
+        self.headers = lg.getheaders()
+
     def confirmComponentAndBom(self):
         """
         确认新增-构件清单
         """
-        params={"key":self.getstrKey()}
+        params = {"key": self.getstrKey()}
         response = requests.request("GET", self.confirmComponentAndBom_url, params=params,
-                                       headers=self.headers)
-        print("确认新增-构建清单",response.json())
+                                    headers=self.headers)
+        print("确认新增-构建清单", response.json())
         return response
+
     def getstrKey(self):
         """
         获取新增构建接口中返回的key
         """
-        response= self.componentsave()
+        response = self.componentsave()
         data = json.loads(response.text)
         # 提取key
         strKey = data["data"]["strKey"]
         return strKey
+
     def componentsave(self):
         """
         新增-构建清单
@@ -53,8 +57,10 @@ class confirmComponentAndBomApi:
             "concreteDosage": "0.636"
         })
         response = requests.request("POST", self.componentsave_url, headers=self.headers, data=payload)
-        print("新增-构建清单",response.json())
+        print("新增-构建清单", response.json())
         return response
+
+
 if __name__ == '__main__':
-    sv= confirmComponentAndBomApi()
+    sv = confirmComponentAndBomApi()
     print(sv.confirmComponentAndBom())

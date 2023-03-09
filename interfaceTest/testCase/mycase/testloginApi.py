@@ -13,12 +13,10 @@ class testlogin(unittest.TestCase):
     # 2、setUp初始话数据引入API接口
 
     def setUp(self):
-        self.account = localReadConfig.get_OPTION("account")
-        self.password = localReadConfig.get_OPTION("password")
         self.loginApi = loginApi()
     #编写测试用力和断言
     def test_post_login(self):
-        response = self.loginApi.login(self.account, self.password)
+        response = self.loginApi.login()
         #打印token
         if response.status_code == 200:
             print("login接口",response.json()["data"]["token"])

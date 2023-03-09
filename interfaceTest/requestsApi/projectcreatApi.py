@@ -8,11 +8,11 @@ localReadConfig = readConfig.ReadConfig()
 
 
 class projectcreatApi:
-    def __init__(self, account, password, abbreviation):
+    def __init__(self, abbreviation):
         baseurl = localReadConfig.get_http("baseurl")
         self.url = baseurl + "/api/report/project/create"
         lg = loginApi()
-        self.token = lg.getToken(account, password)
+        self.token = lg.getToken()
         self.headers = {
             'Authorization': 'Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==',
             'tenant': 'ZGdnYw==',
@@ -55,6 +55,6 @@ class projectcreatApi:
 
 
 if __name__ == '__main__':
-    pc = projectcreatApi("15313487958", "900520", "2023030899")
+    pc = projectcreatApi("2023030999")
     rs = pc.projectcreat()
     print(rs.json())

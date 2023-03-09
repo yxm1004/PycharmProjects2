@@ -12,7 +12,7 @@ class loginApi:
         self.account = localReadConfig.get_OPTION("account")
         self.password = localReadConfig.get_OPTION("password")
 
-    def login(self, account, password):
+    def login(self):
         # 引入常量类，直接使用常量类中的url地址
         constants = ApiConstants()
         headers = {

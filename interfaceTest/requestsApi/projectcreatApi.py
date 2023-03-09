@@ -8,7 +8,7 @@ localReadConfig = readConfig.ReadConfig()
 
 
 class projectcreatApi:
-    def __init__(self, abbreviation):
+    def __init__(self):
         baseurl = localReadConfig.get_http("baseurl")
         self.url = baseurl + "/api/report/project/create"
         lg = loginApi()
@@ -19,6 +19,9 @@ class projectcreatApi:
             'token': "Bearer "+self.token,
             'Content-Type': 'application/json'
         }
+
+
+    def projectcreat(self,abbreviation):
         self.payload = json.dumps({
             "name": "",
             "orderType": "大乐装（东莞）建筑科技有限公司",
@@ -48,13 +51,11 @@ class projectcreatApi:
             "allocationList": [],
             "logo": None
         })
-
-    def projectcreat(self):
         response = requests.request("POST", self.url, headers=self.headers, data=self.payload)
         return response
 
 
 if __name__ == '__main__':
-    pc = projectcreatApi("2023030999")
-    rs = pc.projectcreat()
+    pc = projectcreatApi()
+    rs = pc.projectcreat("2023030991")
     print(rs.json())

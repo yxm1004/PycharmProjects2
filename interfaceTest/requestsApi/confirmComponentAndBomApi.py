@@ -2,7 +2,10 @@ import requests
 import json
 from interfaceTest import readConfig
 from interfaceTest.requestsApi.loginApi import loginApi
+
 localReadConfig = readConfig.ReadConfig()
+
+
 class confirmComponentAndBomApi:
     """新增构建清单componentsave()
     确认新增构建清单confirmComponentAndBom()"""

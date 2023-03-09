@@ -1,9 +1,6 @@
 import time
 import unittest
 from interfaceTest.requestsApi.projectcreatApi import projectcreatApi
-from interfaceTest import readConfig
-
-
 class testprojectcreat(unittest.TestCase ):
     def setUp(self) :
         #初始化创建项目对象

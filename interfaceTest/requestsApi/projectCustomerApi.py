@@ -30,4 +30,8 @@ class projectCustomerApi:
         response = requests.request("POST", self.url, headers=self.headers, data=payload)
         return response
 if __name__ == '__main__':
+    #这只是实例化了
     pc = projectCustomerApi()
+    #调用项目联系人新增方法
+    response=pc.projectCustomer()
+    print(response.json())

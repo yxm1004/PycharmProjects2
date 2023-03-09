@@ -50,4 +50,10 @@ class ApiConstants:
         projectCustomer_url = self.base_url +"/api/report/projectCustomer"
         return projectCustomer_url
 
+    @property
+    def TRANSPORTVECHICE(self):
+        transportVehicle_url = self.base_url +"/api/report/transportVehicle"
+        return transportVehicle_url
+
+
 

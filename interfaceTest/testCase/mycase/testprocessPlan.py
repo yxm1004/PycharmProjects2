@@ -25,38 +25,41 @@ class processPlan(unittest.TestCase):
             'token': self.token,
             'Content-Type': 'application/json'
         }
-        payload = json.dumps({
-            "echoMap": {
-                "projectId": "434"
-            },
-            "id": "1633075829296594944",
-            "createTime": "2023-03-07 15:02:58",
-            "createdBy": "1623846762252861440",
-            "updateTime": "2023-03-07 15:02:58",
-            "updatedBy": "1623846762252861440",
-            "projectId": "434",
-            "building": "6",
-            "floor": "3",
-            "type": "叠合板",
-            "model": "DHB-005",
-            "floorCount": 1,
-            "appearanceSizeLength": 3170,
-            "appearanceSizeWidth": 3520,
-            "appearanceSizeThickness": 60,
-            "squareAmount": 734,
-            "weight": 293,
-            "moldNumber": None,
-            "programmeArea": None,
-            "productionRounds": "3",
-            "schemeNumber": "3",
-            "schemeSequence": "3",
-            "schemeCarNumber": "3",
-            "schemeModel": 10,
-            "note": "测试",
-            "concreteDosage": "0.293",
-            "concreteLabel": "C30",
-            "deleteStatus": 0
-        })
+
+        def test_put_processPlan(slef):
+            payload = json.dumps({
+                "echoMap": {
+                    "projectId": "434"
+                },
+                "id": "1633075829296594944",
+                "createTime": "2023-03-07 15:02:58",
+                "createdBy": "1623846762252861440",
+                "updateTime": "2023-03-07 15:02:58",
+                "updatedBy": "1623846762252861440",
+                "projectId": "434",
+                "building": "6",
+                "floor": "3",
+                "type": "叠合板",
+                "model": "DHB-005",
+                "floorCount": 1,
+                "appearanceSizeLength": 3170,
+                "appearanceSizeWidth": 3520,
+                "appearanceSizeThickness": 60,
+                "squareAmount": 734,
+                "weight": 293,
+                "moldNumber": None,
+                "programmeArea": None,
+                "productionRounds": "3",
+                "schemeNumber": "3",
+                "schemeSequence": "3",
+                "schemeCarNumber": "3",
+                "schemeModel": 10,
+                "note": "测试",
+                "concreteDosage": "0.293",
+                "concreteLabel": "C30",
+                "deleteStatus": 0
+            })
+
         response = requests.request("PUT", self.constants.PROCESSPLAN_URL, headers=self.headers, data=payload)
         self.assertEqual(response.status_code, 200)
 

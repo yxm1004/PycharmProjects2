@@ -8,7 +8,7 @@ localReadConfig = readConfig.ReadConfig()
 class materialPleaseOrderApi():
       def __init__(self):
         baseurl = localReadConfig.get_http("baseurl")
-        self.url = baseurl + "/api/report/deliveryPlan"
+        self.url = baseurl + "/api/report/materialPleaseOrder"
         # 初始化头部
         lg = loginApi()
         #从登陆类里获取头部
@@ -30,7 +30,7 @@ class materialPleaseOrderApi():
           return response
 if __name__ == '__main__':
     pc = materialPleaseOrderApi()
-    response=pc.materialPleaseOrder()
+    response = pc.materialPleaseOrder()
     print(response.json())
 
 

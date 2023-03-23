@@ -14,6 +14,11 @@ class projectupdateApi():
         # 从登陆类里获取头部
         self.headers = lg.getheaders()
     def projectupdate(self):
+        """
+        编辑项目信息-确认投产/取消投产
+        """
+
+
         payload = json.dumps({
             "echoMap": {
                 "province": "北京市",
@@ -55,7 +60,7 @@ class projectupdateApi():
             ],
             "createMark": True,
             "orderType": "大乐装（东莞）建筑科技有限公司",
-            "status": 0,
+            "status": 1,
             "address": [
                 1,
                 2,

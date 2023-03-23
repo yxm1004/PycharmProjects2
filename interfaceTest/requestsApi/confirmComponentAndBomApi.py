@@ -45,7 +45,7 @@ class confirmComponentAndBomApi:
         payload = json.dumps({
             "bomDetailList": [],
             "rebarWeight": "30.475",
-            "projectId": "434",
+            "projectId": "450",
             "building": "6",
             "floorSegment": "3",
             "type": "叠合板",

@@ -20,7 +20,7 @@ class materialPleaseOrderApi():
           payload = json.dumps([
               {
                   "building": "6",
-                  "floor": "3",
+                  "floor": "2",
                   "floorLevels": 1,
                   "projectId": 434,
                   "requiredTime": "2023-03-10"

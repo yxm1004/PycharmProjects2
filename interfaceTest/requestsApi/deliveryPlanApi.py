@@ -18,9 +18,9 @@ class deliveryPlanApi():
             发货计划-新增
         """
         payload = json.dumps({
-            "requireProjectTime": "2023-03-09 18:04:22",
+            "requireProjectTime": "2023-03-23 18:04:22",
             "warning": 0,
-            "projectName": "2023030914-6-3",
+            "projectName": "交付0323-6-3",
             "type": "叠合板",
             "inventoryStatus": "01",
             "projectCountpart": "尹小小",
@@ -37,7 +37,7 @@ class deliveryPlanApi():
             "remark": "",
             "building": "6",
             "floor": "3",
-            "projectId": "434"
+            "projectId": "461"
         })
         response = requests.request("POST", self.url, headers=self.headers, data=payload)
         return response

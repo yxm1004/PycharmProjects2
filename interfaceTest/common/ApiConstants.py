@@ -69,3 +69,8 @@ class ApiConstants:
     def PROJECTUPDATE_URL(self):
         projectupdate_url = self .base_url +"/api/report/project/update"
         return projectupdate_url
+
+    @property
+    def PROCESSPLAN_URL(self):
+        processplan_url = self.base_url + "/api/report/processPlan"
+        return processplan_url

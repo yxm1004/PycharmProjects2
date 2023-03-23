@@ -8,7 +8,7 @@ localReadConfig = readConfig.ReadConfig()
 class materialPleaseOrderApi():
       def __init__(self):
         baseurl = localReadConfig.get_http("baseurl")
-        self.url = baseurl + "/api/report/materialPleaseOrder"
+        self.url = baseurl + "/api/report/materialPleaseOrder/batchSave"
         # 初始化头部
         lg = loginApi()
         #从登陆类里获取头部

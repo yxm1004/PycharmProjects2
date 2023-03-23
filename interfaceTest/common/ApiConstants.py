@@ -62,5 +62,5 @@ class ApiConstants:
 
     @property
     def MATERIALPLEASEORDER_URL(self):
-        materialPleaseOrder_url = self .base_url +"/api/report/materialPleaseOrder"
+        materialPleaseOrder_url = self .base_url +"/api/report/materialPleaseOrder/batchSave"
         return materialPleaseOrder_url

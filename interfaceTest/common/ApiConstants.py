@@ -72,5 +72,5 @@ class ApiConstants:
 
     @property
     def PROCESSPLAN_URL(self):
-        processplan_url = self.base_url + "/api/report/processPlan"
-        return processplan_url
+        processPlan_url = self.base_url + "/api/report/processPlan"
+        return processPlan_url

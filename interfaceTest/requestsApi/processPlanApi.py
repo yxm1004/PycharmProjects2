@@ -14,11 +14,14 @@ class processPlanApi():
         # 从登陆类里获取头部
         self.headers = lg.getheaders()
     def processplan(self):
+        """
+            工艺方案-修改
+        """
         payload = json.dumps({
             "echoMap": {
                 "projectId": "461"
             },
-            "id": "1638869841743970304",
+            "id": "1638870172355788800",
             "createTime": "2023-03-23 15:02:58",
             "createdBy": "1623846762252861440",
             "updateTime": "2023-03-23 15:02:58",

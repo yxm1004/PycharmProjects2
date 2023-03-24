@@ -74,3 +74,7 @@ class ApiConstants:
     def PROCESSPLAN_URL(self):
         processPlan_url = self.base_url + "/api/report/processPlan"
         return processPlan_url
+    @property
+    def STATEMENTRULRE_url(self):
+        statementRules_url = self.base_url +"/api/report/subcontractingStatementRules/queryPage"
+        return statementRules_url

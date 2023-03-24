@@ -33,16 +33,16 @@ class updateSubcontractingApi():
                             ],
                             "schemeCarNumbers": [],
                             "type": "叠合板",
-                            "unitPrice": 990
+                            "unitPrice": 880
                         }
                     ],
                     "enclosure": "",
-                    "orgId": 1514430640907354000
+                    "orgId": 1514430640907354112
                 }
             ],
             "projectId": 461,
             "projectType": 0,
-            "receivableProportion": 15,
+            "receivableProportion": 10,
             "settleDay": 1,
             "settleStyle": 2,
             "settlementFundsProportion": 30

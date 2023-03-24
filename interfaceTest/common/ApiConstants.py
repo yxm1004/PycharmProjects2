@@ -83,3 +83,8 @@ class ApiConstants:
     def UPDATESUBCONTRACTING_URL(self):
         updateSubcontracting_url = self .base_url +"/api/report/subcontractingStatementRules/updateSubcontracting"
         return updateSubcontracting_url
+
+    @property
+    def ACCOUNTSTATEMENTQUERY_URL(self):
+        accountstatementquery_url = self .base_url +"/api/report/accountStatement/queryPage"
+        return accountstatementquery_url

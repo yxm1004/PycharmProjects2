@@ -13,7 +13,7 @@ class statementRulesApi():
         lg = loginApi()
         # 从登陆类里获取头部
         self.headers = lg.getheaders()
-    def statementRulesApi(self):
+    def statementRules(self):
         """
                    获取委外对账规则列表
         """

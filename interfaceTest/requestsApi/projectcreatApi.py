@@ -13,14 +13,8 @@ class projectcreatApi:
         self.url = baseurl + "/api/report/project/create"
         lg = loginApi()
         self.token = lg.getToken()
-        self.headers = {
-            'Authorization': 'Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==',
-            'tenant': 'ZGdnYw==',
-            'token': "Bearer "+self.token,
-            'Content-Type': 'application/json'
-        }
-
-
+        # 从登陆类里获取头部
+        self.headers = lg.getheaders()
     def projectcreat(self,abbreviation):
         self.payload = json.dumps({
             "name": "",
@@ -57,5 +51,5 @@ class projectcreatApi:
 
 if __name__ == '__main__':
     pc = projectcreatApi()
-    rs = pc.projectcreat("交付0323")
+    rs = pc.projectcreat("交付0324")
     print(rs.json())

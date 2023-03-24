@@ -5,7 +5,7 @@ from interfaceTest import readConfig
 from interfaceTest.requestsApi.loginApi import loginApi
 
 localReadConfig = readConfig.ReadConfig()
-class statementRulesApi():
+class statementRulesqueryApi():
     def __init__(self):
         baseurl = localReadConfig.get_http("baseurl")
         self.url = baseurl + "/api/report/subcontractingStatementRules/queryPage"
@@ -13,7 +13,7 @@ class statementRulesApi():
         lg = loginApi()
         # 从登陆类里获取头部
         self.headers = lg.getheaders()
-    def statementRules(self):
+    def statementRulesquery(self):
         """
                    获取委外对账规则列表
         """
@@ -21,8 +21,8 @@ class statementRulesApi():
         response = requests.request("POST", self.url, headers=self.headers, data=payload)
         return response
 if __name__ == '__main__':
-    pc = statementRulesApi()
-    response = pc.statementRulesApi()
+    pc = statementRulesqueryApi()
+    response = pc.statementRulesquery()
     print(response.json())
 
 

@@ -51,5 +51,5 @@ class projectcreatApi:
 
 if __name__ == '__main__':
     pc = projectcreatApi()
-    rs = pc.projectcreat("项目模具06")
+    rs = pc.projectcreat("项目0406")
     print(rs.json())

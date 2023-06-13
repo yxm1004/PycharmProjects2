@@ -98,3 +98,7 @@ class ApiConstants:
     def QUERYMASTERPLAN_URL(self):
         querymasterplan_url = self.base_url +"/api/report/masterPlan/queryMasterPlan"
         return querymasterplan_url
+    @property
+    def CREATEPLAN_URL(self):
+        createrplan_url = self .base_url +"/api/report/masterPlan/createPlan"
+        return createrplan_url

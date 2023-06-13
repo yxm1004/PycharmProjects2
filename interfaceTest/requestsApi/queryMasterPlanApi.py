@@ -26,6 +26,6 @@ class queryMasterPlanApi():
         response = requests.request("POST", self.url, headers=self.headers, data=payload)
         return response
 if __name__ == '__main__':
-    pc = queryMasterPlanApi
+    pc = queryMasterPlanApi()
     response = pc.queryMasterPlanApi()
     print(response.json())

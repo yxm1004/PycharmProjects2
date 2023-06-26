@@ -29,4 +29,6 @@ class materialqueryPageAPi():
         response = requests.request("POST", self.url, headers=self.headers, data=payload)
         return response
 if __name__ == '__main__':
-    pc =
+    pc = materialqueryPageAPi()
+    response = pc.materialqueryPage
+    print(response.json())

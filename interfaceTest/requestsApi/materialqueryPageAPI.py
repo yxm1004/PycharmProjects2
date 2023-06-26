@@ -14,7 +14,7 @@ class materialqueryPageAPi():
         lg = loginApi()
         # 从登陆类里获取头部
         self.headers = lg.getheaders()
-    def materialqueryPage(self):
+    def materialqueryPageAPL(self):
         """
                 物料主档查询
         """
@@ -30,5 +30,5 @@ class materialqueryPageAPi():
         return response
 if __name__ == '__main__':
     pc = materialqueryPageAPi()
-    response = pc.materialqueryPage
-    print(response.json())
+    response = pc.materialqueryPageAPL
+    print(response)

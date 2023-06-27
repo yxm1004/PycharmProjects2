@@ -147,3 +147,8 @@ class ApiConstants:
         accountStatementquerylist_url = self.base_url +"/api/report/accountStatement/queryList"
         return accountStatementquerylist_url
 
+    @property
+    def CREATEDYEARMONTH_URL(self):
+        createdYearMonth_url = self .base_url +"/api/report/masterPlan/versionList?createdYearMonth=2023-06"
+        return createdYearMonth_url
+

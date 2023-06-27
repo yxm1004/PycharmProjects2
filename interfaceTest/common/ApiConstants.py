@@ -112,3 +112,7 @@ class ApiConstants:
     def EXPORTMATERIAL_URL(self):
         exportMaterial_url = self.base_url +"/api/report/material/queryPage"
         return exportMaterial_url
+    @property
+    def STOCKMONITOR_URL(self):
+        stockMonitor_URL = self.base_url +"/api/report/statistics/stockMonitor"
+        return stockMonitor_URL

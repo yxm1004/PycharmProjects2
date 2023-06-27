@@ -16,8 +16,8 @@ class deliveryscheduleApi():
         self.headers = lg.getheaders()
     def deliveryschedule(self):
         """
-                          实时交付进度
-            """
+                实时交付进度
+        """
         payload = json.dumps({
             "month": "2023-06-13"
         })

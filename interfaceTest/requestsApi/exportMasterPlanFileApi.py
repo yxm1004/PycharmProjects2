@@ -24,7 +24,7 @@ class exportMasterPlanFileApi():
             "projectIds": [],
             "version": 0
         })
-        response = requests.request("get", self.url, headers=self.headers, data=payload)
+        response = requests.request("post", self.url, headers=self.headers, data=payload)
         return response
 if __name__ == '__main__':
     pc = exportMasterPlanFileApi()

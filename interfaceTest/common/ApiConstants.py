@@ -116,3 +116,8 @@ class ApiConstants:
     def STOCKMONITOR_URL(self):
         stockMonitor_URL = self.base_url +"/api/report/statistics/stockMonitor"
         return stockMonitor_URL
+
+    @property
+    def YESTERDAYTOTALAMOUNT_URK(self):
+        yesterdaytotalAmount_url = self.base_url +"/api/report/billboards/yesterday/totalAmount"
+        return yesterdaytotalAmount_url

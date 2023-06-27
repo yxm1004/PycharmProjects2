@@ -16,7 +16,7 @@ class materialqueryPageAPi():
         self.headers = lg.getheaders()
     def materialqueryPageAPL(self):
         """
-                物料主档查询
+                物料主档自定义分页查询
         """
         payload = json.dumps({
             "model": {

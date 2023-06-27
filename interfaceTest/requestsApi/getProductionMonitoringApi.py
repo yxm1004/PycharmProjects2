@@ -26,3 +26,6 @@ class getProductionMonitoringApi():
         response = requests.request("POST", self.url, headers=self.headers, data=payload)
         return response
 if __name__ == '__main__':
+   pc = getProductionMonitoringApi()
+   response = pc.getProductionMonitoring()
+   print(response.json())

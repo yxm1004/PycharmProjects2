@@ -105,5 +105,10 @@ class ApiConstants:
 
     @property
     def MATERIALQUERYPAGE_URL(self):
-        materialqueryPage_URL = self.base_url +"/api/report/material/queryPage"
-        return materialqueryPage_URL
+        materialqueryPage_url = self.base_url +"/api/report/material/queryPage"
+        return materialqueryPage_url
+
+    @property
+    def EXPORTMATERIAL_URL(self):
+        exportMaterial_url = self.base_url +"/api/report/material/queryPage"
+        return exportMaterial_url

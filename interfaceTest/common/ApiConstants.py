@@ -152,3 +152,7 @@ class ApiConstants:
         createdYearMonth_url = self .base_url +"/api/report/masterPlan/versionList?createdYearMonth=2023-06"
         return createdYearMonth_url
 
+    @property
+    def EXPORTMASTERPLANFILE_URL(self):
+        exportMasterPlanFile_url = self.base_url +"/api/report/masterPlan/exportMasterPlanFile"
+        return exportMasterPlanFile_url

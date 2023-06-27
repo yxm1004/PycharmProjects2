@@ -131,3 +131,8 @@ class ApiConstants:
     def GETPRODUCTIONMONITORING_URL(self):
         getProductionMonitoring_url = self.base_url +"/api/report/productionTask/getProductionMonitoring"
         return getProductionMonitoring_url
+
+    @property
+    def GETMONITORING_URL(self):
+        getMonitoring_url = self.base_url +"/api/report/billboards/getMonitoring"
+        return getMonitoring_url

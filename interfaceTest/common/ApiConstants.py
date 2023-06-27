@@ -156,3 +156,9 @@ class ApiConstants:
     def EXPORTMASTERPLANFILE_URL(self):
         exportMasterPlanFile_url = self.base_url +"/api/report/masterPlan/exportMasterPlanFile"
         return exportMasterPlanFile_url
+
+    @property
+    def QUERYBUSINESSRECONCILIATION_URL(self):
+        queryBusinessReconciliation_url = self.base_url +"/api/report/accountStatement/queryBusinessReconciliation"
+        return queryBusinessReconciliation_url
+

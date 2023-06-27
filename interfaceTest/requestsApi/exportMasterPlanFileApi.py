@@ -29,4 +29,4 @@ class exportMasterPlanFileApi():
 if __name__ == '__main__':
     pc = exportMasterPlanFileApi()
     response = pc.exportMasterPlanFile()
-    print(response.json())
+    print(response)

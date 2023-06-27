@@ -125,3 +125,9 @@ class ApiConstants:
     @property
     def DELIVERYSCHEDULE_URL(self):
         deliveryschedule_url = self.base_url +"/api/report/statistics/delivery/schedule"
+        return deliveryschedule_url
+
+    @property
+    def GETPRODUCTIONMONITORING_URL(self):
+        getProductionMonitoring_url = self.base_url +"/api/report/productionTask/getProductionMonitoring"
+        return getProductionMonitoring_url

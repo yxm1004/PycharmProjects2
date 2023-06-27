@@ -141,3 +141,8 @@ class ApiConstants:
     def ACCOUNTSTATEMENTGETMONITORING_URL(self):
         accountsataementgetmonitoring_url = self.base_url+"/api/report/accountStatement/getMonitoring"
         return accountsataementgetmonitoring_url
+
+    @property
+    def ACCOUNTSTATEMENTQUERYLIST_URL(self):
+        accountstatementquerylist_url = self.base_url +"/api/report/accountStatement/queryList"
+        return accountstatementquerylist_url

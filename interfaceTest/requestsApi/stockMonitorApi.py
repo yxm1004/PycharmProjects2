@@ -9,7 +9,7 @@ localReadConfig = readConfig.ReadConfig()
 class stockMonitorApi():
     def __init__(self):
         baseurl = localReadConfig.get_http("baseurl")
-        self.url = baseurl + "/api/report/masterPlan/createPlan"
+        self.url = baseurl + "/api/report/statistics/stockMonitor"
         # 初始化头部
         lg = loginApi()
         # 从登陆类里获取头部

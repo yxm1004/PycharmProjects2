@@ -17,11 +17,16 @@ class querySettlementConfirmationStatisticsApi():
         """
                     结算签确-统计
         """
+        payload = json.dumps({
+            "list": [],
+            "overdueStatus": True
+        })
+        response = requests.request("post", self.url, headers=self.headers, data=payload)
+        return response
+if __name__ == '__main__':
+    pc = querySettlementConfirmationStatisticsApi()
+    response = pc.querySettlementConfirmationStatistics()
+    print(response.json())
 
-    payload = json.dumps({
-        "list": [],
-        "overdueStatus": True
-    })
-    response = requests.request("post", self.url, headers=self.headers, data=payload)
-    return response
+
 

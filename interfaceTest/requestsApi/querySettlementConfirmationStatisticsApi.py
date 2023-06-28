@@ -8,7 +8,7 @@ localReadConfig = readConfig.ReadConfig()
 class querySettlementConfirmationStatisticsApi():
     def __init__(self):
         baseurl = localReadConfig.get_http("baseurl")
-        self.url = baseurl + "/api/report/accountStatement/queryAllStatistics"
+        self.url = baseurl + "/api/report/accountStatement/querySettlementConfirmationStatistics"
         # 初始化头部
         lg = loginApi()
         # 从登陆类里获取头部

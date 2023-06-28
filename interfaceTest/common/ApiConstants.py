@@ -168,3 +168,8 @@ class ApiConstants:
         queryBusinessReconciliationStatistics_url = self.base_url +"/api/report/accountStatement/queryBusinessReconciliationStatistics"
         return queryBusinessReconciliationStatistics_url
 
+    @property
+    def GETBUSiNESSRECONCILIATIONCOLUMNDATA_URL(self):
+        getBusinessReconciliationColumnData_url = self.base_url +"/api/report/accountStatement/getBusinessReconciliationColumnData"
+        return getBusinessReconciliationColumnData_url
+

@@ -178,3 +178,7 @@ class ApiConstants:
     def QUERYALLSTATISTICS_URL(self):
         queryAllStatistics_url = self.base_url +"/api/report/accountStatement/queryAllStatistics"
         return queryAllStatistics_url
+    @property
+    def QUERYSETTLEMENTCONFIRMATIONSTATISTICS_URL(self):
+        querySettlementConfirmationStatistics_url = self.base_url +"/api/report/accountStatement/querySettlementConfirmationStatistics"
+        return querySettlementConfirmationStatistics_url

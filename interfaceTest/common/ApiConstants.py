@@ -187,3 +187,4 @@ class ApiConstants:
     def QUERYSETTLEMENTCONFIRMATION_URL(self):
         querySettlementConfirmation_url = self.base_url +"/api/report/accountStatement/querySettlementConfirmation"
         return querySettlementConfirmation_url
+

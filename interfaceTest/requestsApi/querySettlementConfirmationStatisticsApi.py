@@ -23,6 +23,7 @@ class querySettlementConfirmationStatisticsApi():
         })
         response = requests.request("post", self.url, headers=self.headers, data=payload)
         return response
+
 if __name__ == '__main__':
     pc = querySettlementConfirmationStatisticsApi()
     response = pc.querySettlementConfirmationStatistics()

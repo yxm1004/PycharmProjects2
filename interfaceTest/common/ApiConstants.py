@@ -188,3 +188,7 @@ class ApiConstants:
         querySettlementConfirmation_url = self.base_url +"/api/report/accountStatement/querySettlementConfirmation"
         return querySettlementConfirmation_url
 
+    @property
+    def GETSETTLEMENTCONFIRMATIONCOINMNDATA_URL(self):
+        getSettlementConfirmationColumnData_url = self.base_url +"/api/report/accountStatement/getSettlementConfirmationColumnData"
+        return getSettlementConfirmationColumnData_url

@@ -192,3 +192,8 @@ class ApiConstants:
     def GETSETTLEMENTCONFIRMATIONCOINMNDATA_URL(self):
         getSettlementConfirmationColumnData_url = self.base_url +"/api/report/accountStatement/getSettlementConfirmationColumnData"
         return getSettlementConfirmationColumnData_url
+
+    @property
+    def QUERYCOLLECTIONEXECUTEPAGEOFWEB_URL(self):
+        queryCollectionExecutePageOfWeb_url = self.base_url +"/api/report/accountStatement/queryCollectionExecutePageOfWeb"
+        return queryCollectionExecutePageOfWeb_url

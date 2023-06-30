@@ -197,3 +197,8 @@ class ApiConstants:
     def QUERYCOLLECTIONEXECUTEPAGEOFWEB_URL(self):
         queryCollectionExecutePageOfWeb_url = self.base_url +"/api/report/accountStatement/queryCollectionExecutePageOfWeb"
         return queryCollectionExecutePageOfWeb_url
+
+    @property
+    def RANKINGRECORDGETLIST_URL(self):
+        rankingRecordgetList_url = self.base_url +"/api/report/rankingRecord/getList?startTime=2023-06&endTime=2023-06"
+        return rankingRecordgetList_url

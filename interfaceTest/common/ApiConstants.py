@@ -240,4 +240,9 @@ class ApiConstants:
     def ACCOUNTSTATEMENTQUERYPAGEBACK_URL(self):
         accountStatementqueryPageBack_url = self.base_url+"/api/report/accountStatement/queryPageBack"
         return accountStatementqueryPageBack_url
+    @property
+    def ACCOUNTSTATEMENTGETTOPBACK_URL(self):
+        accountStatementgetTopBack_url = self.base_url+"/api/report/accountStatement/getTopBack"
+        return accountStatementgetTopBack_url
+
 

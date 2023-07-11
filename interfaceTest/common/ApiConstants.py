@@ -207,3 +207,8 @@ class ApiConstants:
     def COMPONENTLISTBYPAGE_URL(self):
         componentlistByPage_url = self.base_url +"/api/report/component/listByPage"
         return componentlistByPage_url
+
+    @property
+    def STATISTICSHEAD_URL(self):
+        statisticsHead_url = self.base_url +"/api/report/returnedMoney/statisticsHead"
+        return statisticsHead_url

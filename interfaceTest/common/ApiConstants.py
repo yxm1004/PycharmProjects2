@@ -212,3 +212,9 @@ class ApiConstants:
     def STATISTICSHEAD_URL(self):
         statisticsHead_url = self.base_url +"/api/report/returnedMoney/statisticsHead"
         return statisticsHead_url
+    @property
+    def STATISTICSLIST_URL(self):
+        statisticsList_url = self.base_url +"/api/report/returnedMoney/statisticsList"
+        return statisticsList_url
+
+

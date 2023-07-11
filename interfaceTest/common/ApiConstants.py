@@ -249,4 +249,9 @@ class ApiConstants:
         historyAccountsByProjectId_url = self.base_url+"/api/report/historyAccounts/historyAccountsByProjectId?projectId=1024"
         return historyAccountsByProjectId_url
 
+    @property
+    def ADDHISTORYACCOUNTS_URL(self):
+        addHistoryAccounts_url = self.base_url+"/api/report/historyAccounts/addHistoryAccounts"
+        return addHistoryAccounts_url
+
 

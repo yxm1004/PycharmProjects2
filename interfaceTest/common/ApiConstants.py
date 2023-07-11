@@ -232,3 +232,7 @@ class ApiConstants:
     def ACCOUNTSTATEMENTGETPROJECTOFMONTH_URL(self):
         accountStatementgetProjectOfMonth_url = self.base_url+"/api/report/accountStatement/getProjectOfMonth?startTime=2023-04&endTime=2023-07"
         return accountStatementgetProjectOfMonth_url
+    @property
+    def ACCOUNTSTATEMENTGETPROJECT_URL(self):
+        accountStatementgetProject_url = self.base_url+"/api/report/accountStatement/getProject"
+        return accountStatementgetProject_url

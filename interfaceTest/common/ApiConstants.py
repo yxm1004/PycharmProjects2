@@ -236,3 +236,8 @@ class ApiConstants:
     def ACCOUNTSTATEMENTGETPROJECT_URL(self):
         accountStatementgetProject_url = self.base_url+"/api/report/accountStatement/getProject"
         return accountStatementgetProject_url
+    @property
+    def ACCOUNTSTATEMENTQUERYPAGEBACK_URL(self):
+        accountStatementqueryPageBack_url = self.base_url+"/api/report/accountStatement/queryPageBack"
+        return accountStatementqueryPageBack_url
+

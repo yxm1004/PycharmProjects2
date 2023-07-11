@@ -253,5 +253,10 @@ class ApiConstants:
     def ADDHISTORYACCOUNTS_URL(self):
         addHistoryAccounts_url = self.base_url+"/api/report/historyAccounts/addHistoryAccounts"
         return addHistoryAccounts_url
+    @property
+    def PAGECOMPLAINTCOMPONENT_URL(self):
+        pageComplaintComponent_url = self.base_url+"/api/report/complaintParent/pageComplaintComponent"
+        return pageComplaintComponent_url
+
 
 

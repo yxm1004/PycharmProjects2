@@ -244,5 +244,9 @@ class ApiConstants:
     def ACCOUNTSTATEMENTGETTOPBACK_URL(self):
         accountStatementgetTopBack_url = self.base_url+"/api/report/accountStatement/getTopBack"
         return accountStatementgetTopBack_url
+    @property
+    def HISTORYACCOUNTSBYPROJECTID_URL(self):
+        historyAccountsByProjectId_url = self.base_url+"/api/report/historyAccounts/historyAccountsByProjectId?projectId=1024"
+        return historyAccountsByProjectId_url
 
 

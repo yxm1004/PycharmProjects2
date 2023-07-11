@@ -33,4 +33,4 @@ class exportProgressPaymentApi():
 if __name__ == '__main__':
     pc = exportProgressPaymentApi()
     response = pc.exportProgressPayment()
-    print(response.json())
+    print(response)

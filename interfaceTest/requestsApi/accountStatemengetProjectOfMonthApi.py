@@ -15,7 +15,7 @@ class accountStatementgetProjectOfMonth():
         self.headers = lg.getheaders()
     def accountStatementgetProjectOfMonth(self):
         """
-                   对账单-自定义分页查询
+                   回款管理-项目筛选
         """
         payload = {}
         response = requests.request("get", self.url, headers=self.headers, data=payload)

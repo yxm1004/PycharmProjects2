@@ -258,5 +258,9 @@ class ApiConstants:
         pageComplaintComponent_url = self.base_url+"/api/report/complaintParent/pageComplaintComponent"
         return pageComplaintComponent_url
 
+    @property
+    def EXPORTCOMPLAINTPARENT_URL(self):
+        exportComplaintParent_url = self.base_url+"/api/report/complaintParent/exportComplaintParent"
+        return exportComplaintParent_url
 
 

@@ -218,7 +218,7 @@ class ApiConstants:
         return statisticsList_url
 
     @property
-    def ESPORTPROGRESSPAYMENT_URL(self):
+    def EXPORTPROGRESSPAYMENT_URL(self):
         exportProgressPayment_url = self.base_url+"/api/report/accountStatement/exportProgressPayment"
         return exportProgressPayment_url
 

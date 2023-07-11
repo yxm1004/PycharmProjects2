@@ -222,3 +222,7 @@ class ApiConstants:
         exportProgressPayment_url = self.base_url+"/api/report/accountStatement/exportProgressPayment"
         return exportProgressPayment_url
 
+    @property
+    def RETURNEDMONERYDETAIL_URL(self):
+        returnedMoneydetail_url= self.base_url+"/api/report/returnedMoney/detail/1024"
+        return returnedMoneydetail_url

@@ -26,5 +26,5 @@ class exportComplaintParentApi():
 if __name__ == '__main__':
     pc = exportComplaintParentApi()
     response = pc.exportComplaintParent()
-    print(response.json())
+    print(response)
 

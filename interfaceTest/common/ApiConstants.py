@@ -262,5 +262,9 @@ class ApiConstants:
     def EXPORTCOMPLAINTPARENT_URL(self):
         exportComplaintParent_url = self.base_url+"/api/report/complaintParent/exportComplaintParent"
         return exportComplaintParent_url
+    @property
+    def COMPLAINTPARENTCENSUS_URL(self):
+        complaintParentcensus_url = self.base_url +"/api/report/complaintParent/census"
+        return complaintParentcensus_url
 
 

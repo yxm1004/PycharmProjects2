@@ -8,7 +8,6 @@ class YouTest(seldom.TestCase):
 
     def test_case(self):
         """a simple test case """
-        print('1111111111')
         self.assertEqual(1+1, 2)
 
 

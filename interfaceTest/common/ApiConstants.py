@@ -271,4 +271,10 @@ class ApiConstants:
         complaintCostAffiliationquery_url = self.base_url+"/api/report/complaintCostAffiliation/query"
         return complaintCostAffiliationquery_url
 
+    @property
+    def PROJECTQUERYPAGE_URL(self):
+        projectquerypage_url = self.base_url+"/api/report/project/query/page"
+        return projectquerypage_url
+
+
 

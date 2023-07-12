@@ -18,6 +18,9 @@ class testcreateplan(unittest.TestCase):
         # 获取baseurl
         baseurl = localReadConfig.get_http("baseurl")
         url = baseurl + "/api/report/bom/projectFile/rename"
+        """
+                       创建主计划
+        """
 
         payload = json.dumps({
             "considerMaintenanceTime": "3",

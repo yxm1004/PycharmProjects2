@@ -13,7 +13,7 @@ class complaintCostAffiliationqueryApi():
         #初始化头部
         lg = loginApi()
         #从登陆类里获取头部
-        self .headefs = lg.getheaders()
+        self .headers = lg.getheaders()
     def complaintCostAffiliationquery(self):
         """
                 客诉-费用归属-批量查询

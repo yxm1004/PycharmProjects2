@@ -15,46 +15,41 @@ class projectcreatApi:
         self.token = lg.getToken()
         # 从登陆类里获取头部
         self.headers = lg.getheaders()
-    def projectcreat(self):
-        """
-                创建项目
-        """
-
-        payload = json.dumps({
-            "name": "测试0712号",
-            "orderType": "大乐装（惠州）建筑科技有限公司",
-            "abbreviation": "大乐装07122号",
-            "contractNo": "ww-20230712",
-            "province": 576,
-            "city": 599,
-            "region": 600,
+    def projectcreat(self,abbreviation):
+        self.payload = json.dumps({
+            "name": "",
+            "orderType": "大乐装（东莞）建筑科技有限公司",
+            "abbreviation": abbreviation,
+            "contractNo": "",
+            "province": 1,
+            "city": 2,
+            "region": 6,
             "address": [
-                576,
-                599,
-                600
+                1,
+                2,
+                6
             ],
-            "addressDetail": "铁西建筑局01",
+            "addressDetail": "",
             "note": "",
             "manufacturer": "大乐装 | 数字化交付平台",
-            "contactPerson": "尹123",
-            "contactPhone": "158 7965 4576",
-            "salePerson": "尹晓梅",
+            "contactPerson": "",
+            "contactPhone": "",
+            "salePerson": "尹卡卡",
             "salePhone": "153 1348 7958",
-            "clientName": "铁西建筑局",
-            "contractBelong": "大乐装01",
+            "clientName": "",
+            "contractBelong": "",
             "customers": [],
             "projectType": 1,
             "allocationType": None,
             "coordinationFactory": None,
             "allocationList": [],
-            "logo": None,
-            "orderSource": 2
+            "logo": None
         })
-        response = requests.request("POST", self.url, headers=self.headers, data=payload)
+        response = requests.request("POST", self.url, headers=self.headers, data=self.payload)
         return response
 
 
 if __name__ == '__main__':
     pc = projectcreatApi()
-    rs = pc.projectcreat()
+    rs = pc.projectcreat("你好0627号12")
     print(rs.json())

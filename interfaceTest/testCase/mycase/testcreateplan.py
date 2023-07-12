@@ -3,6 +3,7 @@ import requests
 import json
 from interfaceTest.common.GetToken import Token
 from interfaceTest import readConfig
+from interfaceTest.requestsApi.loginApi import loginApi
 
 
 localReadConfig = readConfig.ReadConfig()
@@ -13,6 +14,10 @@ class testcreateplan(unittest.TestCase):
         tk = Token()
         self.token = 'Bearer ' + tk.get_token()
         print("self.token-------", self.token)
+        # 初始化头部
+        lg = loginApi()
+        # 从登陆类里获取头部
+        self.headers = lg.getheaders()
 
     def test_post_createplan(self):
         # 获取baseurl
@@ -31,14 +36,7 @@ class testcreateplan(unittest.TestCase):
             "planTime": "3",
             "roundStatus": False
         })
-        headers = {
-            'Authorization': 'Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==',
-            'tenant': 'ZGdnYw==',
-            'token': self.token,
-            'Content-Type': 'application/json'
-        }
-
-        response = requests.request("POST", url, headers=headers, data=payload)
+        response = requests.request("POST", url, headers=self.headers, data=payload)
         self.assertEqual(response.status_code, 200)
 if __name__ == '__main__':
     unittest.main()

@@ -276,5 +276,13 @@ class ApiConstants:
         projectquerypage_url = self.base_url+"/api/report/project/query/page"
         return projectquerypage_url
 
+    @property
+    def PROJECTDETAIL_URL(self):
+        projectdetail_url = self.base_url +"/api/report/project/detail/1035"
+        return projectdetail_url
+
+
+
+
 
 

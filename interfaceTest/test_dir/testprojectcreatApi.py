@@ -10,3 +10,5 @@ class testprojectcreat(seldom.TestCase):
         payload = {'key1': 'value1', 'key2': 'value2'}
         r = requests.post("/api/report/project/create", params=payload)
         self.assertEqual(r.status_code, 200)
+if __name__ == '__main__':
+    unittest.main()

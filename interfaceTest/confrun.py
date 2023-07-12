@@ -91,14 +91,14 @@ def title():
     """
     setting report title
     """
-    return "测试报告名称"
+    return "大乐装接口测试报告"
 
 
 def tester():
     """
     setting report tester
     """
-    return "测试人名称"
+    return "yinxm"
 
 
 def description():

@@ -266,5 +266,9 @@ class ApiConstants:
     def COMPLAINTPARENTCENSUS_URL(self):
         complaintParentcensus_url = self.base_url +"/api/report/complaintParent/census"
         return complaintParentcensus_url
+    @property
+    def COMPLAINTCOSTAFFILIATIONQUERY_URL(self):
+        complaintCostAffiliationquery_url = self.base_url+"/api/report/complaintCostAffiliation/query"
+        return complaintCostAffiliationquery_url
 
 

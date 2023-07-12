@@ -17,7 +17,7 @@ class testcreateplan(unittest.TestCase):
     def test_post_createplan(self):
         # 获取baseurl
         baseurl = localReadConfig.get_http("baseurl")
-        url = baseurl + "/api/report/bom/projectFile/rename"
+        url = baseurl + "/api/report/masterPlan/createPlan"
         """
                        创建主计划
         """

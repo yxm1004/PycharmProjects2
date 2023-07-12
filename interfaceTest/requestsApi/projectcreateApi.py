@@ -16,6 +16,10 @@ class projectcreatApi:
         # 从登陆类里获取头部
         self.headers = lg.getheaders()
     def projectcreat(self,abbreviation):
+        """
+                       创建项目
+        """
+
         self.payload = json.dumps({
             "name": "验证",
             "orderType": "大乐装（惠州）建筑科技有限公司",

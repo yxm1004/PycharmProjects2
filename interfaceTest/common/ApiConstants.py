@@ -281,6 +281,12 @@ class ApiConstants:
         projectdetail_url = self.base_url +"/api/report/project/detail/1035"
         return projectdetail_url
 
+    @property
+    def UPDATELIMITTIMECONFIG_URL(self):
+        updateLimitTimeConfig_url = self.base_url+"/api/report/limitTimeConfig/updateLimitTimeConfig"
+        return updateLimitTimeConfig_url
+
+
 
 
 

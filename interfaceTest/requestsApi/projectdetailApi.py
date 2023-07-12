@@ -18,11 +18,12 @@ class projectdetailApi():
         """
                 获取项目信息
         """
-        self.payload = {}
-        response = requests.request("get", self.url, headers=self.headers, data=self.payload)
+        payload = {}
+        response = requests.request("get", self.url, headers=self.headers, data=payload)
         return response
 if __name__ == '__main__':
     pc = projectdetailApi()
     response = pc.projectdetail()
     print(response.json())
 
+1035

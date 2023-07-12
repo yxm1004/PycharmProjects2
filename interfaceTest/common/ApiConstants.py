@@ -12,9 +12,9 @@ class ApiConstants:
         return login_url
 
     @property
-    def PROJECTCREAT_URL(self):
-        projectcreat_url = self.base_url + "/api/report/project/create"
-        return projectcreat_url
+    def PROJECTCREATE_URL(self):
+        projectcreate_url = self.base_url + "/api/report/project/create"
+        return projectcreate_url
 
     @property
     def PROJECTQUERY_URL(self):

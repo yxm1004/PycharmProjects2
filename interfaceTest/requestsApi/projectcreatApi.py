@@ -50,7 +50,7 @@ class projectcreatApi:
             "logo": None,
             "orderSource": 2
         })
-        response = requests.request("POST", self.url, headers=self.headers, data=self.payload)
+        response = requests.request("POST", self.url, headers=self.headers, data=payload)
         return response
 
 

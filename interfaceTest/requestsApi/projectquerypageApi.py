@@ -4,7 +4,7 @@ import json
 from interfaceTest import readConfig
 from interfaceTest.requestsApi.loginApi import loginApi
 
-localReadConfig = readConfig.ReadConfig
+localReadConfig = readConfig.ReadConfig()
 class projectquerypageApi():
     def __init__(self):
         baseurl = localReadConfig.get_http("baseurl")

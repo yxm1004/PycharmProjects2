@@ -27,9 +27,9 @@ def end_run():
 def base_url():
     """
     http test
-    api base url
+    api base url需要则是的地址
     """
-    return "http://httpbin.org"
+    return "https://jf-api-test-x1ksp5.dalezhuang.com"
 
 
 # def app_info():
@@ -91,14 +91,14 @@ def title():
     """
     setting report title
     """
-    return "seldom test report"
+    return "测试报告名称"
 
 
 def tester():
     """
     setting report tester
     """
-    return "duanwq"
+    return "测试人名称"
 
 
 def description():
@@ -112,7 +112,7 @@ def language():
     """
     setting report language
     return "en"
-    return "zh-CN"
+    return "zh-CN" 测试报告语言，英文或中文
     """
     return "zh-CN"
 

@@ -285,6 +285,10 @@ class ApiConstants:
     def UPDATELIMITTIMECONFIG_URL(self):
         updateLimitTimeConfig_url = self.base_url+"/api/report/limitTimeConfig/updateLimitTimeConfig"
         return updateLimitTimeConfig_url
+    @property
+    def MANAGERROLECONFIGLIST_URL(self):
+        manageRoleConfigList_url = self.base_url+"/api/report/manageRoleConfig/manageRoleConfigList"
+        return manageRoleConfigList_url
 
 
 

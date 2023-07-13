@@ -1,4 +1,4 @@
-import self as self
+
 
 from interfaceTest import readConfig
 localReadConfig = readConfig.ReadConfig()

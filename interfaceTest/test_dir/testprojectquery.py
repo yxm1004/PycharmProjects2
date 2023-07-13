@@ -11,7 +11,7 @@ class testprojectquery(seldom.TestCase):
         self.c = Common()
         self.header = self.c.SetHeader()
 
-    def test_post_report (self):
+    def test_post_projectquerypage (self):
         """
                        分页查询项目列表
         """

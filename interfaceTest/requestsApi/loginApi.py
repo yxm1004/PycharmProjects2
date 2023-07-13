@@ -1,6 +1,6 @@
 import json
 import requests
-from interfaceTest.common.ApiConstants import ApiConstants
+from common.ApiConstants import ApiConstants
 from interfaceTest import readConfig
 
 localReadConfig = readConfig.ReadConfig()

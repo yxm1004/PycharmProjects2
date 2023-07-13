@@ -60,7 +60,7 @@ def debug():
     """
     debug mod
     """
-    return False
+    return True
 
 
 def rerun():
@@ -91,7 +91,7 @@ def title():
     """
     setting report title
     """
-    return "交付平台接口测试报告"
+    return "大乐装接口测试报告"
 
 
 def tester():

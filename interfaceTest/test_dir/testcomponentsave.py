@@ -16,6 +16,7 @@ class testcomponentsave(seldom.TestCase):
         self.header = self.c.SetHeader()
 
     def test_002_confirmComponentAndBom(self):
+        """确认提交"""
         print("---------------" + globals()['strKey'])
         params = {"key": globals()['strKey']}
         self.get("/api/report/component/confirmComponentAndBom", params=params, headers=self.header)
@@ -23,6 +24,7 @@ class testcomponentsave(seldom.TestCase):
 
     # 测试用例
     def test_001_componentsave(self):
+        """添加构件"""
         self.payload = json.dumps({
             "bomDetailList": [],
             "rebarWeight": "30.475",

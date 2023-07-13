@@ -91,7 +91,7 @@ def title():
     """
     setting report title
     """
-    return "大乐装接口测试报告"
+    return "交付平台接口测试报告"
 
 
 def tester():

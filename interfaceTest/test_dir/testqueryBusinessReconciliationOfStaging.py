@@ -5,7 +5,7 @@ import time
 import seldom
 from common.loginApi import Common
 
-class queryBusinessReconciliationApi(seldom.TestCase):
+class queryBusinessReconciliationOfStaging(seldom.TestCase):
     def start(self):
         #调用登录公共方法构建报文头
         self.c = Common()
@@ -24,7 +24,7 @@ class queryBusinessReconciliationApi(seldom.TestCase):
             "size": 50
         })
 
-        self.put("/api/report/accountStatement/queryBusinessReconciliation", data=self.payload, headers=self.header)
+        self.put("/api/report/accountStatement/queryBusinessReconciliationOfStaging", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
 
 

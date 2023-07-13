@@ -24,7 +24,7 @@ class queryBusinessReconciliationOfStaging(seldom.TestCase):
             "sort": "id"
         })
 
-        self.put("/api/report/accountStatement/queryBusinessReconciliationOfStaging", data=self.payload, headers=self.header)
+        self.post("/api/report/accountStatement/queryBusinessReconciliationOfStaging", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
 
 

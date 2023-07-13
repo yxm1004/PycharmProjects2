@@ -18,7 +18,7 @@ class queryCreatedYearMonthApi():
                    查询主计划
         """
         payload = ""
-        response = requests.request("POST", self.url, headers=self.headers, data=payload)
+        response = requests.request("get", self.url, headers=self.headers, data=payload)
         return response
 
 if __name__ == '__main__':

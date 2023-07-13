@@ -5,7 +5,6 @@ import time
 import seldom
 from common.loginApi import Common
 
-
 class processPlan(seldom.TestCase):
     def start(self):
         #调用登录公共方法构建报文头
@@ -13,6 +12,9 @@ class processPlan(seldom.TestCase):
         self.header = self.c.SetHeader()
 
     def test_put_processPlan(self):
+        """
+                       工艺方案修改
+        """
         self.payload = json.dumps({
             "id": "1679318602571841536",
             "productionRounds": "2",

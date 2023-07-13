@@ -21,12 +21,6 @@ class testprojectrename(seldom.TestCase ):
             "phone": "",
             "reportUserId": 0
         })
-        headers = {
-            'Authorization': 'Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==',
-            'tenant': 'ZGdnYw==',
-            'token': self.token,
-            'Content-Type': 'application/json'
-        }
 
         self.post("/api/report/bom/projectFile/rename", data=self.payload, headers=self.header)
         self.assertStatusCode(200)

@@ -5,23 +5,23 @@ import time
 import seldom
 from common.loginApi import Common
 
-class testdeliveryschedule(seldom.TestCase):
+class testgetMonitoring(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_post_deliveryschedule(self):
+    def test_post_getMonitoring(self):
         """
-                实时交付进度
+                实时质量监测
         """
         self.payload = json.dumps({
-            "month": "2023-06-13"
+            "screen": 0,
+            "endTime": "2023-05-31",
+            "startTime": "2023-05-01"
         })
-        self.post("/api/report/statistics/delivery/schedule", data=self.payload, headers=self.header)
+        self.post("/api/report/billboards/getMonitoring", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
 
 
 if __name__ == '__main__':
     seldom.main(debug=True)
-
-

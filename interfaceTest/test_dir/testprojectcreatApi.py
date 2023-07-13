@@ -12,6 +12,9 @@ class testprojectcreat(seldom.TestCase):
         self.c = Common()
         self.header = self.c.SetHeader()
     def test_post_projectcreat(self):
+        """
+                       创建项目
+        """
         #用时间戳作为项目简称
         abbreviation = datetime.datetime.now()
         abbreviation = str(int(time.mktime(abbreviation.timetuple())))

@@ -12,7 +12,7 @@ class testqueryBusinessReconciliationOfStaging(seldom.TestCase):
         self.header = self.c.SetHeader()
     def test_post_queryBusinessReconciliationOfStaging(self):
         """
-                       商务对账-分页查询
+                       工作台商务对账-分页查询
         """
         self.payload = json.dumps({
             "current": 1,

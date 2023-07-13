@@ -10,7 +10,7 @@ class queryBusinessReconciliationOfStaging(seldom.TestCase):
         #调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_post_queryBusinessReconciliation(self):
+    def test_post_queryBusinessReconciliationOfStaging(self):
         """
                        商务对账-分页查询
         """

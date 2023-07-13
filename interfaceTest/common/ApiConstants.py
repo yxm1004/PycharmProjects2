@@ -290,6 +290,12 @@ class ApiConstants:
         manageRoleConfigList_url = self.base_url+"/api/report/manageRoleConfig/manageRoleConfigList"
         return manageRoleConfigList_url
 
+    @property
+    def QUERYCREATEDYEARMONTH_URL(self):
+        queryCreatedYearMonth_url = self.base_url+"/api/report/masterPlan/queryCreatedYearMonth"
+        return queryCreatedYearMonth_url
+
+
 
 
 

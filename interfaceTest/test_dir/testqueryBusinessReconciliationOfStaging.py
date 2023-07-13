@@ -15,13 +15,13 @@ class queryBusinessReconciliationOfStaging(seldom.TestCase):
                        商务对账-分页查询
         """
         self.payload = json.dumps({
-            "model": {
-                "list": [],
-                "overdueStatus": True
-            },
-            "extra": {},
             "current": 1,
-            "size": 50
+            "model": {
+                "unDealStatus": False
+            },
+            "order": "descending",
+            "size": 10,
+            "sort": "id"
         })
 
         self.put("/api/report/accountStatement/queryBusinessReconciliationOfStaging", data=self.payload, headers=self.header)

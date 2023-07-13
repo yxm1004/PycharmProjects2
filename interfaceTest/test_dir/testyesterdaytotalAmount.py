@@ -5,7 +5,7 @@ import time
 import seldom
 from common.loginApi import Common
 
-class yesterdaytotalAmount(seldom .TestCase):
+class testyesterdaytotalAmount(seldom .TestCase):
     def start(self):
         #调用登录公共方法构建报文头
         self.c = Common()

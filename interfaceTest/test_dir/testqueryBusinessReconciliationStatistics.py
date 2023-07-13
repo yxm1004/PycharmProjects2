@@ -19,7 +19,7 @@ class testqueryBusinessReconciliationStatistics(seldom.TestCase):
             "overdueStatus": True,
             "projectIdList": []
         })
-        self.post("/api/report/billboards/yesterday/totalAmount", data=self.payload, headers=self.header)
+        self.post("/api/report/accountStatement/queryBusinessReconciliationStatistics", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
 
 

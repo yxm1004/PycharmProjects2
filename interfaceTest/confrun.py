@@ -59,6 +59,7 @@ def base_url():
 def debug():
     """
     debug mod
+    debug模式不输出测试报告
     """
     return False
 

@@ -1,4 +1,6 @@
 import json
+
+import requests
 import seldom
 from seldom import depend
 
@@ -17,9 +19,10 @@ class testcomponentsave(seldom.TestCase):
 
     def test_002_confirmComponentAndBom(self):
         """确认提交"""
-        print("---------------" + globals()['strKey'])
-        params = {"key": globals()['strKey']}
-        self.get("/api/report/component/confirmComponentAndBom", params=params, headers=self.header)
+        print("---------------" + self.response['data']['strKey'])
+        params = {"key": self.response['data']['strKey']}
+        r=self.get("/api/report/component/confirmComponentAndBom", params=params, headers=self.header)
+        print(r.url)
         self.assertStatusCode(200)
 
     # 测试用例
@@ -27,10 +30,11 @@ class testcomponentsave(seldom.TestCase):
         """添加构件"""
         self.payload = json.dumps({
             "bomDetailList": [],
-            "rebarWeight": "30.475",
+            "rebarWeight": "20.475",
             "projectId": "1039",
             "building": "6",
             "floorSegment": "3",
+            "id": 1679690953943678976,
             "type": "叠合板",
             "model": "DHB009",
             "floorCount": "1",
@@ -43,8 +47,6 @@ class testcomponentsave(seldom.TestCase):
             "concreteDosage": "0.636"
         })
         self.post("/api/report/component/saveComponentAndBom", data=self.payload, headers=self.header)
-        globals()['strKey']=json.dumps(self.response['data']['strKey'])
-        print(globals()['strKey']+"22222222222222222222222")
         self.assertStatusCode(200)
 
 

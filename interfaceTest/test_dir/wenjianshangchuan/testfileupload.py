@@ -28,3 +28,4 @@ class testfileupload(seldom.TestCase):
         print(self.header)
         self.post("/api/report/file/upload", headers=self.header,  files=files)
         self.assertStatusCode(200)
+        self.assertJSON(True,self.response["isSuccess"])

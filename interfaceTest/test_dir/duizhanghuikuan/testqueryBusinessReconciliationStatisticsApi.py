@@ -14,7 +14,7 @@ class testqueryBusinessReconciliationStatistics(seldom.TestCase):
         """
                     商务对账-统计
         """
-        payload = json.dumps({
+        self.payload = json.dumps({
             "list": [],
             "overdueStatus": True,
             "projectIdList": []

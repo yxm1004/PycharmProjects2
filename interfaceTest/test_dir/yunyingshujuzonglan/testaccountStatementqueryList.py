@@ -36,6 +36,10 @@ class testaccountStatementquerylist(seldom.TestCase):
         })
         self.post("/api/report/accountStatement/queryList", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
+        assert_data = "成功"  # 断言成功
+        # print("test-----------------"+self.response["msg"])
+        # 取返回msg值断言
+        self.assertJSON(assert_data, self.response["msg"])
 
 
 if __name__ == '__main__':

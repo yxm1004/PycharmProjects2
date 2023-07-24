@@ -19,7 +19,6 @@ class testqueryBusinessReconciliationStatistics(seldom.TestCase):
             "overdueStatus": True,
             "projectIdList": []
         })
-        self.payload = {}
         self.post("/api/report/accountStatement/queryBusinessReconciliationStatistics", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功

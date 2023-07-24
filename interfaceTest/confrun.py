@@ -61,7 +61,7 @@ def debug():
     debug mod
     debug模式不输出测试报告
     """
-    return True
+    return False
 
 
 def rerun():

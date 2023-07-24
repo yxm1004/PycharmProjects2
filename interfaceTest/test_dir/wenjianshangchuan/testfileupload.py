@@ -19,13 +19,19 @@ class testfileupload(seldom.TestCase):
         """
                    文件上传
         """
-        self.payload = {}
         files = [
             ('file', ('1111.webp',
-                      open('E:\\PycharmProjects2\\interfaceTest\\test_dir\\test_data\\1111.webp', 'rb'), 'image/webp'))
+                      open('C:\\Users\\msi\\Pictures\\1111.webp', 'rb'), 'image/webp'))
         ]
 
         print(self.header)
         self.post("/api/report/file/upload", headers=self.header,  files=files)
         self.assertStatusCode(200)
-        self.assertJSON(True,self.response["isSuccess"])
+        assert_data = "成功"  # 断言成功
+        # print("test-----------------"+self.response["msg"])
+        # 取返回msg值断言
+        self.assertJSON(assert_data, self.response["msg"])
+        self.assertJSON(True, self.response["isSuccess"])
+
+if __name__ == '__main__':
+    seldom.main(debug=True)

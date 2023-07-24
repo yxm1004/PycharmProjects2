@@ -15,7 +15,7 @@ class queryCreatedYearMonthApi():
         self.headers = lg.getheaders()
     def queryCreatedYearMonth(self):
         """
-                   查询主计划
+                  查询已经创建主计划的年月份
         """
         payload = ""
         response = requests.request("get", self.url, headers=self.headers, data=payload)

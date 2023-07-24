@@ -49,6 +49,15 @@ class Common(HttpRequest):
             'Content-Type': 'application/json'
         }
         return headers
+    def SetFileHeader (self):
+        token=self.get_login_user()
+        Fileheaders = {
+            'Authorization': 'Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==',
+            'tenant': 'ZGdnYw==',
+            'token': "Bearer " + token,
+        }
+        return Fileheaders
+
 
 if __name__ == '__main__':
     c = Common()

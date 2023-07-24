@@ -67817,3 +67817,1454 @@
  2023-07-24 11:27:14 case.py | INFO | 👀 assertStatusCode -> 200.
  2023-07-24 11:27:14 runner.py | SUCCESS | generated html file: file:///C:\Users\msi\PycharmProjects\interfaceTest\reports\2023_07_24_11_27_08_result.html
  2023-07-24 11:27:14 runner.py | SUCCESS | generated log file: file:///C:\Users\msi\PycharmProjects\interfaceTest\reports\seldom_log.log
+ 2023-07-24 11:47:51 request.py | DEBUG | Execute get_login_user - args: (<common.loginApi.Common object at 0x0000018A0C7F3310>,)
+ 2023-07-24 11:47:51 request.py | DEBUG | Execute get_login_user - kwargs: {}
+ 2023-07-24 11:47:51 request.py | INFO | -------------- Request -----------------[🚀]
+ 2023-07-24 11:47:51 request.py | INFO | [method]: POST      [url]: https://jf-api-test-x1ksp5.dalezhuang.com/api/oauth/noToken/login 
+ 2023-07-24 11:47:51 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer test",
+  "Content-Type": "application/json"
+}
+ 2023-07-24 11:47:51 request.py | DEBUG | [data]:
+ {"account": "13170978240", "avatar": "", "code": "", "grantType": "password", "key": "", "name": "", "openId": "", "password": "yxm900520", "refreshToken": ""}
+ 2023-07-24 11:47:51 request.py | INFO | -------------- Response ----------------[🛬️]
+ 2023-07-24 11:47:51 request.py | INFO | successful with status 200
+ 2023-07-24 11:47:51 request.py | DEBUG | [type]: json      [time]: 0.086913
+ 2023-07-24 11:47:51 request.py | DEBUG | [response]:
+ {
+  "code": 200,
+  "requestId": "c6ba11a0f9fc41f0b03ba7d121985141",
+  "data": {
+    "token": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY5MDE3MDQ3MCwibmJmIjoxNjkwMTcwNDcwLCJleHAiOjE2OTAxOTkyNzB9.OwhqL-DwXSmglGtNFzmIO0NUnGprYY3hjB01wWMDzas",
+    "tokenType": "token",
+    "refreshToken": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2OTAxNzA0NzAsIm5iZiI6MTY5MDE3MDQ3MCwiZXhwIjoxNjkwMjU2ODcwfQ.ip4vkpYG1o2-NgGNb-zpmeh9DgLIasd3X7Xaibko-9s",
+    "name": "尹小小的小号",
+    "account": "13170978240",
+    "avatarId": null,
+    "avatar": null,
+    "workDescribe": "",
+    "userId": "1638799875954966528",
+    "expire": "28800",
+    "expiration": "2023-07-24 19:47:50",
+    "expireMillis": "28800",
+    "roleType": null,
+    "tenant": null,
+    "openId": null,
+    "isChangePassword": true
+  },
+  "msg": "成功",
+  "path": null,
+  "extra": null,
+  "timestamp": "1690170470525",
+  "errorMsg": "",
+  "isSuccess": true
+}
+ 2023-07-24 11:47:51 request.py | DEBUG | Execute get_login_user - response:
+ {'code': 200, 'requestId': 'c6ba11a0f9fc41f0b03ba7d121985141', 'data': {'token': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY5MDE3MDQ3MCwibmJmIjoxNjkwMTcwNDcwLCJleHAiOjE2OTAxOTkyNzB9.OwhqL-DwXSmglGtNFzmIO0NUnGprYY3hjB01wWMDzas', 'tokenType': 'token', 'refreshToken': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2OTAxNzA0NzAsIm5iZiI6MTY5MDE3MDQ3MCwiZXhwIjoxNjkwMjU2ODcwfQ.ip4vkpYG1o2-NgGNb-zpmeh9DgLIasd3X7Xaibko-9s', 'name': '尹小小的小号', 'account': '13170978240', 'avatarId': None, 'avatar': None, 'workDescribe': '', 'userId': '1638799875954966528', 'expire': '28800', 'expiration': '2023-07-24 19:47:50', 'expireMillis': '28800', 'roleType': None, 'tenant': None, 'openId': None, 'isChangePassword': True}, 'msg': '成功', 'path': None, 'extra': None, 'timestamp': '1690170470525', 'errorMsg': '', 'isSuccess': True}
+ 2023-07-24 11:47:51 request.py | INFO | Execute get_login_user - 获取登录用户名 success!
+ 2023-07-24 11:47:51 request.py | INFO | -------------- Request -----------------[🚀]
+ 2023-07-24 11:47:51 request.py | INFO | [method]: POST      [url]: https://jf-api-test-x1ksp5.dalezhuang.com/api/report/masterPlan/createPlan 
+ 2023-07-24 11:47:51 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY5MDE3MDQ3MCwibmJmIjoxNjkwMTcwNDcwLCJleHAiOjE2OTAxOTkyNzB9.OwhqL-DwXSmglGtNFzmIO0NUnGprYY3hjB01wWMDzas",
+  "Content-Type": "application/json"
+}
+ 2023-07-24 11:47:51 request.py | DEBUG | [data]:
+ {"considerMaintenanceTime": "3", "excludeHolidays": ["1"], "expectedProductCycle": "2", "planTime": "3", "roundStatus": false}
+ 2023-07-24 11:47:56 request.py | INFO | -------------- Response ----------------[🛬️]
+ 2023-07-24 11:47:56 request.py | INFO | successful with status 200
+ 2023-07-24 11:47:56 request.py | DEBUG | [type]: json      [time]: 5.369838
+ 2023-07-24 11:47:56 request.py | DEBUG | [response]:
+ {
+  "code": 200,
+  "requestId": "619ad25598cc4f358a2526d2a20650d2",
+  "data": true,
+  "msg": "成功",
+  "path": null,
+  "extra": null,
+  "timestamp": "1690170475900",
+  "errorMsg": "",
+  "isSuccess": true
+}
+ 2023-07-24 11:47:56 case.py | INFO | 👀 assertStatusCode -> 200.
+ 2023-07-24 11:47:56 request.py | DEBUG | Execute get_login_user - args: (<common.loginApi.Common object at 0x0000018A0C4B6890>,)
+ 2023-07-24 11:47:56 request.py | DEBUG | Execute get_login_user - kwargs: {}
+ 2023-07-24 11:47:56 request.py | INFO | -------------- Request -----------------[🚀]
+ 2023-07-24 11:47:56 request.py | INFO | [method]: POST      [url]: https://jf-api-test-x1ksp5.dalezhuang.com/api/oauth/noToken/login 
+ 2023-07-24 11:47:56 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer test",
+  "Content-Type": "application/json"
+}
+ 2023-07-24 11:47:56 request.py | DEBUG | [data]:
+ {"account": "13170978240", "avatar": "", "code": "", "grantType": "password", "key": "", "name": "", "openId": "", "password": "yxm900520", "refreshToken": ""}
+ 2023-07-24 11:47:56 request.py | INFO | -------------- Response ----------------[🛬️]
+ 2023-07-24 11:47:56 request.py | INFO | successful with status 200
+ 2023-07-24 11:47:56 request.py | DEBUG | [type]: json      [time]: 0.083408
+ 2023-07-24 11:47:56 request.py | DEBUG | [response]:
+ {
+  "code": 200,
+  "requestId": "d7dc3e33e121410bb414edee9d5ba2f6",
+  "data": {
+    "token": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY5MDE3MDQ3NSwibmJmIjoxNjkwMTcwNDc1LCJleHAiOjE2OTAxOTkyNzV9.RI2Oplrh2o18lGSC5Y8De6QXzc8CyTD9fQNCBZuiBv8",
+    "tokenType": "token",
+    "refreshToken": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2OTAxNzA0NzUsIm5iZiI6MTY5MDE3MDQ3NSwiZXhwIjoxNjkwMjU2ODc1fQ.6MlcHmtvhvLUb5aNZCjh6-WCZ29enpTeSrgSs9Fk68A",
+    "name": "尹小小的小号",
+    "account": "13170978240",
+    "avatarId": null,
+    "avatar": null,
+    "workDescribe": "",
+    "userId": "1638799875954966528",
+    "expire": "28800",
+    "expiration": "2023-07-24 19:47:55",
+    "expireMillis": "28800",
+    "roleType": null,
+    "tenant": null,
+    "openId": null,
+    "isChangePassword": true
+  },
+  "msg": "成功",
+  "path": null,
+  "extra": null,
+  "timestamp": "1690170475994",
+  "errorMsg": "",
+  "isSuccess": true
+}
+ 2023-07-24 11:47:56 request.py | DEBUG | Execute get_login_user - response:
+ {'code': 200, 'requestId': 'd7dc3e33e121410bb414edee9d5ba2f6', 'data': {'token': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY5MDE3MDQ3NSwibmJmIjoxNjkwMTcwNDc1LCJleHAiOjE2OTAxOTkyNzV9.RI2Oplrh2o18lGSC5Y8De6QXzc8CyTD9fQNCBZuiBv8', 'tokenType': 'token', 'refreshToken': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2OTAxNzA0NzUsIm5iZiI6MTY5MDE3MDQ3NSwiZXhwIjoxNjkwMjU2ODc1fQ.6MlcHmtvhvLUb5aNZCjh6-WCZ29enpTeSrgSs9Fk68A', 'name': '尹小小的小号', 'account': '13170978240', 'avatarId': None, 'avatar': None, 'workDescribe': '', 'userId': '1638799875954966528', 'expire': '28800', 'expiration': '2023-07-24 19:47:55', 'expireMillis': '28800', 'roleType': None, 'tenant': None, 'openId': None, 'isChangePassword': True}, 'msg': '成功', 'path': None, 'extra': None, 'timestamp': '1690170475994', 'errorMsg': '', 'isSuccess': True}
+ 2023-07-24 11:47:56 request.py | INFO | Execute get_login_user - 获取登录用户名 success!
+ 2023-07-24 11:47:56 request.py | INFO | -------------- Request -----------------[🚀]
+ 2023-07-24 11:47:56 request.py | INFO | [method]: GET      [url]: https://jf-api-test-x1ksp5.dalezhuang.com/api/report/masterPlan/versionList?createdYearMonth=2023-06 
+ 2023-07-24 11:47:56 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY5MDE3MDQ3NSwibmJmIjoxNjkwMTcwNDc1LCJleHAiOjE2OTAxOTkyNzV9.RI2Oplrh2o18lGSC5Y8De6QXzc8CyTD9fQNCBZuiBv8",
+  "Content-Type": "application/json"
+}
+ 2023-07-24 11:47:56 request.py | DEBUG | [data]:
+ {}
+ 2023-07-24 11:47:57 request.py | INFO | -------------- Response ----------------[🛬️]
+ 2023-07-24 11:47:57 request.py | INFO | successful with status 200
+ 2023-07-24 11:47:57 request.py | DEBUG | [type]: json      [time]: 0.568251
+ 2023-07-24 11:47:57 request.py | DEBUG | [response]:
+ {
+  "code": 200,
+  "requestId": "43e17d4dd7834e6d9173879ccade0d59",
+  "data": [
+    {
+      "echoMap": {
+        "createdBy": "AAA"
+      },
+      "id": null,
+      "createTime": "2023-06-28 15:50:35",
+      "createdBy": "1650066287751069696",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 371,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "尹小小的小号"
+      },
+      "id": null,
+      "createTime": "2023-06-26 20:35:46",
+      "createdBy": "1638799875954966528",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 370,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-26 15:52:06",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 369,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-26 15:48:46",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 368,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-26 15:17:50",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 367,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-26 15:17:35",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 366,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-26 14:31:05",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 365,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-26 14:30:52",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 364,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-26 14:30:45",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 363,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-26 14:26:47",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 362,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-26 14:26:25",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 361,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {},
+      "id": null,
+      "createTime": "2023-06-17 15:42:46",
+      "createdBy": null,
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 360,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {},
+      "id": null,
+      "createTime": "2023-06-17 15:33:26",
+      "createdBy": null,
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 359,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {},
+      "id": null,
+      "createTime": "2023-06-17 15:17:39",
+      "createdBy": null,
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 358,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "赖文进"
+      },
+      "id": null,
+      "createTime": "2023-06-17 14:58:57",
+      "createdBy": "1627482216462286848",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 357,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "AAA"
+      },
+      "id": null,
+      "createTime": "2023-06-16 18:35:42",
+      "createdBy": "1650066287751069696",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 356,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "AAA"
+      },
+      "id": null,
+      "createTime": "2023-06-16 17:48:57",
+      "createdBy": "1650066287751069696",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 355,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-16 17:47:15",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 354,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "AAA"
+      },
+      "id": null,
+      "createTime": "2023-06-16 17:44:27",
+      "createdBy": "1650066287751069696",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 353,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-16 15:45:26",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 352,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "尹晓梅"
+      },
+      "id": null,
+      "createTime": "2023-06-14 20:46:28",
+      "createdBy": "1630382479472852992",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 351,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "AAA"
+      },
+      "id": null,
+      "createTime": "2023-06-14 20:35:17",
+      "createdBy": "1650066287751069696",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 350,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-14 16:53:45",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 349,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-14 16:48:41",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 348,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-14 14:08:24",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 347,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-14 13:48:12",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 346,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-14 13:47:22",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 345,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-14 11:22:58",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 344,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-14 11:08:43",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 343,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-14 09:45:43",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 342,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-13 20:44:26",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 341,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-13 20:38:05",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 340,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-13 20:33:19",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 339,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-13 20:20:03",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 338,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "纪海东"
+      },
+      "id": null,
+      "createTime": "2023-06-13 20:09:54",
+      "createdBy": "1593449382244515840",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 337,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "尹晓梅"
+      },
+      "id": null,
+      "createTime": "2023-06-13 17:29:53",
+      "createdBy": "1630382479472852992",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 336,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "尹小小的小号"
+      },
+      "id": null,
+      "createTime": "2023-06-13 09:24:22",
+      "createdBy": "1638799875954966528",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 335,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "尹晓梅"
+      },
+      "id": null,
+      "createTime": "2023-06-12 20:44:33",
+      "createdBy": "1630382479472852992",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 334,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "尹小小"
+      },
+      "id": null,
+      "createTime": "2023-06-12 20:40:52",
+      "createdBy": "1639110090675978240",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 333,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "AAA"
+      },
+      "id": null,
+      "createTime": "2023-06-08 11:57:48",
+      "createdBy": "1650066287751069696",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 332,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "汪代宽"
+      },
+      "id": null,
+      "createTime": "2023-06-01 18:45:48",
+      "createdBy": "1562105981800808448",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 331,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    },
+    {
+      "echoMap": {
+        "createdBy": "坚涛"
+      },
+      "id": null,
+      "createTime": "2023-06-01 18:42:37",
+      "createdBy": "1646046066040111104",
+      "updateTime": null,
+      "updatedBy": null,
+      "index": null,
+      "projectId": null,
+      "building": null,
+      "type": null,
+      "totalSquareAmount": null,
+      "standardSquareAmount": null,
+      "floor": null,
+      "sentFloor": null,
+      "producedFloor": null,
+      "producedSquareAmount": null,
+      "stockNumber": null,
+      "needTime": null,
+      "deliveryCycle": null,
+      "cycleData": null,
+      "version": 330,
+      "deleteStatus": null,
+      "ruleId": null,
+      "createdYearMonth": "2023-06"
+    }
+  ],
+  "msg": "成功",
+  "path": null,
+  "extra": null,
+  "timestamp": "1690170476560",
+  "errorMsg": "",
+  "isSuccess": true
+}
+ 2023-07-24 11:47:57 case.py | INFO | 👀 assertStatusCode -> 200.
+ 2023-07-24 11:47:57 request.py | DEBUG | Execute get_login_user - args: (<common.loginApi.Common object at 0x0000018A0C4B37D0>,)
+ 2023-07-24 11:47:57 request.py | DEBUG | Execute get_login_user - kwargs: {}
+ 2023-07-24 11:47:57 request.py | INFO | -------------- Request -----------------[🚀]
+ 2023-07-24 11:47:57 request.py | INFO | [method]: POST      [url]: https://jf-api-test-x1ksp5.dalezhuang.com/api/oauth/noToken/login 
+ 2023-07-24 11:47:57 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer test",
+  "Content-Type": "application/json"
+}
+ 2023-07-24 11:47:57 request.py | DEBUG | [data]:
+ {"account": "13170978240", "avatar": "", "code": "", "grantType": "password", "key": "", "name": "", "openId": "", "password": "yxm900520", "refreshToken": ""}
+ 2023-07-24 11:47:57 request.py | INFO | -------------- Response ----------------[🛬️]
+ 2023-07-24 11:47:57 request.py | INFO | successful with status 200
+ 2023-07-24 11:47:57 request.py | DEBUG | [type]: json      [time]: 0.08631
+ 2023-07-24 11:47:57 request.py | DEBUG | [response]:
+ {
+  "code": 200,
+  "requestId": "b4a97478c3184028a2343f48ed42461c",
+  "data": {
+    "token": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY5MDE3MDQ3NiwibmJmIjoxNjkwMTcwNDc2LCJleHAiOjE2OTAxOTkyNzZ9.O0kR66-CHt_kl4EwezFIbDq2cGftmyv_dy48KZGmlTk",
+    "tokenType": "token",
+    "refreshToken": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2OTAxNzA0NzYsIm5iZiI6MTY5MDE3MDQ3NiwiZXhwIjoxNjkwMjU2ODc2fQ.f1sFRJ3iJEyhUDTOgLGroSyfCblwsR839mYDaXW8tLE",
+    "name": "尹小小的小号",
+    "account": "13170978240",
+    "avatarId": null,
+    "avatar": null,
+    "workDescribe": "",
+    "userId": "1638799875954966528",
+    "expire": "28800",
+    "expiration": "2023-07-24 19:47:56",
+    "expireMillis": "28800",
+    "roleType": null,
+    "tenant": null,
+    "openId": null,
+    "isChangePassword": true
+  },
+  "msg": "成功",
+  "path": null,
+  "extra": null,
+  "timestamp": "1690170476679",
+  "errorMsg": "",
+  "isSuccess": true
+}
+ 2023-07-24 11:47:57 request.py | DEBUG | Execute get_login_user - response:
+ {'code': 200, 'requestId': 'b4a97478c3184028a2343f48ed42461c', 'data': {'token': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY5MDE3MDQ3NiwibmJmIjoxNjkwMTcwNDc2LCJleHAiOjE2OTAxOTkyNzZ9.O0kR66-CHt_kl4EwezFIbDq2cGftmyv_dy48KZGmlTk', 'tokenType': 'token', 'refreshToken': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2OTAxNzA0NzYsIm5iZiI6MTY5MDE3MDQ3NiwiZXhwIjoxNjkwMjU2ODc2fQ.f1sFRJ3iJEyhUDTOgLGroSyfCblwsR839mYDaXW8tLE', 'name': '尹小小的小号', 'account': '13170978240', 'avatarId': None, 'avatar': None, 'workDescribe': '', 'userId': '1638799875954966528', 'expire': '28800', 'expiration': '2023-07-24 19:47:56', 'expireMillis': '28800', 'roleType': None, 'tenant': None, 'openId': None, 'isChangePassword': True}, 'msg': '成功', 'path': None, 'extra': None, 'timestamp': '1690170476679', 'errorMsg': '', 'isSuccess': True}
+ 2023-07-24 11:47:57 request.py | INFO | Execute get_login_user - 获取登录用户名 success!
+ 2023-07-24 11:47:57 request.py | INFO | -------------- Request -----------------[🚀]
+ 2023-07-24 11:47:57 request.py | INFO | [method]: GET      [url]: https://jf-api-test-x1ksp5.dalezhuang.com/api/report/masterPlan/queryCreatedYearMonth 
+ 2023-07-24 11:47:57 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY5MDE3MDQ3NiwibmJmIjoxNjkwMTcwNDc2LCJleHAiOjE2OTAxOTkyNzZ9.O0kR66-CHt_kl4EwezFIbDq2cGftmyv_dy48KZGmlTk",
+  "Content-Type": "application/json"
+}
+ 2023-07-24 11:47:57 request.py | DEBUG | [data]:
+ {}
+ 2023-07-24 11:47:57 request.py | INFO | -------------- Response ----------------[🛬️]
+ 2023-07-24 11:47:57 request.py | INFO | successful with status 200
+ 2023-07-24 11:47:57 request.py | DEBUG | [type]: json      [time]: 0.422325
+ 2023-07-24 11:47:57 request.py | DEBUG | [response]:
+ {
+  "code": 200,
+  "requestId": "2e0509497e354ee581a8458937fa23cf",
+  "data": [
+    "2023-07",
+    "2023-06",
+    "2023-05",
+    "2023-04"
+  ],
+  "msg": "成功",
+  "path": null,
+  "extra": null,
+  "timestamp": "1690170477108",
+  "errorMsg": "",
+  "isSuccess": true
+}
+ 2023-07-24 11:47:57 case.py | INFO | 👀 assertStatusCode -> 200.
+ 2023-07-24 11:47:57 request.py | DEBUG | Execute get_login_user - args: (<common.loginApi.Common object at 0x0000018A0AEC0C10>,)
+ 2023-07-24 11:47:57 request.py | DEBUG | Execute get_login_user - kwargs: {}
+ 2023-07-24 11:47:57 request.py | INFO | -------------- Request -----------------[🚀]
+ 2023-07-24 11:47:57 request.py | INFO | [method]: POST      [url]: https://jf-api-test-x1ksp5.dalezhuang.com/api/oauth/noToken/login 
+ 2023-07-24 11:47:57 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer test",
+  "Content-Type": "application/json"
+}
+ 2023-07-24 11:47:57 request.py | DEBUG | [data]:
+ {"account": "13170978240", "avatar": "", "code": "", "grantType": "password", "key": "", "name": "", "openId": "", "password": "yxm900520", "refreshToken": ""}
+ 2023-07-24 11:47:58 request.py | INFO | -------------- Response ----------------[🛬️]
+ 2023-07-24 11:47:58 request.py | INFO | successful with status 200
+ 2023-07-24 11:47:58 request.py | DEBUG | [type]: json      [time]: 0.08277
+ 2023-07-24 11:47:58 request.py | DEBUG | [response]:
+ {
+  "code": 200,
+  "requestId": "272556c381c4454fa9fbc3eec1f0201c",
+  "data": {
+    "token": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY5MDE3MDQ3NywibmJmIjoxNjkwMTcwNDc3LCJleHAiOjE2OTAxOTkyNzd9.rRslZ7s3jmSD5DlrykYzDIL4kXr-a8gjNZIYF7yLXdg",
+    "tokenType": "token",
+    "refreshToken": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2OTAxNzA0NzcsIm5iZiI6MTY5MDE3MDQ3NywiZXhwIjoxNjkwMjU2ODc3fQ.BKJTMeKLMWTs2zmDJ8oHC7O3pqy6Yh3kpQLJInfJyqQ",
+    "name": "尹小小的小号",
+    "account": "13170978240",
+    "avatarId": null,
+    "avatar": null,
+    "workDescribe": "",
+    "userId": "1638799875954966528",
+    "expire": "28800",
+    "expiration": "2023-07-24 19:47:57",
+    "expireMillis": "28800",
+    "roleType": null,
+    "tenant": null,
+    "openId": null,
+    "isChangePassword": true
+  },
+  "msg": "成功",
+  "path": null,
+  "extra": null,
+  "timestamp": "1690170477199",
+  "errorMsg": "",
+  "isSuccess": true
+}
+ 2023-07-24 11:47:58 request.py | DEBUG | Execute get_login_user - response:
+ {'code': 200, 'requestId': '272556c381c4454fa9fbc3eec1f0201c', 'data': {'token': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY5MDE3MDQ3NywibmJmIjoxNjkwMTcwNDc3LCJleHAiOjE2OTAxOTkyNzd9.rRslZ7s3jmSD5DlrykYzDIL4kXr-a8gjNZIYF7yLXdg', 'tokenType': 'token', 'refreshToken': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2OTAxNzA0NzcsIm5iZiI6MTY5MDE3MDQ3NywiZXhwIjoxNjkwMjU2ODc3fQ.BKJTMeKLMWTs2zmDJ8oHC7O3pqy6Yh3kpQLJInfJyqQ', 'name': '尹小小的小号', 'account': '13170978240', 'avatarId': None, 'avatar': None, 'workDescribe': '', 'userId': '1638799875954966528', 'expire': '28800', 'expiration': '2023-07-24 19:47:57', 'expireMillis': '28800', 'roleType': None, 'tenant': None, 'openId': None, 'isChangePassword': True}, 'msg': '成功', 'path': None, 'extra': None, 'timestamp': '1690170477199', 'errorMsg': '', 'isSuccess': True}
+ 2023-07-24 11:47:58 request.py | INFO | Execute get_login_user - 获取登录用户名 success!
+ 2023-07-24 11:47:58 runner.py | SUCCESS | generated html file: file:///C:\Users\msi\PycharmProjects\interfaceTest\reports\2023_07_24_11_47_50_result.html
+ 2023-07-24 11:47:58 runner.py | SUCCESS | generated log file: file:///C:\Users\msi\PycharmProjects\interfaceTest\reports\seldom_log.log

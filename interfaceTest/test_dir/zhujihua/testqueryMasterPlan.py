@@ -13,7 +13,7 @@ class testqueryMasterPlan(seldom.TestCase):
         """
                    查询主计划
         """
-        payload = json.dumps({
+        self.payload = json.dumps({
             "createTime": "2023-06",
             "orgIds": [],
             "projectIds": [],

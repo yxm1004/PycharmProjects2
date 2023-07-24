@@ -1,0 +1,2155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title> 交付平台接口测试报告 </title>
+  <meta name="generator" content="XTestRunner 1.7.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+  <link rel="stylesheet" href="http://img.itest.info/seldom-main.css">
+  <link rel="stylesheet" href="http://img.itest.info/seldom-utilities.css">
+
+  <style type="text/css" media="screen">
+  body {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 80%;
+  }
+
+  table {
+    font-size: 100%;
+  }
+
+  .table td {
+    white-space: inherit !important;
+  }
+
+  /* -- heading ---------------------------------------------------------------------- */
+  h1 {
+    font-size: 16pt;
+    color: gray;
+  }
+
+  pre {
+    background-color: #eef2f7;
+    padding-top: 10px;
+    text-align: left;
+    max-height: 600px;
+    overflow: auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #F5F5F5;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: rgba(114, 124, 245, .25);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #6c757d;
+  }
+
+  .heading {
+    margin-top: 20px;
+    margin-bottom: 1ex;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 23%;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    box-shadow: 0px 0px 5px #000;
+  }
+
+  .heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+  }
+
+  .heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+  }
+
+  /* -- css div popup ------------------------------------------------------------------------ */
+
+  a.popup_link:hover {
+    color: red;
+  }
+
+  .log_window {
+    max-width: 70%;
+    max-height: 70%;
+  }
+
+  /* -- report ------------------------------------------------------------------------ */
+  .show_detail_line {
+    margin-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .show_detail_button {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+    margin-left: 10px;
+    text-align: right;
+    margin-right: 15px;
+  }
+
+  .header_row {
+    font-weight: bold;
+    color: #606060;
+    border-top-width: 10px;
+    border-color: #d6e9c6;
+    font-size: 15px;
+  }
+
+  .total_row {
+    font-weight: bold;
+    background-color: #dee2e6;
+  }
+
+  .passClass {
+    background-color: #ccf5e7;
+  }
+
+  .failClass {
+    background-color: #ffe8cc;
+  }
+
+  .errorClass {
+    background-color: #ffd6e0;
+  }
+
+  .skipClass {
+    background-color: #e7eaf0;
+  }
+
+  .passCase {
+    color: #00CC88;
+    font-weight: bold;
+  }
+
+  .failCase {
+    color: #FF8C00;
+    font-weight: bold;
+  }
+
+  .errorCase {
+    color: #FF3366;
+    font-weight: bold;
+  }
+
+  .skipCase {
+    color: #525f7f;
+    font-weight: bold;
+  }
+
+  .hiddenRow {
+    display: none;
+  }
+
+  .caseStatistics {
+    width: 46%
+  }
+
+  .none {
+    color: #009900
+  }
+
+  .testcase {
+    margin-left: 2em;
+  }
+
+  /* -- chars ---------------------------------------------------------------------- */
+  .testChars {
+    width: 900px;
+    margin-left: 0px;
+  }
+
+  .error-color {
+    color: #fff;
+    background-color: #f44455;
+    border-color: #f44455;
+  }
+
+  .pass-color {
+    color: #fff;
+    background-color: #5fc27e;
+    border-color: #5fc27e;
+  }
+
+  .fail-color {
+    color: #fff;
+    background-color: #fcc100;
+    border-color: #fcc100;
+  }
+
+  .skip-color {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+
+  /* -- screenshots ---------------------------------------------------------------------- */
+  .img {
+    border-collapse: collapse;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .img-card {
+    height: 600px;
+    width: 800px;
+    background-color: #e7eaf0;
+  }
+
+  .img-circle {
+    height: 20px;
+    border-radius: 12px;
+    background-color: red;
+    padding-left: 13px;
+    margin: 0 auto;
+    position: relative;
+    top: -40px;
+    background-color: rgba(1, 150, 0, 0.3);
+  }
+
+  .img-circle font {
+    border: 1px solid white;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    margin-right: 9px;
+    margin-top: 4px;
+    display: block;
+    float: left;
+    background-color: white;
+  }
+
+  .close-shots {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 99;
+  }
+
+  .footer {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+
+  #headContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .head-list {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  #resultContainer {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+</style>
+</head>
+
+<body style="background-color: #f5f9fc;">
+  <nav
+  class="navbar navbar-light position-lg-sticky top-lg-0 d-none d-lg-block overlap-10 flex-none bg-white border-bottom px-0 py-3"
+  id="topbar">
+  <div class="container-fluid">
+    <div class="hstack gap-2">
+      <a href="https://github.com/SeldomQA/XTestRunner">
+        <img src="http://img.itest.info/XTestRunner_logo.jpg" style="height: 2.25rem;">
+      </a>
+    </div>
+    <div class="navbar-user d-none d-sm-block">
+      <div class="hstack gap-3 ms-4">
+        <h3 style="float: right;"> 交付平台接口测试报告 </h3>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="headContainer" class="container-fluid mm-active">
+  <div class="row">
+    <!-- Overview data -->
+    <div class="col-12 col-lg-5 col-xl-3 d-flex" style="float:left">
+      <div class='card flex-fill'>
+        <div class="card-header">
+          <div class="d-flex align-items-center">
+            <h5 class="mb-0" id="overview">概述</h5>
+          </div>
+        </div>
+        <div class="card-body py-0 position-relative scrollable-y" style="max-height:300px">
+          <div class="list-group list-group-flush">
+            <div class="list-group-item px-0 position-relative hstack flex-wrap head-list">
+              <div class="flex-1">
+                <div class="d-flex align-items-center mb-1">👨‍🔧 测试人员</div>
+                <div class="d-flex align-items-center">
+                  <div class="text-sm text-muted line-clamp-1 me-auto">yinxm</div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item px-0 position-relative hstack flex-wrap head-list">
+              <div class="flex-1">
+                <div class="d-flex align-items-center mb-1">🕒 开始时间</div>
+                <div class="d-flex align-items-center">
+                  <div class="text-sm text-muted line-clamp-1 me-auto">2023-07-13 17:26:04</div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item px-0 position-relative hstack flex-wrap head-list">
+              <div class="flex-1">
+                <div class="d-flex align-items-center mb-1">🕘 结束时间</div>
+                <div class="d-flex align-items-center">
+                  <div class="text-sm text-muted line-clamp-1 me-auto">2023-07-13 17:26:04</div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item px-0 position-relative hstack flex-wrap head-list">
+              <div class="flex-1">
+                <div class="d-flex align-items-center mb-1">⌛ 运行时长</div>
+                <div class="d-flex align-items-center">
+                  <div class="text-sm text-muted line-clamp-1 me-auto">0:00:00.298</div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item px-0 position-relative hstack flex-wrap" style="padding-top: 5px;">
+              <div class="flex-1">
+                <div class="d-flex align-items-center mb-1">ℹ️ 描述</div>
+                <div class="d-flex align-items-center">
+                  <div class="text-sm text-muted me-auto"><p>windows</p><p>jenkins</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- passed & failed -->
+    <div style="width: 20%">
+      <div class="card" style="height: 45%;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col"><span class="h6 font-semibold text-muted text-sm d-block mb-2">通过</span>
+              <span class="h3 font-bold mb-0" id="p_number">1</span>
+            </div>
+            <div class="col-auto">
+              <div class="icon icon-shape bg-success text-white text-lg rounded-circle">P</div>
+            </div>
+          </div>
+          <div class="mt-2 mb-0 text-sm">
+            <span class="badge badge-pill bg-soft-warning text-success me-2">100.00%</span>
+            <span class="text-nowrap text-xs text-muted">通过率</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="progress" style="width:70%; margin-top: 5px;">
+              <div class="progress-bar bg-success" role="progressbar" aria-valuenow="83" aria-valuemin="0"
+                aria-valuemax="100" style="width:100.00%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="height: 45%; top: 10%;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col"><span class="h6 font-semibold text-muted text-sm d-block mb-2">失败</span>
+              <span class="h3 font-bold mb-0" id="f_number">0</span>
+            </div>
+            <div class="col-auto">
+              <div class="icon icon-shape bg-warning text-white text-lg rounded-circle">F</div>
+            </div>
+          </div>
+          <div class="mt-2 mb-0 text-sm">
+            <span class="badge badge-pill bg-soft-warning text-warning me-2">0.00%</span>
+            <span class="text-nowrap text-xs text-muted">失败率</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="progress" style="width:70%; margin-top: 5px;">
+              <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="83" aria-valuemin="0"
+                aria-valuemax="100" style="width:0.00%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- error & skipped -->
+    <div style="width: 20%">
+      <div class="card" style="height: 45%;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col"><span class="h6 font-semibold text-muted text-sm d-block mb-2">错误</span>
+              <span class="h3 font-bold mb-0" id="e_number">0</span>
+            </div>
+            <div class="col-auto">
+              <div class="icon icon-shape bg-danger text-white text-lg rounded-circle">E</div>
+            </div>
+          </div>
+          <div class="mt-2 mb-0 text-sm">
+            <span class="badge badge-pill bg-soft-danger text-danger me-2">0.00%</span>
+            <span class="text-nowrap text-xs text-muted">错误率</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="progress" style="width:70%; margin-top: 5px;">
+              <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="83" aria-valuemin="0"
+                aria-valuemax="100" style="width:0.00%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="height: 45%; top: 10%;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <span class="h6 font-semibold text-muted text-sm d-block mb-2">跳过</span>
+              <span class="h3 font-bold mb-0" id="s_number">0</span>
+            </div>
+            <div class="col-auto">
+              <div class="icon icon-shape bg-secondary text-white text-lg rounded-circle">S</div>
+            </div>
+          </div>
+          <div class="mt-2 mb-0 text-sm">
+            <span class="badge badge-pill bg-soft-secondary text-secondary me-2">0.00%</span>
+            <span class="text-nowrap text-xs text-muted">跳过率</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="progress" style="width:70%; margin-top: 5px;">
+              <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="83" aria-valuemin="0"
+                aria-valuemax="100" style="width:0.00%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- history data -->
+    <div class="col-12 col-lg-5 col-xl-4 d-flex" style="float:right">
+      <div class='card flex-fill'>
+        <div id="echartElement" class="apex-charts" data-colors="#42d29d,#44badc" style="height:420px; padding:10px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div id="resultContainer" class="card">
+  <div class="card-header border-bottom">
+    <span style="float: left;">
+      <h5 class="mb-0">结果</h5>
+    </span>
+    <span style="float: right;">
+      <a href='javascript:showCase(0, 1)' class="btn btn-dark btn-sm">摘要</a>
+      <a href='javascript:showCase(1, 1)' class="btn btn-success btn-sm">通过</a>
+      <a href='javascript:showCase(2, 1)' class="btn btn-warning btn-sm">失败</a>
+      <a href='javascript:showCase(3, 1)' class="btn btn-danger btn-sm">错误</a>
+      <a href='javascript:showCase(4, 1)' class="btn btn-secondary btn-sm">跳过</a>
+      <a href='javascript:showCase(5, 1)' class="btn btn-info btn-sm">所有</a>
+    </span>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-hover table-nowrap">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">测试类/测试用例</th>
+          <th scope="col">描述</th>
+          <th scope="col">时长</th>
+          <th scope="col">执行</th>
+          <th scope="col">通过</th>
+          <th scope="col">失败</th>
+          <th scope="col">错误</th>
+          <th scope="col">查看</th>
+          <th scope="col">截图</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+<tr class='passClass'>
+    <td>testqueryCollectionExecutePageOfWeb.testqueryCollectionExecutePageOfWeb</td>
+    <td></td>
+    <td></td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.1',1)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.1.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_post_queryCollectionExecutePageOfWeb</div>
+    </td>
+    <td style="color: #495057">
+        <div>web- 查询回款执行</div>
+    </td>
+    <td style="color: #495057">
+        <div>0.3 s</div>
+    </td>
+    <td colspan='5' align='center' class='caseStatistics'>
+        <!--css div popup start-->
+        <a class="popup_link" href="javascript:void(0)" onclick="showLog('div_pt1.1.1')">pass</a>
+        <div id='div_pt1.1.1' class="modal show" style="display: none; background-color: #000000c7;">
+            <div class="modal-dialog modal-dialog-centered log_window">
+                <div class="modal-content shadow-3">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="mb-1">test_post_queryCollectionExecutePageOfWeb</h5>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">detailed log</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover" data-bs-dismiss="modal" onclick="hideLog('div_pt1.1.1')">X</button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <pre>pt1.1.1: 2023-07-13 17:26:04 request.py | DEBUG | Execute get_login_user - args: (&lt;common.loginApi.Common object at 0x0000020FE685EDD0&gt;,)
+2023-07-13 17:26:04 request.py | DEBUG | Execute get_login_user - kwargs: {}
+2023-07-13 17:26:04 request.py | INFO | -------------- Request -----------------[🚀]
+2023-07-13 17:26:04 request.py | INFO | [method]: POST      [url]: https://jf-api-test-x1ksp5.dalezhuang.com/api/oauth/noToken/login 
+2023-07-13 17:26:04 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer test",
+  "Content-Type": "application/json"
+}
+2023-07-13 17:26:04 request.py | DEBUG | [data]:
+ {"account": "13170978240", "avatar": "", "code": "", "grantType": "password", "key": "", "name": "", "openId": "", "password": "yxm900520", "refreshToken": ""}
+2023-07-13 17:26:04 request.py | INFO | -------------- Response ----------------[🛬️]
+2023-07-13 17:26:04 request.py | INFO | successful with status 200
+2023-07-13 17:26:04 request.py | DEBUG | [type]: json      [time]: 0.1106
+2023-07-13 17:26:04 request.py | DEBUG | [response]:
+ {
+  "code": 200,
+  "requestId": "ccc7bee5c5bf4d4e8b8c989520fdb001",
+  "data": {
+    "token": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY4OTI0MDM2MywibmJmIjoxNjg5MjQwMzYzLCJleHAiOjE2ODkyNjkxNjN9.e0SwUAtEZqK0iFBJdqTBEm4dLB940Y9l8KWRpVE2FAE",
+    "tokenType": "token",
+    "refreshToken": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2ODkyNDAzNjMsIm5iZiI6MTY4OTI0MDM2MywiZXhwIjoxNjg5MzI2NzYzfQ.A-NfVPsfvrwtjR8hh-lWCDYUf0rXLGZBUWIw_74sB44",
+    "name": "尹小小的小号",
+    "account": "13170978240",
+    "avatarId": null,
+    "avatar": null,
+    "workDescribe": "",
+    "userId": "1638799875954966528",
+    "expire": "28800",
+    "expiration": "2023-07-14 01:26:03",
+    "expireMillis": "28800",
+    "roleType": null,
+    "tenant": null,
+    "openId": null,
+    "isChangePassword": true
+  },
+  "msg": "成功",
+  "path": null,
+  "extra": null,
+  "timestamp": "1689240363401",
+  "errorMsg": "",
+  "isSuccess": true
+}
+2023-07-13 17:26:04 request.py | DEBUG | Execute get_login_user - response:
+ {'code': 200, 'requestId': 'ccc7bee5c5bf4d4e8b8c989520fdb001', 'data': {'token': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY4OTI0MDM2MywibmJmIjoxNjg5MjQwMzYzLCJleHAiOjE2ODkyNjkxNjN9.e0SwUAtEZqK0iFBJdqTBEm4dLB940Y9l8KWRpVE2FAE', 'tokenType': 'token', 'refreshToken': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2ODkyNDAzNjMsIm5iZiI6MTY4OTI0MDM2MywiZXhwIjoxNjg5MzI2NzYzfQ.A-NfVPsfvrwtjR8hh-lWCDYUf0rXLGZBUWIw_74sB44', 'name': '尹小小的小号', 'account': '13170978240', 'avatarId': None, 'avatar': None, 'workDescribe': '', 'userId': '1638799875954966528', 'expire': '28800', 'expiration': '2023-07-14 01:26:03', 'expireMillis': '28800', 'roleType': None, 'tenant': None, 'openId': None, 'isChangePassword': True}, 'msg': '成功', 'path': None, 'extra': None, 'timestamp': '1689240363401', 'errorMsg': '', 'isSuccess': True}
+2023-07-13 17:26:04 request.py | INFO | Execute get_login_user - 获取登录用户名 success!
+2023-07-13 17:26:04 request.py | INFO | -------------- Request -----------------[🚀]
+2023-07-13 17:26:04 request.py | INFO | [method]: POST      [url]: https://jf-api-test-x1ksp5.dalezhuang.com/api/report/accountStatement/queryCollectionExecutePageOfWeb 
+2023-07-13 17:26:04 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY4OTI0MDM2MywibmJmIjoxNjg5MjQwMzYzLCJleHAiOjE2ODkyNjkxNjN9.e0SwUAtEZqK0iFBJdqTBEm4dLB940Y9l8KWRpVE2FAE",
+  "Content-Type": "application/json"
+}
+2023-07-13 17:26:04 request.py | DEBUG | [data]:
+ {"model": {"list": [], "overdueStatus": 2}, "extra": {}, "current": 1, "size": 50}
+2023-07-13 17:26:04 request.py | INFO | -------------- Response ----------------[🛬️]
+2023-07-13 17:26:04 request.py | INFO | successful with status 200
+2023-07-13 17:26:04 request.py | DEBUG | [type]: json      [time]: 0.151661
+2023-07-13 17:26:04 request.py | DEBUG | [response]:
+ {
+  "code": 200,
+  "requestId": "aec2c90363374b548fd47d15936b3dd6",
+  "data": {
+    "totalUnReceivedAmount": "124499132.85",
+    "overdueTotalUnReceivedAmount": "116251653.59",
+    "totalReceivedAmount": "226979943.32",
+    "totalReceivableAmount": "351479076.17",
+    "collectionRate": "64.58",
+    "page": {
+      "records": [
+        {
+          "echoMap": {},
+          "id": "356",
+          "abbreviation": "汇晔",
+          "status": 2,
+          "projectStatus": 0,
+          "orderSource": "8",
+          "contactPerson": "AAA",
+          "salePerson": "苏添贵",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "134",
+          "limitDay": null,
+          "totalReceivedAmount": "200958850.60",
+          "totalUnReceivedAmount": "3675854.41",
+          "overdueTotalUnReceivedAmount": "1483862.40",
+          "totalReceivableAmount": "204634705.01",
+          "collectionRate": "98.20",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-09-24 14:30:33",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "374",
+          "abbreviation": "云谷·梦筑",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "张鹏超",
+          "salePerson": "苏添贵",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "102",
+          "limitDay": null,
+          "totalReceivedAmount": "194051.84",
+          "totalUnReceivedAmount": "197962.40",
+          "overdueTotalUnReceivedAmount": "197962.40",
+          "totalReceivableAmount": "392014.24",
+          "collectionRate": "49.50",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-01-03 14:59:14",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "1006",
+          "abbreviation": "12222222",
+          "status": 1,
+          "projectStatus": 5,
+          "orderSource": "5",
+          "contactPerson": "0000",
+          "salePerson": "000",
+          "salePhone": "000 1100 0000",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "71",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "100000000.00",
+          "overdueTotalUnReceivedAmount": "100000000.00",
+          "totalReceivableAmount": "100000000.00",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-30 18:21:16",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "365",
+          "abbreviation": "颐尚嘉园",
+          "status": 2,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "张鹏超",
+          "salePerson": "胡蝶",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "50",
+          "limitDay": null,
+          "totalReceivedAmount": "600000.00",
+          "totalUnReceivedAmount": "628837.95",
+          "overdueTotalUnReceivedAmount": "496221.48",
+          "totalReceivableAmount": "1228837.95",
+          "collectionRate": "48.83",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-11-15 15:00:01",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "368",
+          "abbreviation": "深高北学校",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "康鹏展",
+          "salePerson": "嘤嘤嘤",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "49",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "531749.60",
+          "overdueTotalUnReceivedAmount": "531749.60",
+          "totalReceivableAmount": "531749.60",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-11-24 16:24:37",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "565",
+          "abbreviation": "大乐装1608",
+          "status": 1,
+          "projectStatus": 2,
+          "orderSource": "",
+          "contactPerson": "尹大大",
+          "salePerson": "尹卡卡",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "48",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "2222.00",
+          "overdueTotalUnReceivedAmount": "2222.00",
+          "totalReceivableAmount": "2222.00",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-04-25 16:08:47",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "590",
+          "abbreviation": "主计划03",
+          "status": 1,
+          "projectStatus": 2,
+          "orderSource": "",
+          "contactPerson": "sad",
+          "salePerson": "dsf",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "46",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "227333.40",
+          "overdueTotalUnReceivedAmount": "123456.00",
+          "totalReceivableAmount": "227333.40",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-22 16:50:04",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "588",
+          "abbreviation": "主计划02",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "132",
+          "salePerson": "13",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "46",
+          "limitDay": null,
+          "totalReceivedAmount": "4000.00",
+          "totalUnReceivedAmount": "119606.00",
+          "overdueTotalUnReceivedAmount": "120456.00",
+          "totalReceivableAmount": "123606.00",
+          "collectionRate": "3.24",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-20 15:38:56",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "499",
+          "abbreviation": "BOM0411",
+          "status": 1,
+          "projectStatus": 2,
+          "orderSource": "",
+          "contactPerson": "尹大大",
+          "salePerson": "尹卡卡",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "44",
+          "limitDay": null,
+          "totalReceivedAmount": "600.00",
+          "totalUnReceivedAmount": "14089.45",
+          "overdueTotalUnReceivedAmount": "4400.00",
+          "totalReceivableAmount": "14689.45",
+          "collectionRate": "4.08",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-04-11 08:41:31",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "372",
+          "abbreviation": "海天学校教学楼3",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "陈亮",
+          "salePerson": "张三",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "44",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "248039.78",
+          "overdueTotalUnReceivedAmount": "44230.52",
+          "totalReceivableAmount": "248039.78",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-11-23 09:44:53",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "362",
+          "abbreviation": "沙湖御景花园",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "李家欢",
+          "salePerson": "熊龙飞",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "44",
+          "limitDay": null,
+          "totalReceivedAmount": "1200000.00",
+          "totalUnReceivedAmount": "954112.97",
+          "overdueTotalUnReceivedAmount": "941323.37",
+          "totalReceivableAmount": "2154112.97",
+          "collectionRate": "55.71",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-10-27 10:05:43",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "351",
+          "abbreviation": "璟荟名庭",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "李家欢",
+          "salePerson": "周翔",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "44",
+          "limitDay": null,
+          "totalReceivedAmount": "3332960.96",
+          "totalUnReceivedAmount": "1948866.36",
+          "overdueTotalUnReceivedAmount": "2174261.45",
+          "totalReceivableAmount": "5281827.32",
+          "collectionRate": "63.10",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-09-09 16:56:37",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "355",
+          "abbreviation": "创新大厦",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "李家欢",
+          "salePerson": "苏添贵",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "43",
+          "limitDay": null,
+          "totalReceivedAmount": "38327.12",
+          "totalUnReceivedAmount": "1404119.08",
+          "overdueTotalUnReceivedAmount": "1404119.08",
+          "totalReceivableAmount": "1442446.20",
+          "collectionRate": "2.66",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-09-24 14:28:40",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "353",
+          "abbreviation": "紫和嘉园",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "8",
+          "contactPerson": "AAA",
+          "salePerson": "AAA",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "43",
+          "limitDay": null,
+          "totalReceivedAmount": "3329468.26",
+          "totalUnReceivedAmount": "3125762.45",
+          "overdueTotalUnReceivedAmount": "1730919.14",
+          "totalReceivableAmount": "6455230.71",
+          "collectionRate": "51.58",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-09-09 17:00:05",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "595",
+          "abbreviation": "回款项目0526号",
+          "status": 1,
+          "projectStatus": 2,
+          "orderSource": "",
+          "contactPerson": "尹卡卡",
+          "salePerson": "尹晓梅",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "42",
+          "limitDay": null,
+          "totalReceivedAmount": "1521.89",
+          "totalUnReceivedAmount": "90545.38",
+          "overdueTotalUnReceivedAmount": "90545.38",
+          "totalReceivableAmount": "92067.27",
+          "collectionRate": "1.65",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-26 10:12:29",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "594",
+          "abbreviation": "回款项目02",
+          "status": 1,
+          "projectStatus": 3,
+          "orderSource": "",
+          "contactPerson": "尹卡卡",
+          "salePerson": "尹大大",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "42",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "80552.34",
+          "overdueTotalUnReceivedAmount": "80000.00",
+          "totalReceivableAmount": "80552.34",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-25 16:58:01",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "592",
+          "abbreviation": "大乐装0524号",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "尹大大",
+          "salePerson": "尹卡卡",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "42",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "6666.00",
+          "overdueTotalUnReceivedAmount": "6666.00",
+          "totalReceivableAmount": "6666.00",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-24 20:31:49",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "591",
+          "abbreviation": "大乐装0523号",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "尹卡卡",
+          "salePerson": "尹大大",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "42",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "1000.00",
+          "overdueTotalUnReceivedAmount": "1000.00",
+          "totalReceivableAmount": "1000.00",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-23 15:44:49",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "589",
+          "abbreviation": "尹大大0522号",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "6",
+          "contactPerson": "尹大大",
+          "salePerson": "尹卡卡",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "42",
+          "limitDay": null,
+          "totalReceivedAmount": "223.35",
+          "totalUnReceivedAmount": "10000.00",
+          "overdueTotalUnReceivedAmount": "10000.00",
+          "totalReceivableAmount": "10223.35",
+          "collectionRate": "2.18",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-22 10:34:27",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "587",
+          "abbreviation": "尹大大0520号",
+          "status": 1,
+          "projectStatus": 2,
+          "orderSource": "",
+          "contactPerson": "尹大大",
+          "salePerson": "尹卡卡",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "42",
+          "limitDay": null,
+          "totalReceivedAmount": "1215.98",
+          "totalUnReceivedAmount": "752916.56",
+          "overdueTotalUnReceivedAmount": "750000.00",
+          "totalReceivableAmount": "754132.54",
+          "collectionRate": "0.16",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-20 09:48:03",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "537",
+          "abbreviation": "神仙水1",
+          "status": 1,
+          "projectStatus": 2,
+          "orderSource": "",
+          "contactPerson": "尹小小",
+          "salePerson": "尹大大",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "42",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "50000.00",
+          "overdueTotalUnReceivedAmount": "50000.00",
+          "totalReceivableAmount": "50000.00",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-04-20 15:02:07",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "363",
+          "abbreviation": "天和北苑",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "李家欢",
+          "salePerson": "周龙",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "42",
+          "limitDay": null,
+          "totalReceivedAmount": "3270000.00",
+          "totalUnReceivedAmount": "2280530.02",
+          "overdueTotalUnReceivedAmount": "1238016.60",
+          "totalReceivableAmount": "5550530.02",
+          "collectionRate": "58.91",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-11-08 10:50:57",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "350",
+          "abbreviation": "佛山万科璞玥府",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "1",
+          "contactPerson": "常诗敏",
+          "salePerson": "熊龙飞",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "42",
+          "limitDay": null,
+          "totalReceivedAmount": "2832844.63",
+          "totalUnReceivedAmount": "1205841.97",
+          "overdueTotalUnReceivedAmount": "1658219.75",
+          "totalReceivableAmount": "4038686.60",
+          "collectionRate": "70.14",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-09-09 16:53:57",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "1012",
+          "abbreviation": "交付0608号",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "4",
+          "contactPerson": "尹小小",
+          "salePerson": "纪海东",
+          "salePhone": "158 7965 4575",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "27",
+          "limitDay": null,
+          "totalReceivedAmount": "4123.00",
+          "totalUnReceivedAmount": "22684.60",
+          "overdueTotalUnReceivedAmount": "12685.60",
+          "totalReceivableAmount": "26807.60",
+          "collectionRate": "15.38",
+          "prepaymentRatio": "13.02",
+          "createTime": "2023-06-08 10:39:47",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "555",
+          "abbreviation": "BOM1706",
+          "status": 1,
+          "projectStatus": 5,
+          "orderSource": "2",
+          "contactPerson": "ios手机",
+          "salePerson": "尹卡卡",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "27",
+          "limitDay": null,
+          "totalReceivedAmount": "1026.25",
+          "totalUnReceivedAmount": "3500.00",
+          "overdueTotalUnReceivedAmount": "3500.00",
+          "totalReceivableAmount": "4526.25",
+          "collectionRate": "22.67",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-04-24 17:06:56",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "586",
+          "abbreviation": "主计划01",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "asd",
+          "salePerson": "asd",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "26",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "10000.00",
+          "overdueTotalUnReceivedAmount": "10000.00",
+          "totalReceivableAmount": "10000.00",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-19 14:52:16",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "593",
+          "abbreviation": "回款项目01",
+          "status": 1,
+          "projectStatus": 3,
+          "orderSource": "",
+          "contactPerson": "尹卡卡",
+          "salePerson": "尹大大",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "17",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "5555.55",
+          "overdueTotalUnReceivedAmount": "5555.55",
+          "totalReceivableAmount": "5555.55",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-25 11:04:34",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "352",
+          "abbreviation": "电连",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "8",
+          "contactPerson": "康鹏展",
+          "salePerson": "AAA",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "14",
+          "limitDay": null,
+          "totalReceivedAmount": "1325189.24",
+          "totalUnReceivedAmount": "215691.75",
+          "overdueTotalUnReceivedAmount": "1.99",
+          "totalReceivableAmount": "1540880.99",
+          "collectionRate": "86.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-09-09 16:58:21",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "361",
+          "abbreviation": "海天学校",
+          "status": 2,
+          "projectStatus": 0,
+          "orderSource": "8",
+          "contactPerson": "CAI",
+          "salePerson": "CAI",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "13",
+          "limitDay": null,
+          "totalReceivedAmount": "1200000.00",
+          "totalUnReceivedAmount": "404430.34",
+          "overdueTotalUnReceivedAmount": "404430.34",
+          "totalReceivableAmount": "1604430.34",
+          "collectionRate": "74.79",
+          "prepaymentRatio": "15000.00",
+          "createTime": "2022-10-26 11:48:44",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "1016",
+          "abbreviation": "历史账款0613号",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "5",
+          "contactPerson": "尹卡卡",
+          "salePerson": "尹晓梅",
+          "salePhone": "153 1348 7958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "12",
+          "limitDay": null,
+          "totalReceivedAmount": "626.00",
+          "totalUnReceivedAmount": "6970.00",
+          "overdueTotalUnReceivedAmount": "6000.00",
+          "totalReceivableAmount": "7596.00",
+          "collectionRate": "8.24",
+          "prepaymentRatio": "6.67",
+          "createTime": "2023-06-13 16:57:54",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "1010",
+          "abbreviation": "交付0607号",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "8",
+          "contactPerson": "尹晓梅",
+          "salePerson": "尹晓梅",
+          "salePhone": "153 1348 7958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "12",
+          "limitDay": null,
+          "totalReceivedAmount": "2408.01",
+          "totalUnReceivedAmount": "8964.80",
+          "overdueTotalUnReceivedAmount": "8000.00",
+          "totalReceivableAmount": "11372.81",
+          "collectionRate": "21.17",
+          "prepaymentRatio": "16.00",
+          "createTime": "2023-06-07 11:23:14",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "1004",
+          "abbreviation": "项目回款0530号",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "尹大大",
+          "salePerson": "尹晓梅",
+          "salePhone": "153 1348 7958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "12",
+          "limitDay": null,
+          "totalReceivedAmount": "2584.50",
+          "totalUnReceivedAmount": "6000.00",
+          "overdueTotalUnReceivedAmount": "6000.00",
+          "totalReceivableAmount": "8584.50",
+          "collectionRate": "30.11",
+          "prepaymentRatio": "8333.33",
+          "createTime": "2023-05-30 14:10:22",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "1003",
+          "abbreviation": "项目回款0529号",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "2",
+          "contactPerson": "尹大大",
+          "salePerson": "常诗敏",
+          "salePhone": "153 1348 7958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "12",
+          "limitDay": null,
+          "totalReceivedAmount": "2636.54",
+          "totalUnReceivedAmount": "11510.30",
+          "overdueTotalUnReceivedAmount": "7000.00",
+          "totalReceivableAmount": "14146.84",
+          "collectionRate": "18.64",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-29 19:41:17",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "549",
+          "abbreviation": "交付1530",
+          "status": 1,
+          "projectStatus": 3,
+          "orderSource": "",
+          "contactPerson": "尹小小",
+          "salePerson": "尹卡卡",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "12",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "95349.74",
+          "overdueTotalUnReceivedAmount": "8600.00",
+          "totalReceivableAmount": "95349.74",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-04-23 15:31:11",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "360",
+          "abbreviation": "深圳传音智汇广场",
+          "status": 2,
+          "projectStatus": 2,
+          "orderSource": "",
+          "contactPerson": "张鹏超",
+          "salePerson": "胡蝶",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "12",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "81435.27",
+          "overdueTotalUnReceivedAmount": "73161.00",
+          "totalReceivableAmount": "81435.27",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-10-25 15:26:53",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "369",
+          "abbreviation": "星河盛境都荟大厦",
+          "status": 2,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "陈亮",
+          "salePerson": "胡蝶",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "10",
+          "limitDay": null,
+          "totalReceivedAmount": "900000.00",
+          "totalUnReceivedAmount": "303639.15",
+          "overdueTotalUnReceivedAmount": "275442.11",
+          "totalReceivableAmount": "1203639.15",
+          "collectionRate": "74.77",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-11-24 17:42:44",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "373",
+          "abbreviation": "海天学校教学楼4",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "陈亮",
+          "salePerson": "张三",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "10",
+          "limitDay": null,
+          "totalReceivedAmount": "1713578.22",
+          "totalUnReceivedAmount": "525401.20",
+          "overdueTotalUnReceivedAmount": "525401.20",
+          "totalReceivableAmount": "2238979.42",
+          "collectionRate": "76.53",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-11-23 09:44:53",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "357",
+          "abbreviation": "中洲滨海华府二期",
+          "status": 1,
+          "projectStatus": 5,
+          "orderSource": "8",
+          "contactPerson": "AAA",
+          "salePerson": "胡蝶",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "10",
+          "limitDay": null,
+          "totalReceivedAmount": "2415677.22",
+          "totalUnReceivedAmount": "1814437.55",
+          "overdueTotalUnReceivedAmount": "584118.79",
+          "totalReceivableAmount": "4230114.77",
+          "collectionRate": "57.11",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-10-13 12:55:23",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "375",
+          "abbreviation": "颐樾府",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "康鹏展",
+          "salePerson": "叶奕敏",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "9",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "5684.20",
+          "overdueTotalUnReceivedAmount": "5684.20",
+          "totalReceivableAmount": "5684.20",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-02-02 15:40:55",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "367",
+          "abbreviation": "海天学校教学楼",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "",
+          "contactPerson": "陈亮",
+          "salePerson": "张三",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "9",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "1125849.53",
+          "overdueTotalUnReceivedAmount": "659605.69",
+          "totalReceivableAmount": "1125849.53",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-11-23 09:44:53",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "364",
+          "abbreviation": "千湾汇",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "1",
+          "contactPerson": "常诗敏",
+          "salePerson": "胡蝶",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "9",
+          "limitDay": null,
+          "totalReceivedAmount": "1920000.00",
+          "totalUnReceivedAmount": "1643231.02",
+          "overdueTotalUnReceivedAmount": "167102.22",
+          "totalReceivableAmount": "3563231.02",
+          "collectionRate": "53.88",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-11-09 10:43:55",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "358",
+          "abbreviation": "琴语新澳",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "8",
+          "contactPerson": "张鹏超",
+          "salePerson": "AAA",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "9",
+          "limitDay": null,
+          "totalReceivedAmount": "1600000.00",
+          "totalUnReceivedAmount": "251219.19",
+          "overdueTotalUnReceivedAmount": "251219.19",
+          "totalReceivableAmount": "1851219.19",
+          "collectionRate": "86.43",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-10-17 09:39:27",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "596",
+          "abbreviation": "测试项目05",
+          "status": 1,
+          "projectStatus": 1,
+          "orderSource": "1",
+          "contactPerson": "123",
+          "salePerson": "常诗敏",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "8",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "17352.30",
+          "overdueTotalUnReceivedAmount": "123.00",
+          "totalReceivableAmount": "17352.30",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-05-26 15:18:18",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "359",
+          "abbreviation": "古梅中学",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "8",
+          "contactPerson": "AAA",
+          "salePerson": "BBB",
+          "salePhone": "181 2394 2611",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "8",
+          "limitDay": null,
+          "totalReceivedAmount": "106683.18",
+          "totalUnReceivedAmount": "153292.24",
+          "overdueTotalUnReceivedAmount": "57790.85",
+          "totalReceivableAmount": "259975.42",
+          "collectionRate": "41.04",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-10-24 10:50:13",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "354",
+          "abbreviation": "紫薇听澜",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "8",
+          "contactPerson": "刘霞",
+          "salePerson": "AAA",
+          "salePhone": "15313487958",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "7",
+          "limitDay": null,
+          "totalReceivedAmount": "21346.53",
+          "totalUnReceivedAmount": "219725.31",
+          "overdueTotalUnReceivedAmount": "30000.00",
+          "totalReceivableAmount": "241071.84",
+          "collectionRate": "8.85",
+          "prepaymentRatio": "0.00",
+          "createTime": "2022-09-24 14:25:46",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        },
+        {
+          "echoMap": {},
+          "id": "1020",
+          "abbreviation": "交付0627号",
+          "status": 1,
+          "projectStatus": 0,
+          "orderSource": "2",
+          "contactPerson": "尹卡卡",
+          "salePerson": "尹小小",
+          "salePhone": "158 7965 4575",
+          "dealStatus": 1,
+          "overdueStatus": 2,
+          "overdueDay": "6",
+          "limitDay": null,
+          "totalReceivedAmount": "0.00",
+          "totalUnReceivedAmount": "10600.69",
+          "overdueTotalUnReceivedAmount": "10600.69",
+          "totalReceivableAmount": "10600.69",
+          "collectionRate": "0.00",
+          "prepaymentRatio": "0.00",
+          "createTime": "2023-06-27 15:44:30",
+          "items": null,
+          "unAdvancePaymentNumber": null,
+          "progressPaymentOfUnReceivedNumber": null,
+          "settlementPaymentOfUnReceivedNumber": null,
+          "guaranteePaymentOfUnReceivedNumber": null
+        }
+      ],
+      "total": "46",
+      "size": "50",
+      "current": "1",
+      "orders": [],
+      "optimizeCountSql": true,
+      "searchCount": true,
+      "countId": null,
+      "maxLimit": null,
+      "pages": "1"
+    },
+    "dtoList": null
+  },
+  "msg": "成功",
+  "path": null,
+  "extra": null,
+  "timestamp": "1689240363551",
+  "errorMsg": "",
+  "isSuccess": true
+}
+2023-07-13 17:26:04 case.py | INFO | 👀 assertStatusCode -&gt; 200.
+</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer border-0 py-5">
+    <span class="text-muted text-sm">用例总数:
+      <button type="button" class="btn btn-sm bg-dark bg-opacity-20 bg-opacity-100-hover text-dark text-white-hover">1</button> =
+      <button type="button"
+        class="btn btn-sm bg-success bg-opacity-20 bg-opacity-100-hover text-success text-white-hover">1</button> +
+      <button type="button"
+        class="btn btn-sm bg-warning bg-opacity-20 bg-opacity-100-hover text-warning text-white-hover">0</button> +
+      <button type="button"
+        class="btn btn-sm bg-danger bg-opacity-20 bg-opacity-100-hover text-danger text-white-hover">0</button> +
+      <button type="button"
+        class="btn btn-sm bg-secondary bg-opacity-20 bg-opacity-100-hover text-secondary text-white-hover">0</button>
+    </span>
+  </div>
+</div>
+<div style="height:120px"></div>
+  
+  <script language="javascript" type="text/javascript">
+    // statistical data
+    var myChart = echarts.init(document.getElementById('echartElement'))
+
+    var overview = document.querySelector('#overview').textContent
+    var passed = document.querySelector('#p_number').textContent
+    var failure = document.querySelector('#f_number').textContent
+    var errors = document.querySelector('#e_number').textContent
+    var skipped = document.querySelector('#s_number').textContent
+    
+    if (overview === 'Overview') {
+      var title = 'Statistical data'
+      var dataClass = ['Passed', 'Failure', 'Errors', 'Skipped']
+    } else {
+      var title = '统计数据'
+      var dataClass = ['通过', '失败', '错误', '跳过']
+    }
+    myChart.setOption({
+      title: {
+        text: title
+      },
+      tooltip: {
+        trigger: 'axis'
+      },
+      xAxis: {
+        type: 'category',
+        data: dataClass
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          name: 'Passed',
+          type: 'bar',
+          stack: 'Total',
+          data: [
+            {
+              value: parseInt(passed),
+              itemStyle: { color: '#00CC88' }
+            },
+            {
+              value: parseInt(failure),
+              itemStyle: { color: '#FF8C00' }
+            },
+            {
+              value: parseInt(errors),
+              itemStyle: { color: '#FF3366' }
+            }, 
+            {
+              value: parseInt(skipped),
+              itemStyle: { color: '#CFD6DF' }
+            }
+          ]
+        }
+      ]
+    })
+
+    function showLog(id) {
+      document.body.style.overflow = 'hidden'
+      document.body.style.height = '100%'
+      document.getElementById(id).style.display = 'block'
+    }
+
+    function hideLog(id) {
+      document.body.style.overflow = 'auto';
+      document.getElementById(id).style.display = 'none'
+    }
+
+    function showImg(obj) {
+      document.body.style.overflow = 'hidden'
+      document.body.style.height = '100%'
+      var nextObj = obj.nextElementSibling
+      nextObj.style.display = 'block'
+      var index = 0;   //每张图片的下标，
+      var len = nextObj.getElementsByTagName('img').length;
+      var imgCircle = nextObj.getElementsByClassName('img-circle')[0]
+      nextObj.onmouseover = function () {  //当鼠标光标停在图片上，则停止轮播
+        clearInterval(start);
+      }
+      nextObj.onmouseout = function () {  //当鼠标光标停在图片上，则开始轮播
+        start = setInterval(autoPlay, 1000);
+      }
+      for (var i = 0; i < len; i++) {
+        var fontTag = document.createElement('font')
+        imgCircle.appendChild(fontTag)
+      }
+      var fontTagList = nextObj.getElementsByTagName('font');  //得到所有圆圈
+      changeImg(0)
+      var funny = function (i) {
+        fontTagList[i].onmouseover = function () {
+          index = i
+          changeImg(i)
+        }
+      }
+      for (var i = 0; i < fontTagList.length; i++) {
+        funny(i);
+      }
+
+      function autoPlay() {
+        if (index > len - 1) {
+          index = 0;
+          clearInterval(start); //运行一轮后停止
+        }
+        changeImg(index++);
+      }
+      imgCircle.style.width = 30 * len + "px";
+      // 对应圆圈和图片同步
+      function changeImg(index) {
+        var imgTags = nextObj.getElementsByTagName('img');
+        var fontTags = nextObj.getElementsByTagName('font');
+        for (i = 0; i < fontTags.length; i++) {
+          imgTags[i].style.display = 'none';
+          fontTags[i].style.backgroundColor = 'white';
+        }
+        imgTags[index].style.display = 'block';
+        if (fontTags.length > 0) {
+          fontTags[index].style.backgroundColor = 'red';
+        }
+      }
+    }
+
+    function hideImg(obj) {
+      document.body.style.overflow = 'auto';
+      obj.parentElement.parentElement.parentElement.parentElement.parentElement.style.display = "none";
+      obj.parentElement.parentElement.parentElement.getElementsByClassName('img-circle')[0].innerHTML = "";
+    }
+
+    output_list = Array();
+    /* level 
+    - 0:Summary
+    - 1:Failed 
+    - 2:Skip
+    - 3:All 
+    */
+    function showCase(level, channel) {
+      trs = document.getElementsByTagName("tr");
+      for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (["ft", "pt", "et", "st"].indexOf(id.substr(0, 2)) != -1) {
+          if (level == 0 && id.substr(2, 1) == channel) {
+            tr.className = 'hiddenRow';
+          }
+        }
+        if (id.substr(0, 3) == 'pt' + channel) {
+          if (level == 1) {
+            tr.className = '';
+          }
+          else if (level > 4 && id.substr(2, 1) == channel) {
+            tr.className = '';
+          }
+          else {
+            tr.className = 'hiddenRow';
+          }
+        }
+        if (id.substr(0, 3) == 'ft' + channel) {
+          if (level == 2) {
+            tr.className = '';
+          }
+          else if (level > 4 && id.substr(2, 1) == channel) {
+            tr.className = '';
+          }
+          else {
+            tr.className = 'hiddenRow';
+          }
+        }
+        if (id.substr(0, 3) == 'et' + channel) {
+          if (level == 3) {
+            tr.className = '';
+          }
+          else if (level > 4 && id.substr(2, 1) == channel) {
+            tr.className = '';
+          }
+          else {
+            tr.className = 'hiddenRow';
+          }
+        }
+        if (id.substr(0, 3) == 'st' + channel) {
+          if (level == 4) {
+            tr.className = '';
+          }
+          else if (level > 4 && id.substr(2, 1) == channel) {
+            tr.className = '';
+          }
+          else {
+            tr.className = 'hiddenRow';
+          }
+        }
+      }
+    }
+    function showClassDetail(cid, count) {
+      var id_list = Array(count);
+      var toHide = 1;
+      for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i + 1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+          tid = 'p' + tid0;
+          tr = document.getElementById(tid);
+        }
+        if (!tr) {
+          tid = 'e' + tid0;
+          tr = document.getElementById(tid);
+        }
+        if (!tr) {
+          tid = 's' + tid0;
+          tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+          toHide = 0;
+        }
+      }
+      for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+          document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+          document.getElementById(tid).className = '';
+        }
+      }
+    }
+    function showTestDetail(div_id) {
+      var detailsDiv = document.getElementById(div_id)
+      var displayState = detailsDiv.style.display
+
+      if (displayState != 'block') {
+        displayState = 'block'
+        detailsDiv.style.display = 'block'
+      }
+      else {
+        detailsDiv.style.display = 'none'
+      }
+    }
+    function html_escape(s) {
+      s = s.replace(/&/g, '&amp;');
+      s = s.replace(/</g, '&lt;');
+      s = s.replace(/>/g, '&gt;');
+      return s;
+    }
+  </script>
+
+  <footer class="footer" style="height: 50px; position: fixed; width: 100%">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          XTestRunner 1.7.0; 2023 © 重定向科技 - http://itest.info
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

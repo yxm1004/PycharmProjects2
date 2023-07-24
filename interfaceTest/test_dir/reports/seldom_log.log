@@ -1,0 +1,124 @@
+ 2023-07-13 11:29:21 runner.py | SUCCESS | generated html file: file:///C:\Users\msi\PycharmProjects\interfaceTest\test_dir\reports\2023_07_13_11_29_20_result.html
+ 2023-07-13 11:29:21 runner.py | SUCCESS | generated log file: file:///C:\Users\msi\PycharmProjects\interfaceTest\test_dir\reports\seldom_log.log
+ 2023-07-13 11:30:30 runner.py | SUCCESS | generated html file: file:///C:\Users\msi\PycharmProjects\interfaceTest\test_dir\reports\2023_07_13_11_30_29_result.html
+ 2023-07-13 11:30:30 runner.py | SUCCESS | generated log file: file:///C:\Users\msi\PycharmProjects\interfaceTest\test_dir\reports\seldom_log.log
+ 2023-07-13 11:31:08 runner.py | SUCCESS | generated html file: file:///C:\Users\msi\PycharmProjects\interfaceTest\test_dir\reports\2023_07_13_11_31_08_result.html
+ 2023-07-13 11:31:08 runner.py | SUCCESS | generated log file: file:///C:\Users\msi\PycharmProjects\interfaceTest\test_dir\reports\seldom_log.log
+ 2023-07-13 12:03:13 request.py | DEBUG | Execute get_login_user - args: (<common.loginApi.Common object at 0x000001EEE9AF9130>,)
+ 2023-07-13 12:03:13 request.py | DEBUG | Execute get_login_user - kwargs: {}
+ 2023-07-13 12:03:13 request.py | INFO | -------------- Request -----------------[🚀]
+ 2023-07-13 12:03:13 request.py | INFO | [method]: POST      [url]: https://jf-api-test-x1ksp5.dalezhuang.com/api/oauth/noToken/login 
+ 2023-07-13 12:03:13 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer test",
+  "Content-Type": "application/json"
+}
+ 2023-07-13 12:03:13 request.py | DEBUG | [data]:
+ {"account": "13170978240", "avatar": "", "code": "", "grantType": "password", "key": "", "name": "", "openId": "", "password": "yxm900520", "refreshToken": ""}
+ 2023-07-13 12:03:13 request.py | INFO | -------------- Response ----------------[🛬️]
+ 2023-07-13 12:03:13 request.py | INFO | successful with status 200
+ 2023-07-13 12:03:13 request.py | DEBUG | [type]: json      [time]: 0.118961
+ 2023-07-13 12:03:13 request.py | DEBUG | [response]:
+ {
+  "code": 200,
+  "requestId": "eaad74c27f28406398f417c4befba2fc",
+  "data": {
+    "token": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY4OTIyMDk5MywibmJmIjoxNjg5MjIwOTkzLCJleHAiOjE2ODkyNDk3OTN9.0lCzlzE37Qd31WC8X71efOdpapu40nonDesCLxXOvRI",
+    "tokenType": "token",
+    "refreshToken": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2ODkyMjA5OTMsIm5iZiI6MTY4OTIyMDk5MywiZXhwIjoxNjg5MzA3MzkzfQ.sL-QkwU4JtCYTdVPX1aNFGXPLY2dJcZpQh6QlabjFOA",
+    "name": "尹小小的小号",
+    "account": "13170978240",
+    "avatarId": null,
+    "avatar": null,
+    "workDescribe": "",
+    "userId": "1638799875954966528",
+    "expire": "28800",
+    "expiration": "2023-07-13 20:03:13",
+    "expireMillis": "28800",
+    "roleType": null,
+    "tenant": null,
+    "openId": null,
+    "isChangePassword": true
+  },
+  "msg": "成功",
+  "path": null,
+  "extra": null,
+  "timestamp": "1689220993036",
+  "errorMsg": "",
+  "isSuccess": true
+}
+ 2023-07-13 12:03:13 request.py | DEBUG | Execute get_login_user - response:
+ {'code': 200, 'requestId': 'eaad74c27f28406398f417c4befba2fc', 'data': {'token': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY4OTIyMDk5MywibmJmIjoxNjg5MjIwOTkzLCJleHAiOjE2ODkyNDk3OTN9.0lCzlzE37Qd31WC8X71efOdpapu40nonDesCLxXOvRI', 'tokenType': 'token', 'refreshToken': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2ODkyMjA5OTMsIm5iZiI6MTY4OTIyMDk5MywiZXhwIjoxNjg5MzA3MzkzfQ.sL-QkwU4JtCYTdVPX1aNFGXPLY2dJcZpQh6QlabjFOA', 'name': '尹小小的小号', 'account': '13170978240', 'avatarId': None, 'avatar': None, 'workDescribe': '', 'userId': '1638799875954966528', 'expire': '28800', 'expiration': '2023-07-13 20:03:13', 'expireMillis': '28800', 'roleType': None, 'tenant': None, 'openId': None, 'isChangePassword': True}, 'msg': '成功', 'path': None, 'extra': None, 'timestamp': '1689220993036', 'errorMsg': '', 'isSuccess': True}
+ 2023-07-13 12:03:13 request.py | INFO | Execute get_login_user - 获取登录用户名 success!
+ 2023-07-13 12:03:13 request.py | INFO | -------------- Request -----------------[🚀]
+ 2023-07-13 12:03:13 request.py | INFO | [method]: POST      [url]: /api/report/masterPlan/createPlan 
+ 2023-07-13 12:03:13 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY4OTIyMDk5MywibmJmIjoxNjg5MjIwOTkzLCJleHAiOjE2ODkyNDk3OTN9.0lCzlzE37Qd31WC8X71efOdpapu40nonDesCLxXOvRI",
+  "Content-Type": "application/json"
+}
+ 2023-07-13 12:03:13 request.py | DEBUG | [data]:
+ {"considerMaintenanceTime": "3", "excludeHolidays": ["1"], "expectedProductCycle": "2", "planTime": "3", "roundStatus": false}
+ 2023-07-13 12:05:42 request.py | DEBUG | Execute get_login_user - args: (<common.loginApi.Common object at 0x000001D957635F10>,)
+ 2023-07-13 12:05:42 request.py | DEBUG | Execute get_login_user - kwargs: {}
+ 2023-07-13 12:05:42 request.py | INFO | -------------- Request -----------------[🚀]
+ 2023-07-13 12:05:42 request.py | INFO | [method]: POST      [url]: https://jf-api-test-x1ksp5.dalezhuang.com/api/oauth/noToken/login 
+ 2023-07-13 12:05:42 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer test",
+  "Content-Type": "application/json"
+}
+ 2023-07-13 12:05:42 request.py | DEBUG | [data]:
+ {"account": "13170978240", "avatar": "", "code": "", "grantType": "password", "key": "", "name": "", "openId": "", "password": "yxm900520", "refreshToken": ""}
+ 2023-07-13 12:05:42 request.py | INFO | -------------- Response ----------------[🛬️]
+ 2023-07-13 12:05:42 request.py | INFO | successful with status 200
+ 2023-07-13 12:05:42 request.py | DEBUG | [type]: json      [time]: 0.115848
+ 2023-07-13 12:05:42 request.py | DEBUG | [response]:
+ {
+  "code": 200,
+  "requestId": "8e48c0efb8694f13bdcf0917fd979f91",
+  "data": {
+    "token": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY4OTIyMTE0MiwibmJmIjoxNjg5MjIxMTQyLCJleHAiOjE2ODkyNDk5NDJ9.oUszS-3bvCZkXQUDe8RkpcbnsPQqO3p6RBGVENowQdQ",
+    "tokenType": "token",
+    "refreshToken": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2ODkyMjExNDIsIm5iZiI6MTY4OTIyMTE0MiwiZXhwIjoxNjg5MzA3NTQyfQ.q62SnMq3AfnT4T3JOV6VpQ3XTs1-mPhUULV8C0Y_swY",
+    "name": "尹小小的小号",
+    "account": "13170978240",
+    "avatarId": null,
+    "avatar": null,
+    "workDescribe": "",
+    "userId": "1638799875954966528",
+    "expire": "28800",
+    "expiration": "2023-07-13 20:05:42",
+    "expireMillis": "28800",
+    "roleType": null,
+    "tenant": null,
+    "openId": null,
+    "isChangePassword": true
+  },
+  "msg": "成功",
+  "path": null,
+  "extra": null,
+  "timestamp": "1689221142463",
+  "errorMsg": "",
+  "isSuccess": true
+}
+ 2023-07-13 12:05:42 request.py | DEBUG | Execute get_login_user - response:
+ {'code': 200, 'requestId': '8e48c0efb8694f13bdcf0917fd979f91', 'data': {'token': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY4OTIyMTE0MiwibmJmIjoxNjg5MjIxMTQyLCJleHAiOjE2ODkyNDk5NDJ9.oUszS-3bvCZkXQUDe8RkpcbnsPQqO3p6RBGVENowQdQ', 'tokenType': 'token', 'refreshToken': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2ODkyMjExNDIsIm5iZiI6MTY4OTIyMTE0MiwiZXhwIjoxNjg5MzA3NTQyfQ.q62SnMq3AfnT4T3JOV6VpQ3XTs1-mPhUULV8C0Y_swY', 'name': '尹小小的小号', 'account': '13170978240', 'avatarId': None, 'avatar': None, 'workDescribe': '', 'userId': '1638799875954966528', 'expire': '28800', 'expiration': '2023-07-13 20:05:42', 'expireMillis': '28800', 'roleType': None, 'tenant': None, 'openId': None, 'isChangePassword': True}, 'msg': '成功', 'path': None, 'extra': None, 'timestamp': '1689221142463', 'errorMsg': '', 'isSuccess': True}
+ 2023-07-13 12:05:42 request.py | INFO | Execute get_login_user - 获取登录用户名 success!
+ 2023-07-13 12:05:42 request.py | INFO | -------------- Request -----------------[🚀]
+ 2023-07-13 12:05:42 request.py | INFO | [method]: POST      [url]: /api/report/project/create 
+ 2023-07-13 12:05:42 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY4OTIyMTE0MiwibmJmIjoxNjg5MjIxMTQyLCJleHAiOjE2ODkyNDk5NDJ9.oUszS-3bvCZkXQUDe8RkpcbnsPQqO3p6RBGVENowQdQ",
+  "Content-Type": "application/json"
+}
+ 2023-07-13 12:05:42 request.py | DEBUG | [data]:
+ {"name": "\u9a8c\u8bc1", "orderType": "\u5927\u4e50\u88c5\uff08\u60e0\u5dde\uff09\u5efa\u7b51\u79d1\u6280\u6709\u9650\u516c\u53f8", "abbreviation": "1689221142", "contractNo": "ww-202307122", "province": 576, "city": 599, "region": 600, "address": [576, 599, 600], "addressDetail": "\u94c1\u897f\u5efa\u7b51\u5c4001", "note": "", "manufacturer": "\u5927\u4e50\u88c5 | \u6570\u5b57\u5316\u4ea4\u4ed8\u5e73\u53f0", "contactPerson": "\u5c39123", "contactPhone": "158 7965 4576", "salePerson": "\u5c39\u6653\u6885", "salePhone": "153 1348 7958", "clientName": "\u94c1\u897f\u5efa\u7b51\u5c40", "contractBelong": "\u5927\u4e50\u88c501", "customers": [], "projectType": 1, "allocationType": null, "coordinationFactory": null, "allocationList": [], "logo": null, "orderSource": 2}

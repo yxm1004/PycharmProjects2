@@ -1,0 +1,48 @@
+ 2023-07-13 11:31:38 request.py | DEBUG | Execute get_login_user - args: (<__main__.Common object at 0x0000017BBB0BCF40>,)
+ 2023-07-13 11:31:38 request.py | DEBUG | Execute get_login_user - kwargs: {}
+ 2023-07-13 11:31:38 request.py | INFO | -------------- Request -----------------[🚀]
+ 2023-07-13 11:31:38 request.py | INFO | [method]: POST      [url]: https://jf-api-test-x1ksp5.dalezhuang.com/api/oauth/noToken/login 
+ 2023-07-13 11:31:38 request.py | DEBUG | [headers]:
+ {
+  "Authorization": "Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==",
+  "tenant": "ZGdnYw==",
+  "token": "Bearer test",
+  "Content-Type": "application/json"
+}
+ 2023-07-13 11:31:38 request.py | DEBUG | [data]:
+ {"account": "13170978240", "avatar": "", "code": "", "grantType": "password", "key": "", "name": "", "openId": "", "password": "yxm900520", "refreshToken": ""}
+ 2023-07-13 11:31:38 request.py | INFO | -------------- Response ----------------[🛬️]
+ 2023-07-13 11:31:38 request.py | INFO | successful with status 200
+ 2023-07-13 11:31:38 request.py | DEBUG | [type]: json      [time]: 0.112603
+ 2023-07-13 11:31:38 request.py | DEBUG | [response]:
+ {
+  "code": 200,
+  "requestId": "66a0825e6e4047d68fe528290aaaec72",
+  "data": {
+    "token": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY4OTIxOTA5NywibmJmIjoxNjg5MjE5MDk3LCJleHAiOjE2ODkyNDc4OTd9.Inn88DSRl4GfalUNrjwK43IFIHnqs9P4aCWvvhPuOE0",
+    "tokenType": "token",
+    "refreshToken": "eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2ODkyMTkwOTcsIm5iZiI6MTY4OTIxOTA5NywiZXhwIjoxNjg5MzA1NDk3fQ.S72IqCXlo3r3O1ctJIRfHq0w0fpnkA8GA0EO_Mi3ejg",
+    "name": "尹小小的小号",
+    "account": "13170978240",
+    "avatarId": null,
+    "avatar": null,
+    "workDescribe": "",
+    "userId": "1638799875954966528",
+    "expire": "28800",
+    "expiration": "2023-07-13 19:31:37",
+    "expireMillis": "28800",
+    "roleType": null,
+    "tenant": null,
+    "openId": null,
+    "isChangePassword": true
+  },
+  "msg": "成功",
+  "path": null,
+  "extra": null,
+  "timestamp": "1689219097863",
+  "errorMsg": "",
+  "isSuccess": true
+}
+ 2023-07-13 11:31:38 request.py | DEBUG | Execute get_login_user - response:
+ {'code': 200, 'requestId': '66a0825e6e4047d68fe528290aaaec72', 'data': {'token': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bC55bCP5bCP55qE5bCP5Y-3IiwidG9rZW5fdHlwZSI6InRva2VuIiwidXNlcmlkIjoiMTYzODc5OTg3NTk1NDk2NjUyOCIsImFjY291bnQiOiIxMzE3MDk3ODI0MCIsImlhdCI6MTY4OTIxOTA5NywibmJmIjoxNjg5MjE5MDk3LCJleHAiOjE2ODkyNDc4OTd9.Inn88DSRl4GfalUNrjwK43IFIHnqs9P4aCWvvhPuOE0', 'tokenType': 'token', 'refreshToken': 'eyJ0eXAiOiJKc29uV2ViVG9rZW4iLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsInVzZXJpZCI6IjE2Mzg3OTk4NzU5NTQ5NjY1MjgiLCJpYXQiOjE2ODkyMTkwOTcsIm5iZiI6MTY4OTIxOTA5NywiZXhwIjoxNjg5MzA1NDk3fQ.S72IqCXlo3r3O1ctJIRfHq0w0fpnkA8GA0EO_Mi3ejg', 'name': '尹小小的小号', 'account': '13170978240', 'avatarId': None, 'avatar': None, 'workDescribe': '', 'userId': '1638799875954966528', 'expire': '28800', 'expiration': '2023-07-13 19:31:37', 'expireMillis': '28800', 'roleType': None, 'tenant': None, 'openId': None, 'isChangePassword': True}, 'msg': '成功', 'path': None, 'extra': None, 'timestamp': '1689219097863', 'errorMsg': '', 'isSuccess': True}
+ 2023-07-13 11:31:38 request.py | INFO | Execute get_login_user - 获取登录用户名 success!

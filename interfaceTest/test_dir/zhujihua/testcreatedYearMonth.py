@@ -17,6 +17,7 @@ class testcreatedYearMonth(seldom.TestCase):
         self.payload = {}
         self.get("/api/report/masterPlan/versionList?createdYearMonth=2023-06", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
+        self.assertEqual(msg="成功")
 
 
 if __name__ == '__main__':

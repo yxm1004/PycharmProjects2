@@ -36,7 +36,7 @@ class testcomponentsave(seldom.TestCase):
             "floorSegment": "3",
             "id": 1679690953943678976,
             "type": "叠合板",
-            "model": "DHB009",
+            "model": "DHB001",
             "floorCount": "1",
             "appearanceSizeLength": "2500",
             "appearanceSizeWidth": "2320",

@@ -15,7 +15,7 @@ class testgetBuildByProjectId(seldom.TestCase):
             根据项目id获取楼栋信息
         """
         self.payload = {}
-        self.post("/api/report/component/listByPage", data=self.payload, headers=self.header)
+        self.get("/api/report/component/getBuildByProjectId?projectId=1061", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

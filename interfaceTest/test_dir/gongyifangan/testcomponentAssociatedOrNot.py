@@ -10,6 +10,9 @@ class testcomponentAssociatedOrNot(seldom.TestCase):
         self.c = Common()
         self.header = self.c.SetHeader()
     def test_get_componentAssociatedOrNot(self):
+        """
+            构件是否已关联生产命令单-销售发货单
+        """
         self.payload = {}
         self.get("/api/report/processPlan/componentAssociatedOrNot/1684044611066003456", data=self.payload, headers=self.header)
         self.assertStatusCode(200)

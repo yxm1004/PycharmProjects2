@@ -6,7 +6,7 @@ class testgetAccountStatementByFirst(seldom.TestCase):
     def start(self):
         # 调用登录公共方法创建报文
         self.c = Common
-        self.headef = self.c.SetHeader()
+        self.header = self.c.SetHeader()
     def test_get_getAccountStatementByFirst(self):
         """
             对账单-获取销售发货单明细

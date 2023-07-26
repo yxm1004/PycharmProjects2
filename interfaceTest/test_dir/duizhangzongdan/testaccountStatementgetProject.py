@@ -8,7 +8,7 @@ class testaccountStatementgetProject(seldom.TestCase):
     def start(self):
       # 调用登录公共方法构建报文头
       self.c = Common
-      self.headef = self.c.SetHeader()
+      self.header = self.c.SetHeader()
     def test_post_accountStatementgetProject(self):
         """
             全年进度款明细-项目筛选

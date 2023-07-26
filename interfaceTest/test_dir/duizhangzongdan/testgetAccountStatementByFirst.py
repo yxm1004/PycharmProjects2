@@ -5,7 +5,7 @@ from common.loginApi import Common
 class testgetAccountStatementByFirst(seldom.TestCase):
     def start(self):
         # 调用登录公共方法创建报文
-        self.c = Common
+        self.c = Common()
         self.header = self.c.SetHeader()
     def test_get_getAccountStatementByFirst(self):
         """

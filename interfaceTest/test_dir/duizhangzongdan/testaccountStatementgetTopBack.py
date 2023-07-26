@@ -5,7 +5,7 @@ from common.loginApi import Common
 class testaccountStatementgetTopBack(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
-        self.c = Common
+        self.c = Common()
         self.header = self.c.SetHeader()
     def test_post_accountStatementgetTopBack(self):
         """

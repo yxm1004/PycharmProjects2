@@ -10,7 +10,7 @@ class testprojectupdate(seldom.TestCase):
         """
             编辑项目信息
         """
-        payload = json.dumps({
+        self.payload = json.dumps({
             "echoMap": {
                 "province": "北京市",
                 "city": "北京市",

@@ -17,7 +17,7 @@ class testconfirmDeleteComponent(seldom.TestCase):
         self.payload = json.dumps({
             "componentParentIds": [],
             "componentIds": [
-                "1684033006378942466"
+                "1684033006408302592"
             ]
         })
         self.post("/api/report/component/deleteComponentByIds", data=self.payload, headers=self.header)
@@ -30,7 +30,7 @@ class testconfirmDeleteComponent(seldom.TestCase):
         payload = json.dumps({
             "componentParentIds": [],
             "componentIds": [
-                "1684033006378942466"
+                "1684033006408302592"
             ]
         })
         self.post("/api/report/component/confirmDeleteComponent", data=self.payload, headers=self.header)

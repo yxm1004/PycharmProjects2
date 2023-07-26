@@ -4,24 +4,18 @@ import time
 
 import seldom
 from common.loginApi import Common
-class testaccountStatementqueryPage(seldom.TestCase):
+class testaccountStatementgetProjectOfMonth(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_post_accountStatementqueryPage(self):
+    def test_get_accountStatementgetProjectOfMonth(self):
         """
-            对账单-自定义分页查询
+            回款管理-项目筛选
         """
-        self.payload = json.dumps({
-            "model": {
-                "list": []
-            },
-            "extra": {},
-            "current": 1,
-            "size": 50
-        })
-        self.post("/api/report/accountStatement/queryPage", data=self.payload,headers=self.header)
+        self.payload = {}
+        self.get("/api/report/accountStatement/getProjectOfMonth?startTime=2023-04&endTime=2023-07", data=self.payload,
+                 headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

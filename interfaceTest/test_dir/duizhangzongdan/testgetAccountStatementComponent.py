@@ -12,7 +12,7 @@ class testgetAccountStatementComponent(seldom.TestCase):
             对账单-获取销售发货单明细
         """
         self.payload = {}
-        self.get("/api/report/accountStatement/getAccountStatementComponent?id=1675715347614793728", data=self.payload, headerstest=self.header)
+        self.get("/api/report/accountStatement/getAccountStatementComponent?id=1675715347614793728", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"   # 断言成功
         # print("test-----------------"+self.response["msg"])

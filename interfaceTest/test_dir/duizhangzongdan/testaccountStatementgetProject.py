@@ -16,7 +16,7 @@ class testaccountStatementgetProject(seldom.TestCase):
         self.payload = json.dumps({
             "time": "2023"
         })
-        self.get("/api/report/accountStatement/getProject", data=self.payload,headers=self.header)
+        self.post("/api/report/accountStatement/getProject", data=self.payload,headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

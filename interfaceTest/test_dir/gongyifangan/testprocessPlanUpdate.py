@@ -13,7 +13,7 @@ class testprocessPlan(seldom.TestCase):
         """
             工艺方案修改
         """
-        payload = json.dumps({
+        self.payload = json.dumps({
             "id": "1684044611066003456",
             "productionRounds": "1",
             "schemeNumber": "1",

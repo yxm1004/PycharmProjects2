@@ -11,7 +11,7 @@ class test03material(seldom.TestCase):
             判断物料是否能被删除
         """
         self.payload = json.dumps([
-            "1684493548516278272"
+            "1684495755609374720"
         ])
         self.post("/api/report/material/checkMaterialDelete", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
@@ -25,7 +25,7 @@ class test03material(seldom.TestCase):
             删除物料
         """
         self.payload = json.dumps([
-            "1684493548516278272"
+            "1684495755609374720"
         ])
         self.delete("/api/report/material/checkMaterialDelete", data=self.payload, headers=self.header)
         self.assertStatusCode(200)

@@ -4,7 +4,7 @@ import time
 
 import seldom
 from common.loginApi import Common
-class testmaterial(seldom.TestCase):
+class test01material(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()
@@ -13,10 +13,10 @@ class testmaterial(seldom.TestCase):
         """
            物料-新增
         """
-        # 用时间戳作为项目简称
+        # 用时间戳作为物料编码
         code = datetime.datetime.now()
         code = str(int(time.mktime(code.timetuple())))
-        # print(abbreviation)
+        # print(code)
         self.payload = json.dumps({
             "orgId": "1471376234272260096",
             "unit": "kg",

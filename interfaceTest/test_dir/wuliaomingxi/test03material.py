@@ -27,7 +27,7 @@ class test03material(seldom.TestCase):
         self.payload = json.dumps([
             "1684495755609374720"
         ])
-        self.delete("/api/report/material/checkMaterialDelete", data=self.payload, headers=self.header)
+        self.delete("/api/report/material", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

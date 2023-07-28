@@ -20,8 +20,9 @@ class testsaveMoldGroup(seldom.TestCase):
         name = datetime.datetime.now()
         name = str(int(time.mktime(name.timetuple())))
 
-        #导入from seldom.testdata import * 生成单词
-        groupNumber=get_word()
+        # 导入from seldom.testdata import * 生成单词
+        groupNumber = get_word()
+
         self.payload = json.dumps({
             "componentType": "2",
             "name": name,

@@ -3,6 +3,9 @@ import datetime
 import time
 
 import seldom
+from seldom import data
+from seldom.testdata import *
+
 from common.loginApi import Common
 class testsaveMoldGroup(seldom.TestCase):
     def start(self):
@@ -16,8 +19,9 @@ class testsaveMoldGroup(seldom.TestCase):
         # 用时间戳作为模具组名称
         name = datetime.datetime.now()
         name = str(int(time.mktime(name.timetuple())))
-        # print(name)
 
+        #导入from seldom.testdata import * 生成单词
+        groupNumber=get_word()
         self.payload = json.dumps({
             "componentType": "2",
             "name": name,
@@ -26,7 +30,7 @@ class testsaveMoldGroup(seldom.TestCase):
             "phone": "",
             "note": "",
             "personPhone": "1639110090675978240-15879654575",
-            "groupNumber": "MUXH-0002",
+            "groupNumber": groupNumber,
             "staticProject": "静态项目01",
             "fileDTOList": [],
             "managerPhone": "15879654575",

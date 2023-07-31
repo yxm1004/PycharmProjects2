@@ -17,7 +17,7 @@ class testgetProjectColumnData(seldom.TestCase):
         # print("test-----------------"+self.response["msg"])
         # 取返回msg值断言
         self.assertJSON(assert_data, self.response["msg"])
-        self.assertJSON(False, self.response["isSuccess"])
+        self.assertJSON(True, self.response["isSuccess"])
 
 
 if __name__ == '__main__':

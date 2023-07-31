@@ -8,7 +8,7 @@ class testchangeParentgetDrawList(seldom.TestCase):
         self.header = self.c.SetHeader()
     def test_post_changeParentgetDrawList(self):
         """
-            设计变更-根据项目id获取有关联图纸的编号(去重)
+            通过项目-楼栋层-构件编号获取所有图纸
         """
         self.payload = json.dumps([
             {

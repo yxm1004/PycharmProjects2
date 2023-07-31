@@ -27,4 +27,5 @@ class testprojectrename(seldom.TestCase ):
 
 
 if __name__ == '__main__':
-     seldom.main(debug=True)
+    seldom.main(debug=True)
+

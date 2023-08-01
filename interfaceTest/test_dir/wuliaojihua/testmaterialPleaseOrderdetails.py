@@ -72,6 +72,8 @@ class testmaterialPleaseOrderdetails(seldom.TestCase):
         # 取返回msg值断言
         self.assertJSON(assert_data, self.response["msg"])
         self.assertJSON(True, self.response["isSuccess"])
+
+
 if __name__ == '__main__':
     seldom.main(debug=True)
 

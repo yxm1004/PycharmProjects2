@@ -1,17 +1,17 @@
 import json
 import seldom
 from common.loginApi import Common
-class testmaterialPleaseOrderlistCascade(seldom.TestCase):
+class testmaterialPleaseOrderfloorList(seldom.TestCase):
     def start(self):
         #调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_get_materialPleaseOrderlistCascade(self):
+    def test_get_materialPleaseOrderfloorList(self):
         """
-            物料计划，级联筛选-项目简称，楼栋，楼层
+            物料计划-楼层下拉框
         """
         self.payload = {}
-        self.get("/api/report/materialPleaseOrder/listCascade", data=self.payload, headers=self.header)
+        self.get("/api/report/materialPleaseOrder/floorList?projectId=1068&building=6", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

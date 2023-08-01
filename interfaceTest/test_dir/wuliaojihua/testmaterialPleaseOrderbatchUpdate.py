@@ -16,7 +16,7 @@ class testmaterialPleaseOrderbatchUpdate(seldom.TestCase):
                 "code": "PR20230731170456",
                 "createTime": "2023-08-01",
                 "createdBy": 1630382479472853000,
-                "floor": "6",
+                "floor": "5",
                 "floorLevels": "2",
                 "id": 1685939593490202600,
                 "projectId": 1068,

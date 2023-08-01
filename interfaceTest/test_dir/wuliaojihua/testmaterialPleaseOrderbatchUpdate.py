@@ -14,14 +14,14 @@ class testmaterialPleaseOrderbatchUpdate(seldom.TestCase):
             {
                 "building": "6",
                 "code": "PR20230731170456",
-                "createTime": "2023-03-10",
+                "createTime": "2023-08-01",
                 "createdBy": 1630382479472853000,
-                "floor": "3",
-                "floorLevels": "1",
+                "floor": "6",
+                "floorLevels": "2",
                 "id": 1685939593490202600,
-                "projectId": 434,
-                "requiredTime": "2023-03-10",
-                "updateTime": "2023-03-10",
+                "projectId": 1068,
+                "requiredTime": "2023-08-01",
+                "updateTime": "2023-08-01",
                 "updatedBy": 1630382479472853000
             }
         ])

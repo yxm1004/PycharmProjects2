@@ -11,7 +11,7 @@ class testtmpBomDetailsummaryMaterial(seldom.TestCase):
             物料请购单的物料汇总
         """
         self.payload = json.dumps({
-            "materialCode": "PR20230705090322"
+            "materialCode": "PR20230731163356"
         })
         self.post("/api/report/tmpBomDetail/summaryMaterial", data=self.payload, headers=self.header)
         self.assertStatusCode(200)

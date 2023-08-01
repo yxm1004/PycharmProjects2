@@ -6,6 +6,7 @@ class testmaterialPleaseOrderbatchUpdate(seldom.TestCase):
         #调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
+
     def test_post_materialPleaseOrderbatchUpdate(self):
         """
             批量编辑物料请购单

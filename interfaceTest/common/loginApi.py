@@ -57,6 +57,15 @@ class Common(HttpRequest):
             'token': "Bearer " + token,
         }
         return Fileheaders
+    def SetFormHeader (self):
+        token=self.get_login_user()
+        FormHeader = {
+            'Authorization': 'Basic Y2xvdWRmYWN0b3J5X3dlYjpjbG91ZGZhY3Rvcnlfd2ViX3NlY3JldA==',
+            'tenant': 'ZGdnYw==',
+            'token': "Bearer " + token,
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+        return FormHeader
 
 
 if __name__ == '__main__':

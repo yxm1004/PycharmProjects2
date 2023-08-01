@@ -10,7 +10,8 @@ class testmaterialPleaseOrderdetails(seldom.TestCase):
         self.b = BatchSave()
         data = self.b.get_pm()
         self.code = data.get("code")
-        self.id_ = data.get("id")#id和框架的id字段冲突了导致取不到case的值
+        self.id_se\
+            = data.get("id")#id和框架的id字段冲突了导致取不到case的值
         self.createdBy = data.get("createdBy")
         self.updatedBy = data.get("updatedBy")
 

@@ -18,7 +18,7 @@ class testmaterialPleaseOrderqueryPage(seldom.TestCase):
             "current": 1,
             "size": 50
         })
-        self.get("/api/report/materialPleaseOrder/details", data=self.payload, headers=self.header)
+        self.get("/api/report/materialPleaseOrder/queryPage", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

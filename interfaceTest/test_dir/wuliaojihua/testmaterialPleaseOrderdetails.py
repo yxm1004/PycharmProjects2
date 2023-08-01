@@ -10,7 +10,7 @@ class testmaterialPleaseOrderdetails(seldom.TestCase):
         self.b = BatchSave()
         data = self.b.get_pm()
         self.code = data.get("code")
-        self.id = data.get("id")
+        self.id_ = data.get("id")#id和框架的id字段冲突了导致取不到case的值
         self.createdBy = data.get("createdBy")
         self.updatedBy = data.get("updatedBy")
 
@@ -44,7 +44,7 @@ class testmaterialPleaseOrderdetails(seldom.TestCase):
                 "createdBy": self.createdBy,
                 "floor": "5",
                 "floorLevels": "2",
-                "id": self.id,
+                "id": self.id_,
                 "projectId": 1068,
                 "requiredTime": "2023-08-01",
                 "updateTime": "2023-08-01",

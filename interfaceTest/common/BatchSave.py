@@ -17,7 +17,7 @@ class BatchSave(HttpRequest):
     pm.globals.set("updatedBy",jsonData.data[0].updatedBy)
     """
     def get_pm(self):
-        data=self.bathSave()
+        data = self.bathSave()
         return data[0]
         # data=self.bathSave()
         # code=data[0].get("code")
@@ -54,7 +54,8 @@ class BatchSave(HttpRequest):
         r = self.post(url, headers=self.header, data=payload)
         return r
 
+
 if __name__ == '__main__':
-    b=BatchSave()
-    d=b.get_pm()
+    b = BatchSave()
+    d = b.get_pm()
     print(d.get("code"))

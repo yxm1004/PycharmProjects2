@@ -8,8 +8,8 @@ class testmaterialPleaseOrderdetails(seldom.TestCase):
     def start_class(self):
 
         self.b = BatchSave()
-        data= self.b.get_pm()
-        self.code=data.get("code")
+        data = self.b.get_pm()
+        self.code = data.get("code")
         self.id = data.get("id")
         self.createdBy = data.get("createdBy")
         self.updatedBy = data.get("updatedBy")
@@ -23,7 +23,7 @@ class testmaterialPleaseOrderdetails(seldom.TestCase):
         """
             物料请购单详情
         """
-        data={"code":self.code}
+        data = {"code":self.code}
         print(data)
         self.get("/api/report/materialPleaseOrder/details", params=data, headers=self.SetFormHeader)
         self.assertStatusCode(200)
@@ -51,8 +51,8 @@ class testmaterialPleaseOrderdetails(seldom.TestCase):
                 "updatedBy": self.updatedBy
             }
         ])
-        self.SetFormHeader["Content-Type"]='application/json'
-        header =self.SetFormHeader
+        self.SetFormHeader["Content-Type"] = 'application/json'
+        header = self.SetFormHeader
         self.post("/api/report/materialPleaseOrder/batchUpdate", data=self.payload, headers=self.SetFormHeader)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功

@@ -2,12 +2,12 @@ import json
 import seldom
 from common.loginApi import Common
 
-class testworkbenchTaskRecordproject(seldom.TestCase):
+class testworkbenchTaskRecordprojectmanage(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_post_workbenchTaskRecordproject(self):
+    def test_post_workbenchTaskRecordprojectmanage(self):
         """
            项目导入管理者视角
         """

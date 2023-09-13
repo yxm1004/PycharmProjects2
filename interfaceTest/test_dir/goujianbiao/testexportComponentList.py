@@ -17,7 +17,7 @@ class testexportComponentList(seldom.TestCase):
             "projectId": "1058",
             "list": []
         })
-        self.post("/api/report/component/exportComponentList",data=self.payload,headers=self.header)
+        self.post("/api/report/component/exportComponentList", data=self.payloa, headers=self.header)
         self.assertStatusCode(200)
 
 

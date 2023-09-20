@@ -1,12 +1,12 @@
 import json
 import seldom
 from common.loginApi import Common
-class testworkbenchFileRecordquery(seldom.TestCase):
+class testworkbenchFileRecordquery01(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_post_workbenchFileRecordquery(self):
+    def test_post_workbenchFileRecordquery01(self):
         """
            上传首件验收图片-附件查询
         """

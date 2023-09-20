@@ -14,7 +14,7 @@ class testmanageRollingProduction(seldom.TestCase):
             "overdue": True,
             "rollingProduction": 2
         })
-        self.delete("/api/report/workbenchTaskRecord/project/manageRollingProduction", data=self.payload,
+        self.post("/api/report/workbenchTaskRecord/project/manageRollingProduction", data=self.payload,
                     headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功

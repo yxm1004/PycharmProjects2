@@ -15,7 +15,7 @@ class testqueryProcessInspectionRollingHeadOfManage(seldom.TestCase):
             "startTime": "2023-09-01",
             "overdue": True
         })
-        self.delete("/api/report/workbenchTaskRecord/queryProcessInspectionRollingHeadOfManage", data=self.payload,
+        self.post("/api/report/workbenchTaskRecord/queryProcessInspectionRollingHeadOfManage", data=self.payload,
                     headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功

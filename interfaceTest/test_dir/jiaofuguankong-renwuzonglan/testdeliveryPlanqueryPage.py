@@ -25,8 +25,7 @@ class testdeliveryPlanqueryPage(seldom.TestCase):
             "current": 1,
             "size": 50
         })
-        self.post("/api/report/deliveryPlan/queryPage", data=self.payload,
-                  headers=self.header)
+        self.post("/api/report/deliveryPlan/queryPage", data=self.payload,headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

@@ -1,21 +1,23 @@
 import json
 import seldom
 from common.loginApi import Common
-
-class testcomponentgetList(seldom.TestCase):
+class testproductionTaskconfirmFirstAcceptance(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_post_componentgetList(self):
+    def test_post_productionTaskconfirmFirstAcceptance(self):
         """
-           首件验收-任务详情构件筛选
+           首件命令单确认
         """
         self.payload = json.dumps({
-            "projectId": "1113",
-            "tableState": 2
+            "taskId": "1696766438326403076",
+            "productionTaskId": "1696766427396046848",
+            "partyAcceptanceTime": "2023-09-07 00:00:00",
+            "building": "4",
+            "floor": "4"
         })
-        self.post("/api/report/component/getList", data=self.payload,headers=self.header)
+        self.post("/api/report/productionTask/confirmFirstAcceptance", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

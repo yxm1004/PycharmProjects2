@@ -1,7 +1,7 @@
 import json
 import seldom
 from common.loginApi import Common
-class testuserLinefactory(seldom.TestCase)
+class testuserLinefactory(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()

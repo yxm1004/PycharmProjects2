@@ -13,7 +13,7 @@ class testdictionaryquery(seldom.TestCase):
         self.payload = json.dumps({
             "type": "TRAIN_NUMBER"
         })
-        self.post("/api/report/workbenchTaskRecord/queryRollingDelivery", data=self.payload, headers=self.header)
+        self.post("/api/report/dictionary/query", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

@@ -2,20 +2,20 @@ import json
 import seldom
 from common.loginApi import Common
 
-class testcomponentgetList(seldom.TestCase):
+class testcomponentgetList02(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_post_componentgetList(self):
+    def test_post_componentgetList02(self):
         """
-           首件验收-任务详情构件筛选
+          执行者视角-滚动交付-构件联动筛选
         """
         self.payload = json.dumps({
-            "projectId": "1113",
-            "tableState": 2
+            "projectId": "1111",
+            "tableState": 0
         })
-        self.post("/api/report/component/getList", data=self.payload,headers=self.header)
+        self.post("/api/report/component/getList", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

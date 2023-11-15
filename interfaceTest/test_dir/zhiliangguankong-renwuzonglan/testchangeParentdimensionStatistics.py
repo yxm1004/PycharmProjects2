@@ -1,17 +1,23 @@
 import json
 import seldom
 from common.loginApi import Common
-class testchangeParentcurrentStatistics(seldom.TestCase):
+class testchangeParentdimensionStatistics(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_get_changeParentcurrentStatistics(self):
+    def test_post_changeParentdimensionStatistics(self):
         """
-           管理者视角--设计变更近30天任务统计
+           管理者视角--设计变更多维度统计
         """
-        self.payload = {}
-        self.get("/api/report/changeParent/currentStatistics", data=self.payload, headers=self.header)
+        self.payload = json.dumps({
+            "dimensionList": [
+                "项目简称"
+            ],
+            "endTime": "2023-11-15",
+            "startTime": "2023-11-01"
+        })
+        self.post("/api/report/changeParent/dimensionStatistics", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

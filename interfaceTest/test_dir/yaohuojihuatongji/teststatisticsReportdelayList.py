@@ -1,14 +1,14 @@
 import json
 import seldom
 from common.loginApi import Common
-class teststatisticsReportplanList(seldom.TestCase):
+class teststatisticsReportdelayList(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_post_statisticsReportplanList(self):
+    def test_post_statisticsReportdelayList(self):
         """
-           要货计划统计
+           延误统计列表
         """
         self.payload = json.dumps({
             "startTime": "2023-12-01",
@@ -16,7 +16,6 @@ class teststatisticsReportplanList(seldom.TestCase):
             "orgIds": [],
             "list": []
         })
-
         self.post("/api/report/statisticsReport/planList", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
@@ -28,3 +27,4 @@ class teststatisticsReportplanList(seldom.TestCase):
 
 if __name__ == '__main__':
     seldom.main(debug=True)
+

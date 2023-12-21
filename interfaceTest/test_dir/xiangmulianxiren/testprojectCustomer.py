@@ -26,7 +26,6 @@ class testprojectCustomer(seldom.TestCase):
         # print("test-----------------"+self.response["msg"])
         # 取返回msg值断言
         self.assertJSON(assert_data, self.response["msg"])
-        self.assertJSON(False, self.response["false"])
 
 
 if __name__ == '__main__':

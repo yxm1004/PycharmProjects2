@@ -28,7 +28,7 @@ class testprojectCustomer2(seldom.TestCase):
             "salesmanPhone": "13170978240",
             "building": "B2#"
         })
-        self.post("/api/report/projectCustomer", data=self.payload, headers=self.header)
+        self.put("/api/report/projectCustomer", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

@@ -10,7 +10,7 @@ class testdeliveryPlan2(seldom.TestCase):
         """
           发货计划-修改
         """
-        payload = json.dumps({
+        self.payload = json.dumps({
             "echoMap": {
                 "inventoryStatus": "无库存",
                 "projectId": "设计院1123号",

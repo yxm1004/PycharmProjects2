@@ -1,17 +1,24 @@
 import json
 import seldom
 from common.loginApi import Common
-class testrefreshDeliveryPlan(seldom.TestCase):
+class testdeliveryPlanqueryPage(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_put_refreshDeliveryPlan(self):
+    def test_post_deliveryPlanqueryPage(self):
         """
-           刷新库存
+           发货计划-自定义分页查询
         """
-        self.payload = {}
-        self.put("/api/report/deliveryPlan/refreshDeliveryPlan", data=self.payload, headers=self.header)
+        self.payload = json.dumps({
+            "model": {
+                "list": []
+            },
+            "extra": {},
+            "current": 1,
+            "size": 50
+        })
+        self.post("/api/report/deliveryPlan/queryPage", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

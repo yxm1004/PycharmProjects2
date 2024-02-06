@@ -1,21 +1,20 @@
 import json
 import seldom
 from common.loginApi import Common
-
-class testgetUpdateInfoByRequireId(seldom.TestCase):
+class testreturnedMoneystatisticsHead(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_post_getUpdateInfoByRequireId(self):
+    def test_post_returnedMoneystatisticsHead(self):
         """
-          发货单-获取项目信息+楼栋
+                回款管理列表头部统计
         """
         self.payload = json.dumps({
-            "id": "1277",
-            "building": "#B栋"
+            "startTime": "2023-04",
+            "endTime": "2023-07"
         })
-        self.post("/api/report/project/getUpdateInfoByRequireId", data=self.payload, headers=self.header)
+        self.post("/api/report/returnedMoney/statisticsHead", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])

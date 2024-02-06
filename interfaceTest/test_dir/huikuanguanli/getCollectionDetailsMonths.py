@@ -1,12 +1,13 @@
 import json
 import seldom
 from common.loginApi import Common
-class testinvoicingRecordgetCollectionDetailsMonths(seldom.TestCase):
+
+class testgetCollectionDetailsMonths(seldom.TestCase):
     def start(self):
         # 调用登录公共方法构建报文头
         self.c = Common()
         self.header = self.c.SetHeader()
-    def test_post_invoicingRecordgetCollectionDetailsMonths(self):
+    def test_post_getCollectionDetailsMonths(self):
         """
             回款明细-开票登记，查询开票账期月份
         """

@@ -17,7 +17,7 @@ class testreturnedMoneyexportDetails(seldom.TestCase):
             "startTime": "2024-01-01",
             "endTime": "2024-01-31"
         })
-        self.get("/api/report/returnedMoney/exportDetails", data=self.payload, headers=self.header)
+        self.post("/api/report/returnedMoney/exportDetails", data=self.payload, headers=self.header)
         self.assertStatusCode(200)
         assert_data = "成功"  # 断言成功
         # print("test-----------------"+self.response["msg"])
